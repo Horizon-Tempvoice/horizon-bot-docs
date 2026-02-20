@@ -1,5 +1,4 @@
 import type { BaseLayoutProps } from 'fumadocs-ui/layouts/shared';
-import {i18n} from "@/lib/i18n";
 
 // fill this with your actual GitHub info, for example:
 export const gitConfig = {
@@ -10,7 +9,8 @@ export const gitConfig = {
 
 export function baseOptions(locale: string): BaseLayoutProps {
   return {
-    i18n,
+    // We'll render a custom language switcher in the sidebar banner
+    i18n: false,
     nav: {
       title: 'Horizon TempVoice',
     },

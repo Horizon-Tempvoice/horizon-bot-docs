@@ -4,8 +4,9 @@ import { Inter } from 'next/font/google';
 import { source } from '@/lib/source';
 import { DocsLayout } from 'fumadocs-ui/layouts/docs';
 import { baseOptions } from '@/lib/layout.shared';
-import {defineI18nUI} from "fumadocs-ui/i18n";
-import {i18n} from "@/lib/i18n";
+import { defineI18nUI } from 'fumadocs-ui/i18n';
+import { i18n } from '@/lib/i18n';
+import { LanguageSwitcher } from '@/components/LanguageSwitcher';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -15,9 +16,11 @@ const { provider } = defineI18nUI(i18n, {
     translations: {
         en: {
             displayName: 'English',
+            chooseLanguage: 'Language',
         },
         de: {
             displayName: 'Deutsch',
+            chooseLanguage: 'Sprache',
         },
     },
 });
@@ -28,7 +31,11 @@ export default async function Layout({ params, children }: { params: Promise<{ l
     <html lang={lang} className={inter.className} suppressHydrationWarning>
       <body className="flex flex-col min-h-screen">
         <RootProvider i18n={provider(lang)}>
-            <DocsLayout {...baseOptions(lang)} tree={source.getPageTree(lang)}>
+          <DocsLayout
+            {...baseOptions(lang)}
+            tree={source.getPageTree(lang)}
+            sidebar={{ banner: <LanguageSwitcher /> }}
+          >
             {children}
           </DocsLayout>
         </RootProvider>
