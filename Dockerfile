@@ -1,5 +1,5 @@
 FROM node:25-alpine AS base
-RUN npm install -g corepack@latest
+RUN npm install -g corepack@latest --force
 
 FROM base AS deps
 RUN apk add --no-cache libc6-compat
