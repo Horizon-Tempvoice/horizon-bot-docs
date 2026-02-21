@@ -31,5 +31,12 @@
     "typescript": "^5.9.3",
     "eslint-config-next": "16.1.6",
     "eslint": "^9.21.0"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "sharp",
+      "unrs-resolver"
+    ]
   }
 }
