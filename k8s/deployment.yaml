@@ -2,8 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: horizon-bot-docs
-  labels:
-    app: horizon-bot-docs
 spec:
   replicas: 1
   selector:
