@@ -17,6 +17,7 @@ spec:
       containers:
       - name: horizon-bot-docs
         image: ghcr.io/horizon-tempvoice/horizon-bot-docs:latest
+        imagePullPolicy: Always
         ports:
         - containerPort: 3000
         resources:

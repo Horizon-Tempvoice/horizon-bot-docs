@@ -10,7 +10,7 @@ spec:
   applicationRefs:
     - namePattern: horizon-bot-docs
       images:
-        - alias: horizon-bot
+        - alias: horizon-bot-docs
           imageName: ghcr.io/horizon-tempvoice/horizon-bot-docs:latest
           commonUpdateSettings:
             updateStrategy: digest
