@@ -4,7 +4,7 @@ metadata:
   name: horizon-bot-docs
   namespace: horizon-bot
   annotations:
-    argocd-image-updater.argoproj.io/image-list: horizon-bot-docs=ghcr.io/horizon-tempvoice/horizon-bot-docs:latest
+    argocd-image-updater.argoproj.io/image-list: horizon-bot-docs=ghcr.io/horizon-tempvoice/horizon-bot-docs
     argocd-image-updater.argoproj.io/horizon-bot-docs.update-strategy: digest
     argocd-image-updater.argoproj.io/write-back-method: argocd
 spec:
@@ -12,7 +12,7 @@ spec:
   source:
     repoURL: 'https://github.com/horizon-tempvoice/horizon-bot-docs.git'
     targetRevision: main
-    path: k8s
+    path: k8s/overlays/production
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: horizon-bot
