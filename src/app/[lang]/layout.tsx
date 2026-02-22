@@ -7,6 +7,7 @@ import { baseOptions } from '@/lib/layout.shared';
 import { defineI18nUI } from 'fumadocs-ui/i18n';
 import { i18n } from '@/lib/i18n';
 import { LanguageSwitcher } from '@/components/LanguageSwitcher';
+import React from "react";
 
 const inter = Inter({
   subsets: ['latin'],
@@ -17,7 +18,7 @@ const { provider } = defineI18nUI(i18n, {
         en: {
             displayName: 'English',
             chooseLanguage: 'Language',
-            lastUpdate: 'Last updated',
+            lastUpdate: 'Last updated at',
             search: 'Search',
             nextPage: 'Next Page',
             previousPage: 'Previous Page',
@@ -27,7 +28,7 @@ const { provider } = defineI18nUI(i18n, {
         de: {
             displayName: 'Deutsch',
             chooseLanguage: 'Sprache',
-            lastUpdate: 'Zuletzt aktualisiert',
+            lastUpdate: 'Zuletzt aktualisiert am',
             search: 'Suche',
             nextPage: 'Nächste Seite',
             previousPage: 'Vorherige Seite',
