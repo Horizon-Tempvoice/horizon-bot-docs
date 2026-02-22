@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: horizon-bot-docs
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    cert-manager.io/cluster-issuer: letsencrypt-dns
+spec:
+  tls:
+  - hosts:
+    - docs.horizon-bot.cloud
+    secretName: horizon-bot-docs-tls
+  rules:
+  - host: docs.horizon-bot.cloud
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: horizon-bot-docs
+            port:
+              number: 80
