@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: horizon-bot-docs
-  namespace: argocd
+  namespace: horizon-bot
 spec:
   project: default
   source:
