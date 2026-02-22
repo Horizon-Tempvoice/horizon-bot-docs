@@ -17,10 +17,22 @@ const { provider } = defineI18nUI(i18n, {
         en: {
             displayName: 'English',
             chooseLanguage: 'Language',
+            lastUpdate: 'Last updated',
+            search: 'Search',
+            nextPage: 'Next Page',
+            previousPage: 'Previous Page',
+            toc: 'On this page',
+            tocNoHeadings: 'No headings found in this page',
         },
         de: {
             displayName: 'Deutsch',
             chooseLanguage: 'Sprache',
+            lastUpdate: 'Zuletzt aktualisiert',
+            search: 'Suche',
+            nextPage: 'Nächste Seite',
+            previousPage: 'Vorherige Seite',
+            toc: 'Auf dieser Seite',
+            tocNoHeadings: 'Keine Überschriften in dieser Seite gefunden',
         },
     },
 });
