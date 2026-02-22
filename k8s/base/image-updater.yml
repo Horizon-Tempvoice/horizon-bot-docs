@@ -12,5 +12,6 @@ spec:
       images:
         - alias: horizon-bot-docs
           imageName: ghcr.io/horizon-tempvoice/horizon-bot-docs
+          allowTags: "regexp:^latest$"
           commonUpdateSettings:
             updateStrategy: digest
