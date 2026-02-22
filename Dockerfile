@@ -2,7 +2,7 @@ FROM node:25-alpine AS base
 RUN npm install -g corepack@latest --force
 
 FROM base AS deps
-RUN apk add --no-cache libc6-compat
+RUN apk add --no-cache libc6-compat git openssh-client
 WORKDIR /app
 
 COPY package.json yarn.lock* package-lock.json* pnpm-lock.yaml* .npmrc* source.config.ts next.config.* ./
@@ -13,9 +13,9 @@ RUN \
   else echo "Lockfile not found." && exit 1; \
   fi
 
-
 FROM base AS builder
 WORKDIR /app
+RUN apk add --no-cache git openssh-client
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
