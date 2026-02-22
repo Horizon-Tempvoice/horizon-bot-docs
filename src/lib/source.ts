@@ -8,6 +8,7 @@ export const source = loader({
   i18n,
   baseUrl: '/',
   source: docs.toFumadocsSource(),
+  lastModifiedTime: 'git',
   plugins: [lucideIconsPlugin()],
 });
 
