@@ -8,7 +8,7 @@ metadata:
     argocd-image-updater.argoproj.io/horizon-bot-docs.update-strategy: digest
     argocd-image-updater.argoproj.io/write-back-method: argocd
 spec:
-  project: default
+  project: horizon-bot
   source:
     repoURL: 'https://github.com/horizon-tempvoice/horizon-bot-docs.git'
     targetRevision: main
