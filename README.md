@@ -1,45 +1,25 @@
-# horizon-bot-docs
+# Horizon Bot Documentation
 
-This is a Next.js application generated with
-[Create Fumadocs](https://github.com/fuma-nama/fumadocs).
+The official documentation for Horizon Bot.
 
-Run development server:
+## Overview
 
-```bash
-npm run dev
-# or
-pnpm dev
-# or
-yarn dev
-```
+This repository contains the documentation for Horizon Bot, built using [Next.js](https://next.js.org) and [Fumadocs](https://fumadocs.dev).
 
-Open http://localhost:3000 with your browser to see the result.
+## Development
 
-## Explore
+To get started with local development:
 
-In the project, you can see:
+1.  Install dependencies:
+    ```bash
+    pnpm install
+    ```
+2.  Run the development server:
+    ```bash
+    pnpm dev
+    ```
+3.  Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-- `lib/source.ts`: Code for content source adapter, [`loader()`](https://fumadocs.dev/docs/headless/source-api) provides the interface to access your content.
-- `lib/layout.shared.tsx`: Shared options for layouts, optional but preferred to keep.
+## Contributing
 
-| Route                     | Description                                            |
-| ------------------------- | ------------------------------------------------------ |
-| `app/(home)`              | The route group for your landing page and other pages. |
-| `app/docs`                | The documentation layout and pages.                    |
-| `app/api/search/route.ts` | The Route Handler for search.                          |
-
-### Fumadocs MDX
-
-A `source.config.ts` config file has been included, you can customise different options like frontmatter schema.
-
-Read the [Introduction](https://fumadocs.dev/docs/mdx) for further details.
-
-## Learn More
-
-To learn more about Next.js and Fumadocs, take a look at the following
-resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js
-  features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-- [Fumadocs](https://fumadocs.dev) - learn about Fumadocs
+We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for more details.
