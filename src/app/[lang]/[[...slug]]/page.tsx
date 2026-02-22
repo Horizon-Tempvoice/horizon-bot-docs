@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import { getMDXComponents } from '@/mdx-components';
 import type { Metadata } from 'next';
 import { createRelativeLink } from 'fumadocs-ui/mdx';
+import { gitConfig } from '@/lib/layout.shared';
 
 export default async function Page(props: {
   params: Promise<{ lang: string; slug?: string[] }>;
@@ -25,9 +26,24 @@ export default async function Page(props: {
           })}
         />
       </DocsBody>
-      {page.data.lastModified && (
-        <PageLastUpdate date={new Date(page.data.lastModified)} />
-      )}
+      <div className="flex flex-row items-center gap-2 mt-8 text-sm text-fd-muted-foreground">
+        {page.data.lastModified && (
+          <PageLastUpdate date={new Date(page.data.lastModified)} className="mt-0" />
+        )}
+        {process.env.NEXT_PUBLIC_GIT_REVISION && (
+          <>
+            {page.data.lastModified && <span>•</span>}
+            <a
+              href={`https://github.com/${gitConfig.user}/${gitConfig.repo}/commit/${process.env.NEXT_PUBLIC_GIT_REVISION}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-fd-foreground transition-colors"
+            >
+                Commit {process.env.NEXT_PUBLIC_GIT_REVISION}
+            </a>
+          </>
+        )}
+      </div>
     </DocsPage>
   );
 }
