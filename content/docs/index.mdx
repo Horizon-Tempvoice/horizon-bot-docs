@@ -5,7 +5,7 @@ icon: House
 ---
 
 import {Card} from "fumadocs-ui/components/card";
-import {MessageCircle} from "lucide-react";
+import {DownloadCloud, MessageCircle} from "lucide-react";
 
 import {Cards} from "fumadocs-ui/components/card";
 
@@ -19,6 +19,14 @@ In this documentation, you'll find everything you need to know about using Horiz
         title="Support Server"
         description="Join our Discord for the latest news and help with Horizon."
         href="https://support.horizon-bot.cloud"
+        external
+    />
+
+    <Card
+        icon={<DownloadCloud className="text-cyan-400" />}
+        title="Invite Horizon"
+        description={`Invite Horizon to your server and start using it right away.`}
+        href={`https://discord.com/oauth2/authorize?client_id=1463545589907197996&permissions=945715203089&integration_type=0&scope=bot+applications.commands`}
         external
     />
 </Cards>
