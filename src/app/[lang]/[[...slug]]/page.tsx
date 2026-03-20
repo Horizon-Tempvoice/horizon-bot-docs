@@ -1,5 +1,5 @@
 import { getPageImage, source } from '@/lib/source';
-import { DocsBody, DocsDescription, DocsPage, DocsTitle, PageLastUpdate } from 'fumadocs-ui/layouts/docs/page';
+import { DocsBody, DocsDescription, DocsPage, DocsTitle } from 'fumadocs-ui/layouts/docs/page';
 import { notFound } from 'next/navigation';
 import { getMDXComponents } from '@/mdx-components';
 import type { Metadata } from 'next';
@@ -28,7 +28,16 @@ export default async function Page(props: {
       </DocsBody>
       <div className="flex flex-row items-center gap-2 mt-8 text-sm text-fd-muted-foreground">
         {page.data.lastModified && (
-          <PageLastUpdate date={new Date(page.data.lastModified)} className="mt-0" />
+          <span>
+            {lang === 'de' ? 'Zuletzt aktualisiert am' : 'Last updated at'}{' '}
+            {new Date(page.data.lastModified).toLocaleString(lang, {
+              day: '2-digit',
+              month: '2-digit',
+              year: 'numeric',
+              hour: '2-digit',
+              minute: '2-digit',
+            })}
+          </span>
         )}
         {process.env.NEXT_PUBLIC_GIT_REVISION && (
           <>

@@ -12,7 +12,19 @@ export function baseOptions(locale: string): BaseLayoutProps {
     // We'll render a custom language switcher in the sidebar banner
     i18n: false,
     nav: {
-      title: 'Horizon TempVoice',
+      title: (
+        <>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/img/horizon-prod.png"
+            alt="Horizon"
+            width={24}
+            height={24}
+            className="rounded-full"
+          />
+          Horizon TempVoice
+        </>
+      ),
     },
     githubUrl: `https://github.com/${gitConfig.user}/${gitConfig.repo}`,
   };

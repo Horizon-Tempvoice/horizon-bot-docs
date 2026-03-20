@@ -1,6 +1,6 @@
 import { RootProvider } from 'fumadocs-ui/provider/next';
 import '../global.css';
-import { Inter } from 'next/font/google';
+import { GeistSans } from 'geist/font/sans';
 import { source } from '@/lib/source';
 import { DocsLayout } from 'fumadocs-ui/layouts/docs';
 import { baseOptions } from '@/lib/layout.shared';
@@ -8,10 +8,15 @@ import { defineI18nUI } from 'fumadocs-ui/i18n';
 import { i18n } from '@/lib/i18n';
 import { LanguageSwitcher } from '@/components/LanguageSwitcher';
 import React from "react";
+import type { Metadata } from 'next';
 
-const inter = Inter({
-  subsets: ['latin'],
-});
+export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NODE_ENV === 'development' ? 'http://localhost:3000' : 'https://docs.horizon-bot.cloud'),
+  icons: {
+    icon: '/img/horizon-prod.png',
+  },
+};
+
 
 const { provider } = defineI18nUI(i18n, {
     translations: {
@@ -41,7 +46,7 @@ const { provider } = defineI18nUI(i18n, {
 export default async function Layout({ params, children }: { params: Promise<{ lang: string }>; children: React.ReactNode }) {
   const lang = (await params).lang;
   return (
-    <html lang={lang} className={inter.className} suppressHydrationWarning>
+    <html lang={lang} className={GeistSans.className} suppressHydrationWarning>
       <body className="flex flex-col min-h-screen">
         <RootProvider i18n={provider(lang)}>
           <DocsLayout

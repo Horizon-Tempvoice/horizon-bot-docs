@@ -14,6 +14,7 @@ try {
 const config = {
   reactStrictMode: true,
   output: 'standalone',
+  allowedDevOrigins: ['192.168.1.26', '127.0.0.1'],
   env: {
     NEXT_PUBLIC_GIT_REVISION: revision,
   },

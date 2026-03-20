@@ -65,3 +65,40 @@
 button[data-search-full] {
     background-color: var(--color-fd-background);
 }
+
+#nd-toc a.ps-6 {
+    position: relative;
+}
+
+#nd-toc a.ps-6:has(+ a.ps-6)::before {
+    content: '';
+    position: absolute;
+    inset-inline-start: 0.75rem;
+    top: 0;
+    bottom: 0;
+    border-inline-start: 1px solid color-mix(in oklab, var(--color-fd-foreground) 12%, transparent);
+    pointer-events: none;
+}
+
+#nd-toc a.ps-6:has(+ a.ps-6)::after {
+    content: '';
+    position: absolute;
+    inset-inline-start: 0.75rem;
+    top: 50%;
+    width: 0.5rem;
+    border-bottom: 1px solid color-mix(in oklab, var(--color-fd-foreground) 12%, transparent);
+    pointer-events: none;
+}
+
+#nd-toc a.ps-6:not(:has(+ a.ps-6))::before {
+    content: '';
+    position: absolute;
+    inset-inline-start: 0.75rem;
+    top: 0;
+    height: 50%;
+    width: 0.5rem;
+    border-inline-start: 1px solid color-mix(in oklab, var(--color-fd-foreground) 12%, transparent);
+    border-bottom: 1px solid color-mix(in oklab, var(--color-fd-foreground) 12%, transparent);
+    border-end-start-radius: 5px;
+    pointer-events: none;
+}
