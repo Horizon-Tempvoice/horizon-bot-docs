@@ -19,12 +19,12 @@
     --color-fd-muted-foreground: hsl(240, 6%, 50%);
     --color-fd-secondary: hsl(240, 6%, 97%);
     --color-fd-accent-foreground: hsl(240, 6%, 25%);
-    --color-fd-primary: hsl(216, 79%, 56%);
+    --color-fd-primary: var(--brand-color);
 }
 
 .dark {
     --color-fd-ring: hsl(234, 100%, 83%);
-    --color-fd-primary: hsl(195, 100%, 78%);
+    --color-fd-primary: var(--brand-color);
     --color-fd-secondary-foreground: hsl(60, 100%, 98%);
     --color-fd-card-foreground: hsl(60, 100%, 98%);
     --color-fd-background: hsl(240, 7%, 11%);

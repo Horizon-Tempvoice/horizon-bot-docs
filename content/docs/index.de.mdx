@@ -6,6 +6,7 @@ icon: House
 
 import {Card, Cards} from "fumadocs-ui/components/card";
 import {DownloadCloud, MessageCircle} from "lucide-react";
+import {BRAND_COLOR} from "@/lib/brand";
 
 # Vielen Dank, dass du dich für Horizon entschieden hast
 
@@ -13,7 +14,7 @@ In dieser Dokumentation findest du alles, was du wissen musst, um Horizon zur Er
 
 <Cards>
     <Card
-        icon={<MessageCircle className="text-cyan-400" />}
+        icon={<MessageCircle style={{ color: BRAND_COLOR }} />}
         title="Support-Server"
         description="Tritt unserem Discord bei für die neuesten Nachrichten und Hilfe zu Horizon."
         href="https://support.horizon-bot.cloud"
@@ -21,7 +22,7 @@ In dieser Dokumentation findest du alles, was du wissen musst, um Horizon zur Er
     />
 
     <Card
-        icon={<DownloadCloud className="text-cyan-400" />}
+        icon={<DownloadCloud style={{ color: BRAND_COLOR }} />}
         title="Horizon einladen"
         description={`Füge Horizon jetzt zu deinem Sever hinzu!`}
         href={`https://discord.com/oauth2/authorize?client_id=1463545589907197996&permissions=945715203089&integration_type=0&scope=bot+applications.commands`}
