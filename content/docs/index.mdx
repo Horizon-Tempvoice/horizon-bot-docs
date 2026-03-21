@@ -4,10 +4,8 @@ description: Give your users total control with Horizon's temporary voice channe
 icon: House
 ---
 
-import {Card} from "fumadocs-ui/components/card";
+import {Card, Cards} from "fumadocs-ui/components/card";
 import {DownloadCloud, MessageCircle} from "lucide-react";
-
-import {Cards} from "fumadocs-ui/components/card";
 
 ## Thanks for choosing Horizon
 
@@ -25,8 +23,22 @@ In this documentation, you'll find everything you need to know about using Horiz
     <Card
         icon={<DownloadCloud className="text-cyan-400" />}
         title="Invite Horizon"
-        description={`Invite Horizon to your server and start using it right away.`}
-        href={`https://discord.com/oauth2/authorize?client_id=1463545589907197996&permissions=945715203089&integration_type=0&scope=bot+applications.commands`}
+        description="Invite Horizon to your server and start using it right away."
+        href="https://discord.com/oauth2/authorize?client_id=1463545589907197996&permissions=945715203089&integration_type=0&scope=bot+applications.commands"
         external
     />
 </Cards>
+
+---
+
+## What is a temporary voice channel and how do I benefit from it?
+
+Think of it as a voice channel that only exists when someone actually needs it. When a user joins a **"Join to Create"** channel, Horizon spins up a private room for them - and once everyone leaves, it's gone. No leftovers, no cleanup needed.
+
+* **No more empty channels:** The channel list only shows chanels that are actually being used.
+* **Members manage their own space:** As the channel owner, you can rename it, lock it, set a user limit and more, either via `/commands` or the <strong className="bg-gradient-to-r from-[#7C3AED] to-[#00A0FF] bg-clip-text text-transparent">Horizon-Panel</strong>. No admin required.
+* **Fully configurable for admins:** Server admins decide exactly what members are allowed to change in their channels.
+* **Scales automatically:** Whether it's 2 people or 200, the server just keeps itself clean.
+* **Private by default:** Each room belongs to the person who created it, for as long as they need it.
+
+No clutter. No manual work. It just handles itself.

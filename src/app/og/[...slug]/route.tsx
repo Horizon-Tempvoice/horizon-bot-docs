@@ -1,4 +1,5 @@
 import { getPageImage, source } from '@/lib/source';
+import { BRAND_COLOR } from '@/lib/brand';
 import { notFound } from 'next/navigation';
 import { ImageResponse } from 'next/og';
 import { readFileSync } from 'fs';
@@ -65,7 +66,7 @@ function OGImage({ title, description, avatarSrc }: { title: string; description
         style={{
           height: '3px',
           borderRadius: '9999px',
-          background: '#00A0FF',
+          background: BRAND_COLOR,
           width: '100%',
         }}
       />
