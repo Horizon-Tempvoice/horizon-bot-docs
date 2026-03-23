@@ -30,7 +30,7 @@ function OGImage({ title, description, avatarSrc }: { title: string; description
           style={{ borderRadius: '50%' }}
         />
         <span style={{ fontSize: '32px', fontWeight: 600, color: '#7dd3fc' }}>
-          Horizon TempVoice
+          Horizon - Tempvoice System
         </span>
       </div>
 
