@@ -1,7 +1,8 @@
 {
   "title": "Docs",
   "pages": [
-    "---GETTING STARTED---",
-    "index"
+    "---BEGIN HERE---",
+    "index",
+    "quickstart"
   ]
 }

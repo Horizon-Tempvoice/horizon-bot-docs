@@ -2,6 +2,7 @@
   "title": "Docs",
   "pages": [
     "---ERSTE SCHRITTE---",
-    "index"
+    "index",
+    "quickstart"
   ]
 }
