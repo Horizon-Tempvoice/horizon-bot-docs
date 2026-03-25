@@ -12,3 +12,4 @@ resources:
   - service.yaml
   - ingress.yaml
   - image-updater.yml
+  - pdb.yaml
