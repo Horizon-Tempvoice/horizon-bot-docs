@@ -9,10 +9,10 @@ spec:
   ingressClassName: nginx-ic
   tls:
   - hosts:
-    - docs.horizon-bot.cloud
+    - docs.horizon-bot.me
     secretName: horizon-bot-docs-tls
   rules:
-  - host: docs.horizon-bot.cloud
+  - host: docs.horizon-bot.me
     http:
       paths:
       - path: /

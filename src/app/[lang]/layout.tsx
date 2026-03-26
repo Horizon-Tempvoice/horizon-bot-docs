@@ -12,7 +12,7 @@ import type { Metadata } from 'next';
 import { BRAND_COLOR } from '@/lib/brand';
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NODE_ENV === 'development' ? 'http://localhost:3000' : 'https://docs.horizon-bot.cloud'),
+  metadataBase: new URL(process.env.NODE_ENV === 'development' ? 'http://localhost:3000' : 'https://docs.horizon-bot.me'),
   icons: {
     icon: '/img/horizon-prod.png',
   },
