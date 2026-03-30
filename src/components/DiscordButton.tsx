@@ -1,6 +1,6 @@
 import { ExternalLink } from "lucide-react";
 
-type Variant = "primary" | "secondary" | "danger" | "success";
+type Variant = "primary" | "secondary" | "danger" | "success" | "native";
 
 interface DiscordButtonProps {
   label: string;
@@ -9,6 +9,7 @@ interface DiscordButtonProps {
 }
 
 const VARIANT_STYLES: Record<Variant, string> = {
+  native: "bg-fd-background/60 border-fd-border text-fd-foreground hover:bg-fd-accent",
   primary: "bg-blue-500/20 border-blue-500/40 text-blue-400 hover:bg-blue-500/30",
   secondary: "bg-fd-background/60 border-fd-border text-fd-foreground hover:bg-fd-accent",
   danger: "bg-red-500/20 border-red-500/40 text-red-400 hover:bg-red-500/30",
