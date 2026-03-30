@@ -23,8 +23,10 @@ function OGImage({ title, description, avatarSrc }: { title: string; description
     >
       {/* Top: Avatar + Site name */}
       <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={avatarSrc}
+          alt=""
           width={56}
           height={56}
           style={{ borderRadius: '50%' }}
