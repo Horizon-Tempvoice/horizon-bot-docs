@@ -6,15 +6,16 @@ icon: Feather
 
 import {ExternalLink} from "lucide-react";
 import {INVITE_URL} from "@/lib/constants";
+import {BRAND_COLOR} from "@/lib/brand";
 import Image from "next/image";
 
 # 1. Invite Horizon to your server
 
-Bring <strong className="bg-linear-to-r from-cyan-500 to-fuchsia-500 bg-clip-text text-transparent">Horizon</strong> to your server – just head to <a href={INVITE_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1">invite.horizon-bot.me <ExternalLink size={14} /></a> and you're good to go.
+Bring <strong style={{ color: BRAND_COLOR }}>Horizon</strong> to your server – just head to <a href={INVITE_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1">invite.horizon-bot.me <ExternalLink size={14} /></a> and you're good to go.
 
 # 2. Setup Horizon in your server
 
-Using the `/setup` command, you can setup Horizon in your server. Click on ``Setup Horizon`` and it will generate you a <strong className="bg-linear-to-r from-cyan-500 to-fuchsia-500 bg-clip-text text-transparent">Join to Create</strong> and a <strong className="bg-linear-to-r from-cyan-500 to-fuchsia-500 bg-clip-text text-transparent">Horizon-Panel</strong>.
+Using the `/setup` command, you can setup Horizon in your server. Click on ``Setup Horizon`` and it will generate you a <strong style={{ color: BRAND_COLOR }}>Join to Create</strong> and a <strong style={{ color: BRAND_COLOR }}>Horizon-Panel</strong>.
 
 <div className="flex gap-4 mt-4">
     <Image src="/img/content/setupcommand_en.png" alt="The /setup command" width={400} height={200} className="rounded-lg" />
