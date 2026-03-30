@@ -8,10 +8,15 @@ import {ExternalLink} from "lucide-react";
 import {INVITE_URL} from "@/lib/constants";
 import {BRAND_COLOR} from "@/lib/brand";
 import Image from "next/image";
+import {Callout} from "fumadocs-ui/components/callout";
 
 # 1. Invite Horizon to your server
 
 Bring <strong style={{ color: BRAND_COLOR }}>Horizon</strong> to your server – just head to <a href={INVITE_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1">invite.horizon-bot.me <ExternalLink size={14} /></a> and you're good to go.
+
+<div className="mt-2 mb-8">
+  <DiscordButton label="Invite Horizon" href={INVITE_URL} />
+</div>
 
 # 2. Setup Horizon in your server
 
@@ -21,3 +26,17 @@ Using the `/setup` command, you can setup Horizon in your server. Click on ``Set
     <Image src="/img/content/setupcommand_en.png" alt="The /setup command" width={400} height={200} className="rounded-lg" />
     <Image src="/img/content/setupcommand_done_en.png" alt="Finished Setup" width={400} height={200} className="rounded-lg" />
 </div>
+
+<strong style={{ color: BRAND_COLOR }}>Horizon</strong> is now ready to be used in your server. Just join the <strong style={{ color: BRAND_COLOR }}>Join to Create</strong> and your own Channel will be created.
+
+---
+
+# Generator Channel
+These specialized voice channels automatically generate a temporary channel when joined. You can set up multiple Generator Channels by repeating the configuration steps; each one can be customized independently to define how its temporary channels behave.
+
+<Callout title="Notice" type="warn">
+    You can have a maximum of 3 Generator Channels per server. Deleting a Generator will also delete the record in the database of the Bot.
+</Callout>
+
+# Tempvoice Panel
+The Tempvoice Panel, <em>referred as the <strong style={{ color: BRAND_COLOR }}>Horizon-Panel</strong></em>, is a Discord native interface that allows you to manage your temporary voice channels as a alternative to the Slash Commands.
