@@ -22,7 +22,7 @@ export function baseOptions(locale: string): BaseLayoutProps {
             height={24}
             className="rounded-full"
           />
-          Horizon TempVoice
+          Horizon
         </>
       ),
     },

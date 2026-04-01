@@ -13,6 +13,10 @@ import { BRAND_COLOR } from '@/lib/brand';
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NODE_ENV === 'development' ? 'http://localhost:3000' : 'https://docs.horizon-bot.me'),
+  title: {
+    template: '%s | Horizon',
+    default: 'Horizon',
+  },
   icons: {
     icon: '/img/horizon-prod.png',
   },
