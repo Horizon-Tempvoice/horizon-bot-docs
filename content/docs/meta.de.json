@@ -3,6 +3,10 @@
   "pages": [
     "---ERSTE SCHRITTE---",
     "index",
-    "quickstart"
+    "quickstart",
+    "---FÜR MITGLIEDER---",
+    "control-channel",
+    "---FÜR ADMINS---",
+    "configure-channel"
   ]
 }
