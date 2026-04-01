@@ -5,6 +5,8 @@ import { getMDXComponents } from '@/mdx-components';
 import type { Metadata } from 'next';
 import { createRelativeLink } from 'fumadocs-ui/mdx';
 import { gitConfig } from '@/lib/layout.shared';
+import Link from 'next/link';
+import { icons } from 'lucide-react';
 
 export default async function Page(props: {
   params: Promise<{ lang: string; slug?: string[] }>;
@@ -15,8 +17,27 @@ export default async function Page(props: {
 
   const MDX = page.data.body;
 
+  const parentPage =
+    page.slugs.length > 1 ? source.getPage([page.slugs[0]], lang) : null;
+
+  const parentIconName = parentPage?.data.icon as string | undefined;
+  const ParentIcon = parentIconName ? icons[parentIconName as keyof typeof icons] : null;
+
   return (
-    <DocsPage toc={page.data.toc} full={page.data.full}>
+    <DocsPage toc={page.data.toc} full={page.data.full} breadcrumb={{ enabled: false }}>
+      {parentPage && (
+        <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-widest mb-1">
+          <Link
+            href={`/${lang}/${page.slugs[0]}`}
+            className="inline-flex items-center gap-1.5 text-fd-primary hover:opacity-80 transition-opacity"
+          >
+            {ParentIcon && <ParentIcon className="size-3.5 shrink-0" />}
+            {parentPage.data.title}
+          </Link>
+          <span className="text-fd-muted-foreground" aria-hidden>›</span>
+          <span className="text-fd-primary">{page.data.title}</span>
+        </div>
+      )}
       <DocsTitle>{page.data.title}</DocsTitle>
       <DocsDescription className="mb-0">{page.data.description}</DocsDescription>
       <DocsBody>
