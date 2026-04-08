@@ -1,10 +1,10 @@
 ---
-title: Overview
+title: Channel Commands
 icon: Goal
 ---
 
 import {Card, Cards} from "fumadocs-ui/components/card";
-import {PencilLine, Users} from "lucide-react";
+import {PencilLine, Users, EyeOff, Lock} from "lucide-react";
 import {BRAND_COLOR} from "@/lib/brand";
 
 <Cards>
@@ -17,15 +17,22 @@ import {BRAND_COLOR} from "@/lib/brand";
 
     <Card
         icon={<Users style={{ color: BRAND_COLOR }} />}
-        title="Channel Userlimit"
+        title="Channel User Limit"
         description="Limit the number of users in your temporary channel."
         href="/control-channel/limit"
     />
 
     <Card
-        icon={<PencilLine style={{ color: BRAND_COLOR }} />}
-        title="Channel Rename"
-        description="Rename your temporary channel."
-        href="/control-channel/name"
+        icon={<EyeOff style={{ color: BRAND_COLOR }} />}
+        title="Hide Channel"
+        description="Hide your channel from other users."
+        href="/control-channel/hide"
+    />
+
+    <Card
+        icon={<Lock style={{ color: BRAND_COLOR }} />}
+        title="Lock Channel"
+        description="Prevent new users from joining your channel."
+        href="/control-channel/lock"
     />
 </Cards>

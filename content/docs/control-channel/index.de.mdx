@@ -1,0 +1,24 @@
+---
+title: Kanal Befehle
+icon: Goal
+---
+
+import {Card, Cards} from "fumadocs-ui/components/card";
+import {PencilLine, Users, EyeOff, Lock} from "lucide-react";
+import {BRAND_COLOR} from "@/lib/brand";
+
+<Cards>
+    <Card
+        icon={<PencilLine style={{ color: BRAND_COLOR }} />}
+        title="Kanal umbenennen"
+        description="Gib deinem temporären Kanal einen eigenen Namen."
+        href="/control-channel/name"
+    />
+
+    <Card
+        icon={<Users style={{ color: BRAND_COLOR }} />}
+        title="Nutzerlimit festlegen"
+        description="Begrenze, wie viele Nutzer deinem Kanal beitreten können."
+        href="/control-channel/limit"
+    />
+</Cards>

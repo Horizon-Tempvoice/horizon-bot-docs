@@ -1,6 +1,8 @@
 {
   "pages": [
     "name",
-    "limit"
+    "limit",
+    "hide",
+    "lock"
   ]
 }
