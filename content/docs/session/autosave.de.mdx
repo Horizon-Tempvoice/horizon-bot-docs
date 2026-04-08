@@ -1,0 +1,21 @@
+---
+title: Autosave
+description: Deinen aktiven Sitzungs-Slot automatisch aktualisieren, wenn du den Kanal verlässt.
+icon: RefreshCw
+---
+
+Mit `/session autosave [enabled]` aktivierst oder deaktivierst du das automatische Speichern. Wenn aktiviert, wird dein aktiver Sitzungs-Slot jedes Mal automatisch mit deinem aktuellen Kanalzustand aktualisiert, wenn du den Kanal verlässt.
+
+<Callout title="Hinweis" type="info">
+    Autosave benötigt ein aktives Sitzungsprofil. Nutze zuerst `/session activate`.
+</Callout>
+
+<Callout title="Wann Autosave übersprungen wird" type="warn">
+    Dein Kanalzustand wird **nicht** automatisch gespeichert, wenn:
+    - Du kein aktives Sitzungsprofil gesetzt hast
+    - Der Server-Admin das Sitzungs-Feature deaktiviert hat
+    - Der Kanal an dich übertragen wurde (du bist nicht der ursprüngliche Ersteller)
+    - Du den Kanal per `/claim` übernommen hast
+
+    Ein manuelles Speichern per `/session save` ist weiterhin möglich, aber Vorsicht: Dabei wird dein Sitzungsprofil mit dem aktuellen Kanalzustand überschrieben.
+</Callout>

@@ -3,6 +3,18 @@
     "name",
     "limit",
     "hide",
-    "lock"
+    "unhide",
+    "lock",
+    "unlock",
+    "trust",
+    "untrust",
+    "block",
+    "unblock",
+    "kick",
+    "invite",
+    "info",
+    "claim",
+    "transfer",
+    "status"
   ]
 }

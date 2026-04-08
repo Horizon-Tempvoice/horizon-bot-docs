@@ -1,0 +1,57 @@
+---
+title: Gespeicherte Kanäle (Sitzungsprofile)
+icon: Bookmark
+---
+
+import {Card, Cards} from "fumadocs-ui/components/card";
+import {Save, Play, SkipForward, Eye, Trash2, RefreshCw} from "lucide-react";
+import {BRAND_COLOR} from "@/lib/brand";
+
+<ImageWithCaption src="/img/content/session_view_command_en.png" alt="Sitzungsansicht" maxWidth="300px" />
+
+Sitzungsprofile erlauben es dir, deine aktuelle Kanalkonfiguration zu speichern, inkl. Name, Nutzerlimit, Sperr-/Versteckt-Status, vertraute Nutzer, blockierte Nutzer und Moderatoren, und sie beim nächsten Kanalerstellen automatisch anzuwenden.
+
+Du kannst bis zu **3 Sitzungsprofile** speichern, jeweils mit einem optionalen Label.
+
+<Callout title="Hinweis" type="info">
+    Server-Admins können das Sitzungs-Feature deaktivieren. Falls die Befehle unten nicht funktionieren, sind Sitzungen auf deinem Server möglicherweise nicht verfügbar.
+</Callout>
+
+<Cards>
+    <Card
+        icon={<Save style={{ color: BRAND_COLOR }} />}
+        title="Save"
+        description="Deinen aktuellen Kanal in einem Slot speichern."
+        href="/session/save"
+    />
+    <Card
+        icon={<Play style={{ color: BRAND_COLOR }} />}
+        title="Activate"
+        description="Einen Slot als aktives Profil für den nächsten Kanal setzen."
+        href="/session/activate"
+    />
+    <Card
+        icon={<SkipForward style={{ color: BRAND_COLOR }} />}
+        title="Skip"
+        description="Deine aktive Sitzung einmalig überspringen."
+        href="/session/skip"
+    />
+    <Card
+        icon={<Eye style={{ color: BRAND_COLOR }} />}
+        title="Show"
+        description="Alle gespeicherten Sitzungs-Slots anzeigen."
+        href="/session/show"
+    />
+    <Card
+        icon={<Trash2 style={{ color: BRAND_COLOR }} />}
+        title="Delete"
+        description="Einen gespeicherten Sitzungs-Slot löschen."
+        href="/session/delete"
+    />
+    <Card
+        icon={<RefreshCw style={{ color: BRAND_COLOR }} />}
+        title="Autosave"
+        description="Deine aktive Sitzung automatisch aktualisieren, wenn du den Kanal verlässt."
+        href="/session/autosave"
+    />
+</Cards>

@@ -1,0 +1,10 @@
+{
+  "pages": [
+    "save",
+    "activate",
+    "skip",
+    "show",
+    "delete",
+    "autosave"
+  ]
+}

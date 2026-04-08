@@ -4,8 +4,12 @@ icon: Goal
 ---
 
 import {Card, Cards} from "fumadocs-ui/components/card";
-import {PencilLine, Users, EyeOff, Lock} from "lucide-react";
+import {PencilLine, Users, EyeOff, Eye, Lock, LockOpen, UserPlus, UserMinus, UserX, UserCheck, DoorOpen, Mail, Download, Repeat2, MessageSquare, Info} from "lucide-react";
 import {BRAND_COLOR} from "@/lib/brand";
+
+<Callout title="Hinweis" type="info">
+    Server-Admins können einschränken, welche dieser Funktionen auf ihrem Server verfügbar sind. Manche Befehle stehen dir je nach Serverkonfiguration möglicherweise nicht zur Verfügung.
+</Callout>
 
 <Cards>
     <Card
@@ -20,5 +24,103 @@ import {BRAND_COLOR} from "@/lib/brand";
         title="Nutzerlimit festlegen"
         description="Begrenze, wie viele Nutzer deinem Kanal beitreten können."
         href="/control-channel/limit"
+    />
+
+    <Card
+        icon={<EyeOff style={{ color: BRAND_COLOR }} />}
+        title="Kanal verstecken"
+        description="Verstecke deinen Kanal vor anderen Nutzern."
+        href="/control-channel/hide"
+    />
+
+    <Card
+        icon={<Eye style={{ color: BRAND_COLOR }} />}
+        title="Kanal anzeigen"
+        description="Mache deinen Kanal wieder sichtbar."
+        href="/control-channel/unhide"
+    />
+
+    <Card
+        icon={<Lock style={{ color: BRAND_COLOR }} />}
+        title="Kanal sperren"
+        description="Verhindere, dass neue Nutzer deinem Kanal beitreten."
+        href="/control-channel/lock"
+    />
+
+    <Card
+        icon={<LockOpen style={{ color: BRAND_COLOR }} />}
+        title="Kanal entsperren"
+        description="Erlaube Nutzern wieder, deinem Kanal beizutreten."
+        href="/control-channel/unlock"
+    />
+
+    <Card
+        icon={<UserPlus style={{ color: BRAND_COLOR }} />}
+        title="Nutzer vertrauen"
+        description="Gib einem Nutzer Zugang zu deinem gesperrten oder versteckten Kanal."
+        href="/control-channel/trust"
+    />
+
+    <Card
+        icon={<UserMinus style={{ color: BRAND_COLOR }} />}
+        title="Vertrauen entziehen"
+        description="Entziehe einem Nutzer den vertrauten Zugang zu deinem Kanal."
+        href="/control-channel/untrust"
+    />
+
+    <Card
+        icon={<UserX style={{ color: BRAND_COLOR }} />}
+        title="Nutzer blockieren"
+        description="Blockiere einen Nutzer, sodass er deinem Kanal nicht beitreten kann."
+        href="/control-channel/block"
+    />
+
+    <Card
+        icon={<UserCheck style={{ color: BRAND_COLOR }} />}
+        title="Nutzer entblockieren"
+        description="Hebe eine Blockierung eines Nutzers auf."
+        href="/control-channel/unblock"
+    />
+
+    <Card
+        icon={<DoorOpen style={{ color: BRAND_COLOR }} />}
+        title="Nutzer kicken"
+        description="Trenne einen Nutzer von deinem Kanal."
+        href="/control-channel/kick"
+    />
+
+    <Card
+        icon={<Mail style={{ color: BRAND_COLOR }} />}
+        title="Nutzer einladen"
+        description="Lade einen Nutzer in deinen Kanal ein."
+        href="/control-channel/invite"
+    />
+
+    <Card
+        icon={<Info style={{ color: BRAND_COLOR }} />}
+        title="Kanal-Info"
+        description="Informationen über deinen Kanal anzeigen."
+        href="/control-channel/info"
+    />
+
+    <Card
+        icon={<Download style={{ color: BRAND_COLOR }} />}
+        title="Kanal beanspruchen"
+        description="Übernimm den Besitz eines Kanals, dessen Inhaber den Kanal verlassen hat."
+        href="/control-channel/claim"
+    />
+
+    <Card
+        icon={<Repeat2 style={{ color: BRAND_COLOR }} />}
+        title="Kanal übertragen"
+        description="Übertrage den Besitz deines Kanals an ein anderes Mitglied."
+        href="/control-channel/transfer"
+    />
+
+    <Card
+        icon={<MessageSquare style={{ color: BRAND_COLOR }} />}
+        title="Status setzen"
+        description="Setze oder entferne eine Statusnachricht für deinen Kanal."
+        href="/control-channel/status"
     />
 </Cards>

@@ -6,7 +6,9 @@
     "quickstart",
     "---FÜR MITGLIEDER---",
     "panel",
+    "mod",
     "control-channel",
+    "session",
     "---FÜR ADMINS---",
     "configure-channel"
   ]

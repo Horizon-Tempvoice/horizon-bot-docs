@@ -1,0 +1,76 @@
+---
+title: Kanal-Moderatoren
+description: Delegiere die Kanalverwaltung an vertrauenswürdige Mitglieder.
+icon: Shield
+---
+
+import {Card, Cards} from "fumadocs-ui/components/card";
+import {PencilLine, Users, DoorOpen, UserX, UserCheck, UserPlus, UserMinus, Mail, Info} from "lucide-react";
+import {BRAND_COLOR} from "@/lib/brand";
+
+Als Kanalbesitzer kannst du Mitglieder zu **Kanal-Moderatoren** befördern. Mods helfen dir dabei, deinen Kanal zu verwalten, und können die meisten Moderationsbefehle genauso nutzen wie du.
+
+Mit `/mod add @nutzer` fügst du einen Moderator hinzu, mit `/mod remove @nutzer` entfernst du ihn wieder.
+
+<Callout title="Hinweis" type="info">
+    Nur der Kanalbesitzer kann Moderatoren hinzufügen oder entfernen. Ein Kanal kann maximal **7** Moderatoren haben.
+</Callout>
+
+## Was Kanalmods können
+
+<Cards>
+    <Card
+        icon={<PencilLine style={{ color: BRAND_COLOR }} />}
+        title="Rename"
+        description="Den Kanal umbenennen."
+        href="/control-channel/name"
+    />
+    <Card
+        icon={<Users style={{ color: BRAND_COLOR }} />}
+        title="User Limit"
+        description="Das Nutzerlimit des Kanals festlegen."
+        href="/control-channel/limit"
+    />
+    <Card
+        icon={<DoorOpen style={{ color: BRAND_COLOR }} />}
+        title="Kick"
+        description="Mitglieder aus dem Kanal trennen."
+        href="/control-channel/kick"
+    />
+    <Card
+        icon={<UserX style={{ color: BRAND_COLOR }} />}
+        title="Block"
+        description="Mitglieder vom Beitreten blockieren."
+        href="/control-channel/block"
+    />
+    <Card
+        icon={<UserCheck style={{ color: BRAND_COLOR }} />}
+        title="Unblock"
+        description="Eine Blockierung aufheben."
+        href="/control-channel/unblock"
+    />
+    <Card
+        icon={<UserPlus style={{ color: BRAND_COLOR }} />}
+        title="Trust"
+        description="Einem Mitglied Zugang zu einem gesperrten oder versteckten Kanal geben."
+        href="/control-channel/trust"
+    />
+    <Card
+        icon={<UserMinus style={{ color: BRAND_COLOR }} />}
+        title="Untrust"
+        description="Vertrauten Zugang eines Mitglieds entziehen."
+        href="/control-channel/untrust"
+    />
+    <Card
+        icon={<Mail style={{ color: BRAND_COLOR }} />}
+        title="Invite"
+        description="Ein Mitglied in den Kanal einladen."
+        href="/control-channel/invite"
+    />
+    <Card
+        icon={<Info style={{ color: BRAND_COLOR }} />}
+        title="Info"
+        description="Kanal-Info anzeigen, inkl. vertrauter und blockierter Mitglieder."
+        href="/control-channel/info"
+    />
+</Cards>

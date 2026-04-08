@@ -4,8 +4,12 @@ icon: Goal
 ---
 
 import {Card, Cards} from "fumadocs-ui/components/card";
-import {PencilLine, Users, EyeOff, Lock} from "lucide-react";
+import {PencilLine, Users, EyeOff, Eye, Lock, LockOpen, UserPlus, UserMinus, UserX, UserCheck, DoorOpen, Mail, Download, Repeat2, MessageSquare, Info} from "lucide-react";
 import {BRAND_COLOR} from "@/lib/brand";
+
+<Callout title="Note" type="info">
+    Server admins can restrict which of these features are available on their server. Some commands may not be available to you depending on the server's configuration.
+</Callout>
 
 <Cards>
     <Card
@@ -30,9 +34,93 @@ import {BRAND_COLOR} from "@/lib/brand";
     />
 
     <Card
+        icon={<Eye style={{ color: BRAND_COLOR }} />}
+        title="Unhide Channel"
+        description="Make your channel visible again."
+        href="/control-channel/unhide"
+    />
+
+    <Card
         icon={<Lock style={{ color: BRAND_COLOR }} />}
         title="Lock Channel"
         description="Prevent new users from joining your channel."
         href="/control-channel/lock"
+    />
+
+    <Card
+        icon={<LockOpen style={{ color: BRAND_COLOR }} />}
+        title="Unlock Channel"
+        description="Allow users to join your channel again."
+        href="/control-channel/unlock"
+    />
+
+    <Card
+        icon={<UserPlus style={{ color: BRAND_COLOR }} />}
+        title="Trust User"
+        description="Grant a user access to your locked or hidden channel."
+        href="/control-channel/trust"
+    />
+
+    <Card
+        icon={<UserMinus style={{ color: BRAND_COLOR }} />}
+        title="Untrust User"
+        description="Remove a user's trusted access from your channel."
+        href="/control-channel/untrust"
+    />
+
+    <Card
+        icon={<UserX style={{ color: BRAND_COLOR }} />}
+        title="Block User"
+        description="Block a user from joining your channel."
+        href="/control-channel/block"
+    />
+
+    <Card
+        icon={<UserCheck style={{ color: BRAND_COLOR }} />}
+        title="Unblock User"
+        description="Remove a block from a user."
+        href="/control-channel/unblock"
+    />
+
+    <Card
+        icon={<DoorOpen style={{ color: BRAND_COLOR }} />}
+        title="Kick User"
+        description="Disconnect a user from your channel."
+        href="/control-channel/kick"
+    />
+
+    <Card
+        icon={<Mail style={{ color: BRAND_COLOR }} />}
+        title="Invite User"
+        description="Invite a user to your channel."
+        href="/control-channel/invite"
+    />
+
+    <Card
+        icon={<Info style={{ color: BRAND_COLOR }} />}
+        title="Channel Info"
+        description="View information about your channel."
+        href="/control-channel/info"
+    />
+
+    <Card
+        icon={<Download style={{ color: BRAND_COLOR }} />}
+        title="Claim Channel"
+        description="Take ownership of a channel whose owner has left."
+        href="/control-channel/claim"
+    />
+
+    <Card
+        icon={<Repeat2 style={{ color: BRAND_COLOR }} />}
+        title="Transfer Channel"
+        description="Transfer ownership of your channel to another member."
+        href="/control-channel/transfer"
+    />
+
+    <Card
+        icon={<MessageSquare style={{ color: BRAND_COLOR }} />}
+        title="Set Status"
+        description="Set or remove a status message for your channel."
+        href="/control-channel/status"
     />
 </Cards>

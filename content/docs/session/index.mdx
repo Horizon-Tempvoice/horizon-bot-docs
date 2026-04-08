@@ -1,0 +1,57 @@
+---
+title: Saved Channels (Sessions)
+icon: Bookmark
+---
+
+import {Card, Cards} from "fumadocs-ui/components/card";
+import {Save, Play, SkipForward, Eye, Trash2, RefreshCw} from "lucide-react";
+import {BRAND_COLOR} from "@/lib/brand";
+
+<ImageWithCaption src="/img/content/session_view_command_en.png" alt="Session View" maxWidth="300px" />
+
+Session profiles let you save your current channel configuration, including name, user limit, lock/hide state, trusted users, blocked users, and moderators, and automatically apply it the next time you create a channel.
+
+You can have up to **3 saved slots**, each with an optional label.
+
+<Callout title="Note" type="info">
+    Server admins can disable the session feature. If the commands below don't work, sessions may not be available on your server.
+</Callout>
+
+<Cards>
+    <Card
+        icon={<Save style={{ color: BRAND_COLOR }} />}
+        title="Save"
+        description="Save your current channel to a slot."
+        href="/session/save"
+    />
+    <Card
+        icon={<Play style={{ color: BRAND_COLOR }} />}
+        title="Activate"
+        description="Set a slot as your active profile for the next channel."
+        href="/session/activate"
+    />
+    <Card
+        icon={<SkipForward style={{ color: BRAND_COLOR }} />}
+        title="Skip"
+        description="Skip your active session once."
+        href="/session/skip"
+    />
+    <Card
+        icon={<Eye style={{ color: BRAND_COLOR }} />}
+        title="Show"
+        description="View all your saved session slots."
+        href="/session/show"
+    />
+    <Card
+        icon={<Trash2 style={{ color: BRAND_COLOR }} />}
+        title="Delete"
+        description="Delete a saved session slot."
+        href="/session/delete"
+    />
+    <Card
+        icon={<RefreshCw style={{ color: BRAND_COLOR }} />}
+        title="Autosave"
+        description="Automatically update your active session when you leave."
+        href="/session/autosave"
+    />
+</Cards>

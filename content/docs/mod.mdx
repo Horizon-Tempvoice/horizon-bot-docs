@@ -1,0 +1,76 @@
+---
+title: Channel Moderators
+description: Delegate channel moderation to trusted members.
+icon: Shield
+---
+
+import {Card, Cards} from "fumadocs-ui/components/card";
+import {PencilLine, Users, DoorOpen, UserX, UserCheck, UserPlus, UserMinus, Mail, Info} from "lucide-react";
+import {BRAND_COLOR} from "@/lib/brand";
+
+As a channel owner, you can promote members to **channel moderators**. Mods can help you manage your channel and use most moderation commands just like you.
+
+Use `/mod add @user` to add a moderator and `/mod remove @user` to remove one.
+
+<Callout title="Note" type="info">
+    Only the channel owner can add or remove moderators. A channel can have a maximum of **7** moderators.
+</Callout>
+
+## What Channel Mods Can Do
+
+<Cards>
+    <Card
+        icon={<PencilLine style={{ color: BRAND_COLOR }} />}
+        title="Rename"
+        description="Rename the channel."
+        href="/control-channel/name"
+    />
+    <Card
+        icon={<Users style={{ color: BRAND_COLOR }} />}
+        title="User Limit"
+        description="Set the user limit of the channel."
+        href="/control-channel/limit"
+    />
+    <Card
+        icon={<DoorOpen style={{ color: BRAND_COLOR }} />}
+        title="Kick"
+        description="Disconnect members from the channel."
+        href="/control-channel/kick"
+    />
+    <Card
+        icon={<UserX style={{ color: BRAND_COLOR }} />}
+        title="Block"
+        description="Block members from joining."
+        href="/control-channel/block"
+    />
+    <Card
+        icon={<UserCheck style={{ color: BRAND_COLOR }} />}
+        title="Unblock"
+        description="Lift a block from a member."
+        href="/control-channel/unblock"
+    />
+    <Card
+        icon={<UserPlus style={{ color: BRAND_COLOR }} />}
+        title="Trust"
+        description="Grant a member access to a locked or hidden channel."
+        href="/control-channel/trust"
+    />
+    <Card
+        icon={<UserMinus style={{ color: BRAND_COLOR }} />}
+        title="Untrust"
+        description="Remove trusted access from a member."
+        href="/control-channel/untrust"
+    />
+    <Card
+        icon={<Mail style={{ color: BRAND_COLOR }} />}
+        title="Invite"
+        description="Invite a member to the channel."
+        href="/control-channel/invite"
+    />
+    <Card
+        icon={<Info style={{ color: BRAND_COLOR }} />}
+        title="Info"
+        description="View channel info including trusted and blocked members."
+        href="/control-channel/info"
+    />
+</Cards>
