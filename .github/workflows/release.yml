@@ -16,6 +16,7 @@ on:
       - 'tsconfig.json'
       - 'postcss.config.mjs'
       - 'eslint.config.mjs'
+      - '.github/workflows/release.yml'
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
