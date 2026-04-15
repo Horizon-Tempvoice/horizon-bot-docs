@@ -47,9 +47,9 @@ jobs:
           cache: 'pnpm'
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
-        env:
-          PNPM_ONLY_BUILT_DEPENDENCIES: esbuild,sharp,unrs-resolver
+        run: |
+          pnpm config set only-built-dependencies-strategy all
+          pnpm install --frozen-lockfile
 
       - name: Lint
         run: pnpm run lint
