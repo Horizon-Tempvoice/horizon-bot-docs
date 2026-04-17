@@ -19,3 +19,20 @@ Moderator permissions are scoped strictly to your channel. They cannot transfer 
 For more information, see [Channel Moderators](/mod).
 
 ---
+
+# In-Channel Log for Members
+
+import Image from "next/image";
+
+Horizon can post automatic log messages directly inside your temporary voice channel, so members always know what's going on without needing any external bot or audit log access.
+
+![In-Channel Log Showcase](/img/content/in_channel_log_showcase.png)
+
+When enabled, Horizon tracks the following events and posts a short message in the channel the moment they happen:
+
+- **Joined** -> A member joined the channel
+- **Left** -> A member left the channel
+- **Claimed** -> Someone claimed ownership after the previous owner left
+- **Transferred** -> The owner transferred the channel to another member
+
+Each event is prefixed with a distinct emoji so the log stays readable at a glance. Server admins can enable or disable the member log per generator and choose exactly which events to track, all from the [Dashboard](https://dashboard.horizon-bot.me).

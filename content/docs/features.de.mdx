@@ -19,3 +19,20 @@ Moderatorenrechte sind strikt auf deinen Kanal beschränkt. Sie können den Kana
 Weitere Informationen findest du unter [Kanal-Moderatoren](/mod).
 
 ---
+
+# In-Channel Log für Mitglieder
+
+import Image from "next/image";
+
+Horizon kann automatische Log-Nachrichten direkt in deinen temporären Sprachkanal posten, sodass Mitglieder immer wissen, was gerade passiert, ganz ohne externen Bot oder Zugriff auf das Audit-Log.
+
+![In-Channel Log Showcase](/img/content/in_channel_log_showcase.png)
+
+Wenn aktiviert, verfolgt Horizon folgende Ereignisse und postet eine kurze Nachricht im Kanal, sobald sie eintreten:
+
+- **Beigetreten** -> Ein Mitglied ist dem Kanal beigetreten
+- **Verlassen** -> Ein Mitglied hat den Kanal verlassen
+- **Beansprucht** -> Jemand hat den Kanal übernommen, nachdem der vorherige Besitzer gegangen ist
+- **Übertragen** -> Der Besitzer hat den Kanal an ein anderes Mitglied übertragen
+
+Jedes Ereignis wird mit einem eigenen Emoji markiert, damit das Log auf einen Blick lesbar bleibt. Server-Admins können den Member-Log pro Generator aktivieren und genau festlegen, welche Ereignisse geloggt werden, alles im [Dashboard](https://dashboard.horizon-bot.me).
