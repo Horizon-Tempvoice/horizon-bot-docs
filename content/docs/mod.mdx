@@ -5,7 +5,7 @@ icon: Shield
 ---
 
 import {Card, Cards} from "fumadocs-ui/components/card";
-import {PencilLine, Users, DoorOpen, UserX, UserCheck, UserPlus, UserMinus, Mail, Info} from "lucide-react";
+import {PencilLine, Users, DoorOpen, UserX, UserCheck, UserPlus, UserMinus, Mail, Info, Activity, Globe} from "lucide-react";
 import {BRAND_COLOR} from "@/lib/brand";
 
 As a channel owner, you can promote members to **channel moderators**. Mods can help you manage your channel and use most moderation commands just like you.
@@ -72,5 +72,17 @@ Use `/mod add @user` to add a moderator and `/mod remove @user` to remove one.
         title="Info"
         description="View channel info including trusted and blocked members."
         href="/control-channel/info"
+    />
+    <Card
+        icon={<Activity style={{ color: BRAND_COLOR }} />}
+        title="Bitrate"
+        description="Adjust the audio bitrate of the channel."
+        href="/control-channel/bitrate"
+    />
+    <Card
+        icon={<Globe style={{ color: BRAND_COLOR }} />}
+        title="Region"
+        description="Set the voice server region of the channel."
+        href="/control-channel/region"
     />
 </Cards>

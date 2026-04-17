@@ -5,7 +5,7 @@ icon: House
 ---
 
 import {Card, Cards} from "fumadocs-ui/components/card";
-import {DownloadCloud, MessageCircle} from "lucide-react";
+import {DownloadCloud, MessageCircle, LayoutDashboard} from "lucide-react";
 import {BRAND_COLOR} from "@/lib/brand";
 import {INVITE_URL, SUPPORT_URL} from "@/lib/constants";
 
@@ -13,7 +13,7 @@ import {INVITE_URL, SUPPORT_URL} from "@/lib/constants";
 
 In this documentation, you'll find everything you need to know about using Horizon to create and manage temporary voice channels in your Discord server. Whether you're new to Horizon or looking to explore advanced features, we've got you covered. Feel free to join our Discord Server if you have any questions or just want to stay up to date with the latest news and updates about Horizon.
 
-<Cards>
+<Cards className="grid-cols-3">
     <Card
         icon={<MessageCircle style={{ color: BRAND_COLOR }} />}
         title="Support Server"
@@ -27,6 +27,14 @@ In this documentation, you'll find everything you need to know about using Horiz
         title="Invite Horizon"
         description="Invite Horizon to your server and start using it right away."
         href={INVITE_URL}
+        external
+    />
+
+    <Card
+        icon={<LayoutDashboard style={{ color: BRAND_COLOR }} />}
+        title="Dashboard"
+        description="Configure Horizon and manage your server settings."
+        href="https://dashboard.horizon-bot.me"
         external
     />
 </Cards>

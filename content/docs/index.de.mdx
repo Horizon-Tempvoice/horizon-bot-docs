@@ -5,7 +5,7 @@ icon: House
 ---
 
 import {Card, Cards} from "fumadocs-ui/components/card";
-import {DownloadCloud, MessageCircle} from "lucide-react";
+import {DownloadCloud, MessageCircle, LayoutDashboard} from "lucide-react";
 import {BRAND_COLOR} from "@/lib/brand";
 import {INVITE_URL, SUPPORT_URL} from "@/lib/constants";
 
@@ -13,7 +13,7 @@ import {INVITE_URL, SUPPORT_URL} from "@/lib/constants";
 
 In dieser Dokumentation findest du alles, was du wissen musst, um Horizon zur Erstellung und Verwaltung von temporären Sprachkanälen in deinem Discord-Server zu nutzen. Egal, ob du neu bei Horizon bist oder fortgeschrittene Funktionen erkunden möchtest, wir sind für dich da. Tritt gerne unserem Discord-Server bei, wenn du Fragen hast oder einfach nur über die neuesten Nachrichten und Updates zu Horizon auf dem Laufenden bleiben möchtest.
 
-<Cards>
+<Cards className="grid-cols-3">
     <Card
         icon={<MessageCircle style={{ color: BRAND_COLOR }} />}
         title="Support-Server"
@@ -25,8 +25,16 @@ In dieser Dokumentation findest du alles, was du wissen musst, um Horizon zur Er
     <Card
         icon={<DownloadCloud style={{ color: BRAND_COLOR }} />}
         title="Horizon einladen"
-        description={`Füge Horizon jetzt zu deinem Server hinzu!`}
+        description="Füge Horizon jetzt zu deinem Server hinzu."
         href={INVITE_URL}
+        external
+    />
+
+    <Card
+        icon={<LayoutDashboard style={{ color: BRAND_COLOR }} />}
+        title="Dashboard"
+        description="Konfiguriere Horizon und verwalte deine Servereinstellungen."
+        href="https://dashboard.horizon-bot.me"
         external
     />
 </Cards>
