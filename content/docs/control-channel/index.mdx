@@ -4,7 +4,7 @@ icon: Goal
 ---
 
 import {Card, Cards} from "fumadocs-ui/components/card";
-import {PencilLine, Users, EyeOff, Eye, Lock, LockOpen, UserPlus, UserMinus, UserX, UserCheck, DoorOpen, Mail, Download, Repeat2, MessageSquare, Info} from "lucide-react";
+import {PencilLine, Users, EyeOff, Eye, Lock, LockOpen, UserPlus, UserMinus, UserX, UserCheck, DoorOpen, Mail, Download, Repeat2, MessageSquare, Info, Activity, Globe} from "lucide-react";
 import {BRAND_COLOR} from "@/lib/brand";
 
 <Callout title="Note" type="info">
@@ -122,5 +122,19 @@ import {BRAND_COLOR} from "@/lib/brand";
         title="Set Status"
         description="Set or remove a status message for your channel."
         href="/control-channel/status"
+    />
+
+    <Card
+        icon={<Activity style={{ color: BRAND_COLOR }} />}
+        title="Channel Bitrate"
+        description="Adjust the audio bitrate of your channel."
+        href="/control-channel/bitrate"
+    />
+
+    <Card
+        icon={<Globe style={{ color: BRAND_COLOR }} />}
+        title="Channel Region"
+        description="Set the voice server region for your channel."
+        href="/control-channel/region"
     />
 </Cards>
