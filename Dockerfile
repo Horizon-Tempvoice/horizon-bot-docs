@@ -9,7 +9,7 @@ RUN yarn install --frozen-lockfile
 
 FROM base AS builder
 WORKDIR /app
-RUN apk add --no-cache git openssh-client
+RUN apk add --no-cache git openssh-client pnpm
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
