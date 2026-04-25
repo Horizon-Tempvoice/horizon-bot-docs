@@ -3,7 +3,7 @@
     "name",
     "limit",
     "hide",
-    "unhide",
+    "show",
     "lock",
     "unlock",
     "trust",
