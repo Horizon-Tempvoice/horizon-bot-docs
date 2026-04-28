@@ -5,12 +5,14 @@
     "index",
     "quickstart",
     "features",
-    "---FOR MEMBERS---",
+    "---CONTROL TEMPORARY CHANNELS---",
     "panel",
     "mod",
     "control-channel",
     "session",
-    "---FOR ADMINS---",
-    "configure-channel"
+    "---CONFIGURE TEMPORARY CHANNELS---",
+    "configure-channel",
+    "---FREQUENTLY ASKED QUESTIONS---",
+    "faq"
   ]
 }
