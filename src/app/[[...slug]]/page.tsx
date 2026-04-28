@@ -10,21 +10,21 @@ import { icons } from 'lucide-react';
 import { findPath } from 'fumadocs-core/page-tree';
 
 export default async function Page(props: {
-  params: Promise<{ lang: string; slug?: string[] }>;
+  params: Promise<{ slug?: string[] }>;
 }) {
-  const { lang, slug } = await props.params;
-  const page = source.getPage(slug, lang);
+  const { slug } = await props.params;
+  const page = source.getPage(slug);
   if (!page) notFound();
 
   const MDX = page.data.body;
 
   const parentPage =
-    page.slugs.length > 1 ? source.getPage([page.slugs[0]], lang) : null;
+    page.slugs.length > 1 ? source.getPage([page.slugs[0]]) : null;
 
   const parentIconName = parentPage?.data.icon as string | undefined;
   const ParentIcon = parentIconName ? icons[parentIconName as keyof typeof icons] : null;
 
-  const tree = source.getPageTree(lang);
+  const tree = source.getPageTree();
   const treePath = findPath(tree.children, (node) => node.type === 'page' && node.url === page.url, { includeSeparator: true });
   const categoryLabel = treePath?.find((n) => n.type === 'separator')?.name ?? null;
 
@@ -34,7 +34,7 @@ export default async function Page(props: {
         <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-widest mb-1">
           {parentPage ? (
             <Link
-              href={`/${lang}/${page.slugs[0]}`}
+              href={`/${page.slugs[0]}`}
               className="inline-flex items-center gap-1.5 text-fd-primary hover:opacity-80 transition-opacity"
             >
               {ParentIcon && <ParentIcon className="size-3.5 shrink-0" />}
@@ -49,7 +49,7 @@ export default async function Page(props: {
       )}
       <DocsTitle>{page.data.title}</DocsTitle>
       <DocsDescription className="mb-0">{page.data.description}</DocsDescription>
-<DocsBody>
+      <DocsBody>
         <MDX
           components={getMDXComponents({
             a: createRelativeLink(source, page),
@@ -59,8 +59,8 @@ export default async function Page(props: {
       <div className="flex flex-row items-center gap-2 mt-8 text-sm text-fd-muted-foreground">
         {page.data.lastModified && (
           <span>
-            {lang === 'de' ? 'Zuletzt aktualisiert am' : 'Last updated at'}{' '}
-            {new Date(page.data.lastModified).toLocaleString(lang, {
+            Last updated at{' '}
+            {new Date(page.data.lastModified).toLocaleString('en', {
               day: '2-digit',
               month: '2-digit',
               year: 'numeric',
@@ -78,7 +78,7 @@ export default async function Page(props: {
               rel="noopener noreferrer"
               className="hover:text-fd-foreground transition-colors"
             >
-                Commit {process.env.NEXT_PUBLIC_GIT_REVISION}
+              Commit {process.env.NEXT_PUBLIC_GIT_REVISION}
             </a>
           </>
         )}
@@ -92,10 +92,10 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata(props: {
-  params: Promise<{ lang: string; slug?: string[] }>;
+  params: Promise<{ slug?: string[] }>;
 }): Promise<Metadata> {
-  const { lang, slug } = await props.params;
-  const page = source.getPage(slug, lang);
+  const { slug } = await props.params;
+  const page = source.getPage(slug);
   if (!page) notFound();
 
   return {

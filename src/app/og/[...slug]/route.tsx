@@ -78,8 +78,7 @@ function OGImage({ title, description, avatarSrc }: { title: string; description
 
 export async function GET(_req: Request, { params }: { params: Promise<{ slug: string[] }> }) {
   const { slug } = await params;
-  const locale = slug[0];
-  const page = source.getPage(slug.slice(1, -1), locale);
+  const page = source.getPage(slug.slice(0, -1));
   if (!page) notFound();
 
   const avatarBuffer = readFileSync(join(process.cwd(), 'public/img/horizon-prod.png'));
@@ -97,7 +96,6 @@ export async function GET(_req: Request, { params }: { params: Promise<{ slug: s
 
 export function generateStaticParams() {
   return source.getPages().map((page) => ({
-    lang: page.locale,
     slug: getPageImage(page).segments,
   }));
 }
