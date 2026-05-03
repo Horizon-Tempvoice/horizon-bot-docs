@@ -34,4 +34,4 @@ jobs:
         run: yarn types:check
 
       - name: Test Build
-        run: pnpm run build
+        run: yarn build
