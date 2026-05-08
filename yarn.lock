@@ -2675,10 +2675,10 @@ fumadocs-mdx@14.3.2:
     vfile "^6.0.3"
     zod "^4.3.6"
 
-fumadocs-ui@16.8.7:
-  version "16.8.7"
-  resolved "https://registry.yarnpkg.com/fumadocs-ui/-/fumadocs-ui-16.8.7.tgz#a9502eef4ab394a14797d623d7bd0548bc94d247"
-  integrity sha512-ICTA2y+R++f8UKF3RL6mT3jCk6l7F5wpfuPV5dc7VRWNGxeFeiEwHdqo6Zb51HTjt1jDc7PQ1/T8I+gwPniU8g==
+fumadocs-ui@16.8.8:
+  version "16.8.8"
+  resolved "https://registry.yarnpkg.com/fumadocs-ui/-/fumadocs-ui-16.8.8.tgz#a85f4c3dac065897c4578598cf6d748e310180b7"
+  integrity sha512-Em1fdtkob9byOqjNEPyDv8R/wVKXfitBnm4Afyvkl4PorMFRRnh6P7t+42ogrcbmoKs1S56AUnKrIERufSHJtw==
   dependencies:
     "@fumadocs/tailwind" "0.0.5"
     "@radix-ui/react-accordion" "^1.2.12"
