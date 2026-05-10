@@ -2682,10 +2682,10 @@ fumadocs-mdx@15.0.2:
     vitefu "^1.1.3"
     zod "^4.4.3"
 
-fumadocs-ui@16.8.8:
-  version "16.8.8"
-  resolved "https://registry.yarnpkg.com/fumadocs-ui/-/fumadocs-ui-16.8.8.tgz#a85f4c3dac065897c4578598cf6d748e310180b7"
-  integrity sha512-Em1fdtkob9byOqjNEPyDv8R/wVKXfitBnm4Afyvkl4PorMFRRnh6P7t+42ogrcbmoKs1S56AUnKrIERufSHJtw==
+fumadocs-ui@16.8.9:
+  version "16.8.9"
+  resolved "https://registry.yarnpkg.com/fumadocs-ui/-/fumadocs-ui-16.8.9.tgz#0099914403429bf9c297a91d9ac7f5dc87a47067"
+  integrity sha512-TvIDt7pGuPYP8I1OkMx1t5k4tTPXkzyZMsv7hBs2EtYqdelYtIywEApP+UuHXGIE+fkqMJ0h+VgNqGT00WKbbQ==
   dependencies:
     "@fumadocs/tailwind" "0.0.5"
     "@radix-ui/react-accordion" "^1.2.12"
