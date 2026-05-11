@@ -5,7 +5,7 @@ import { source } from '@/lib/source';
 import { DocsLayout } from 'fumadocs-ui/layouts/docs';
 import { baseOptions } from '@/lib/layout.shared';
 import React from "react";
-import Script from 'next/script';
+import { Analytics } from '@/components/analytics';
 import type { Metadata } from 'next';
 import { BRAND_COLOR } from '@/lib/brand';
 
@@ -24,8 +24,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={GeistSans.className} suppressHydrationWarning style={{ '--brand-color': BRAND_COLOR } as React.CSSProperties}>
       <body className="flex flex-col min-h-screen">
-        <Script defer src="https://analytics.diamondforge.me/script.js" data-website-id="6e92de1c-42cb-4a3d-8698-3e907c128215" strategy="afterInteractive" />
-        <Script defer src="https://analytics.diamondforge.me/recorder.js" data-website-id="6e92de1c-42cb-4a3d-8698-3e907c128215" data-sample-rate="0.6" data-mask-level="moderate" data-max-duration="900000" strategy="afterInteractive" />
+        <Analytics />
         <RootProvider>
           <DocsLayout
             {...baseOptions}

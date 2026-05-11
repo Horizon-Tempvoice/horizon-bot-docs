@@ -1,0 +1,58 @@
+---
+title: Moderation Log
+description: Track everything that happens inside your temporary channels with a detailed event log.
+---
+
+import { Accordion, Accordions } from 'fumadocs-ui/components/accordion';
+
+The Moderation Log records all significant actions that happen in temporary channels created by a generator. Each event is posted as a formatted message to a channel or webhook of your choice.
+
+<Callout title="Where to find this?" type="info">
+    Open the [Dashboard](https://dashboard.horizon-bot.me), select your server, pick the correct Creator Channel and navigate to the **Feature Tab**.
+</Callout>
+
+![Mod Log](/img/feature-tab-docs/modlog.png)
+
+## What gets logged
+
+<Accordions type="multiple">
+    <Accordion title="Channel">
+        - Channel created and deleted
+        - Channel renamed
+        - User limit changed
+        - Bitrate changed
+        - Region changed
+        - Channel claimed or ownership transferred
+    </Accordion>
+    <Accordion title="Visibility and access">
+        - Channel locked or unlocked
+        - Channel hidden or made visible again
+        - User trusted or untrusted
+        - User blocked or unblocked
+        - User kicked
+        - Invite created
+    </Accordion>
+    <Accordion title="Moderation">
+        - Channel Moderator role added or removed from a user
+    </Accordion>
+    <Accordion title="Sessions">
+        - Session saved, activated or deleted
+        - Autosave toggled
+    </Accordion>
+    <Accordion title="Other">
+        - Channel status set or removed
+        - Looking for members post created
+    </Accordion>
+</Accordions>
+
+## Setup
+
+You can send logs to either a text channel or a Discord webhook.
+
+Pick **Channel** to let Horizon automatically create a webhook in a channel of your choice. Once the webhook is set up successfully, the mode switches to **Webhook** automatically. This is expected behavior.
+
+Pick **Webhook** and paste your own URL to use an existing webhook.
+
+<Callout title="Note" type="info">
+    If the webhook becomes invalid, Horizon removes it automatically to avoid errors.
+</Callout>

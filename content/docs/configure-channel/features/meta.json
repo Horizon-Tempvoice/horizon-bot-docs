@@ -1,5 +1,6 @@
 {
   "pages": [
-    "toggle_features"
+    "toggle_features",
+    "modlog"
   ]
 }
