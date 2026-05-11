@@ -5,10 +5,10 @@ icon: Shield
 ---
 
 import {Card, Cards} from "fumadocs-ui/components/card";
-import {PencilLine, Users, DoorOpen, UserX, UserCheck, UserPlus, UserMinus, Mail, Info, Activity, Globe} from "lucide-react";
+import {PencilLine, Users, DoorOpen, UserX, UserCheck, UserPlus, UserMinus, Mail, Info, Activity, Globe, Lock, Eye, MessageCircle} from "lucide-react";
 import {BRAND_COLOR} from "@/lib/brand";
 
-As a channel owner, you can promote members to **channel moderators**. Mods can help you manage your channel and use most moderation commands just like you.
+As a channel owner, you can promote members to **channel moderators**. Mods can help you manage your channel and use a configurable set of commands on your behalf.
 
 Use `/mod add @user` to add a moderator and `/mod remove @user` to remove one.
 
@@ -16,15 +16,11 @@ Use `/mod add @user` to add a moderator and `/mod remove @user` to remove one.
     Only the channel owner can add or remove moderators. A channel can have a maximum of **7** moderators.
 </Callout>
 
-## What Channel Mods Can Do
+## Default Mod Commands
+
+The following commands are available to channel moderators by default:
 
 <Cards>
-    <Card
-        icon={<PencilLine style={{ color: BRAND_COLOR }} />}
-        title="Rename"
-        description="Rename the channel."
-        href="/control-channel/name"
-    />
     <Card
         icon={<Users style={{ color: BRAND_COLOR }} />}
         title="User Limit"
@@ -68,12 +64,6 @@ Use `/mod add @user` to add a moderator and `/mod remove @user` to remove one.
         href="/control-channel/invite"
     />
     <Card
-        icon={<Info style={{ color: BRAND_COLOR }} />}
-        title="Info"
-        description="View channel info including trusted and blocked members."
-        href="/control-channel/info"
-    />
-    <Card
         icon={<Activity style={{ color: BRAND_COLOR }} />}
         title="Bitrate"
         description="Adjust the audio bitrate of the channel."
@@ -86,3 +76,58 @@ Use `/mod add @user` to add a moderator and `/mod remove @user` to remove one.
         href="/control-channel/region"
     />
 </Cards>
+
+## Opt-In Commands
+
+The following commands are **disabled for mods by default**. They can be enabled by the server admin in the dashboard, or by the channel owner via `/mod permissions` if the server admin allows it:
+
+<Cards>
+    <Card
+        icon={<PencilLine style={{ color: BRAND_COLOR }} />}
+        title="Rename"
+        description="Rename the channel."
+        href="/control-channel/name"
+    />
+    <Card
+        icon={<Lock style={{ color: BRAND_COLOR }} />}
+        title="Lock / Unlock"
+        description="Lock or unlock the channel."
+        href="/control-channel/lock"
+    />
+    <Card
+        icon={<Eye style={{ color: BRAND_COLOR }} />}
+        title="Hide / Show"
+        description="Hide or show the channel."
+        href="/control-channel/hide"
+    />
+    <Card
+        icon={<MessageCircle style={{ color: BRAND_COLOR }} />}
+        title="Status"
+        description="Set or remove the channel status."
+        href="/control-channel/status"
+    />
+</Cards>
+
+## Customizing Permissions Per Channel
+
+Channel owners can use `/mod permissions` to customize which commands their mods are allowed to use. A selection menu will appear with all available permissions. Select the ones you want to grant.
+
+<Callout title="Note" type="info">
+    Depending on the server admin's **Enforce Setting**, channel owners can either only restrict the delegated permissions or freely choose from all available commands.
+</Callout>
+
+## Server Admin Configuration
+
+<Callout title="Where to find this?" type="info">
+    Open the [Dashboard](https://dashboard.horizon-bot.me), select your server, pick the correct Creator Channel and navigate to the **Access Tab**.
+</Callout>
+
+![Channel Mod Configuration](/img/content/channel_mod_config.png)
+
+Server admins can configure moderator behavior per generator in the **Channel Moderators** section of the Access tab.
+
+| Setting | Description |
+|---|---|
+| **Moderator Permissions** | Select which commands are available to channel moderators. Changes apply to all channels created by this generator. |
+| **Enforce Setting** | When enabled, channel owners can only pick from the permissions selected above. When disabled, the selection acts as a default and owners can freely adjust via `/mod permissions`. |
+| **Protect Moderators** | When enabled, channel moderators cannot use mod-level commands (kick, block) against each other. The channel owner is always exempt from this restriction. |
