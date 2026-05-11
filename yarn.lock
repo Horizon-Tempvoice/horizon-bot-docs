@@ -2636,10 +2636,10 @@ framer-motion@^12.38.0:
     motion-utils "^12.36.0"
     tslib "^2.4.0"
 
-fumadocs-core@16.8.9:
-  version "16.8.9"
-  resolved "https://registry.yarnpkg.com/fumadocs-core/-/fumadocs-core-16.8.9.tgz#a59f187d2c2725e2ea3d1336151dac4fb4776120"
-  integrity sha512-kv/P6R6IPGMfNWXj0bWCm5x+XISmPLSISt6LIECS7gMmgEz3uexUFJA0vciW6IzN+K28jca3Xd/Og8Z1LKcT1w==
+fumadocs-core@16.8.10:
+  version "16.8.10"
+  resolved "https://registry.yarnpkg.com/fumadocs-core/-/fumadocs-core-16.8.10.tgz#64b68cf16afd256b1c24c3539898d22f9fa3ad86"
+  integrity sha512-dXSk2tVMAlQQ5NOCwtu2n+2nw0nB6JCYvTKmCCImHJk8ZVy3Y3Y3qDIU9QUScD5Fsa/t3+k5Wce+mPdwqlcGRw==
   dependencies:
     "@orama/orama" "^3.1.18"
     estree-util-value-to-estree "^3.5.0"
