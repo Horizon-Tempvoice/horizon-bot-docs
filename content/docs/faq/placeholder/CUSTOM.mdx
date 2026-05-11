@@ -1,0 +1,21 @@
+---
+title: "{CUSTOM}"
+description: Inserts the name a user has chosen for their channel via the name command.
+---
+
+When a user renames their channel with `/name`, that name is stored and inserted wherever `{CUSTOM}` appears in the template. Everything around it stays fixed, so server admins can enforce a consistent format while still giving users control over part of the name.
+
+For example, with the template `` 🎮・{CUSTOM} ``:
+
+- A user who set their name to ``ranked grind`` gets ``🎮・ranked grind``
+- A user who set their name to ``chill session`` gets ``🎮・chill session``
+
+The ``🎮・`` part cannot be changed by the user, only the custom portion.
+
+<Callout title="No name set yet?" type="info">
+    ``{CUSTOM}`` uses the user's server nickname as a fallback until they set a custom name.
+</Callout>
+
+<Callout title="Change the fallback" type="idea">
+    Click the ``{ }`` button to open the placeholder overview and use the settings gear next to ``{CUSTOM}`` to adjust the default behavior.
+</Callout>
