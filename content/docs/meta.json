@@ -11,7 +11,8 @@
     "control-channel",
     "session",
     "---CONFIGURE TEMPORARY VOICE CHANNELS---",
-    "configure-channel",
+    "configure-channel/overview",
+    "configure-channel/features",
     "configure-channel/placeholder"
   ]
 }
