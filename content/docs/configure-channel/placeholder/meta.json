@@ -1,6 +1,9 @@
 {
 "pages": [
     "CUSTOM",
+    "OWNER_USERNAME",
+    "OWNER_NICK",
+    "OWNER_ID",
     "RANDOM_WORD"
   ]
 }
