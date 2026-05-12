@@ -2659,10 +2659,10 @@ fumadocs-core@16.8.10:
     unist-util-visit "^5.1.0"
     vfile "^6.0.3"
 
-fumadocs-mdx@15.0.3:
-  version "15.0.3"
-  resolved "https://registry.yarnpkg.com/fumadocs-mdx/-/fumadocs-mdx-15.0.3.tgz#ae077cf0e6d8bf403864438356d890d720b33b45"
-  integrity sha512-TxttSMwgBA13jyFAQgNH41tpRXLYMNJuE0nZrafrSEacgu1re4pOVBijCvs7GM6i6Uae5E39FI/Yw8fIBs4P5Q==
+fumadocs-mdx@15.0.4:
+  version "15.0.4"
+  resolved "https://registry.yarnpkg.com/fumadocs-mdx/-/fumadocs-mdx-15.0.4.tgz#aad8a241c1c4d469b2b0feaa4b55eb97e4f71a9d"
+  integrity sha512-swJ7VB9x8fPjVAcH4xMg7qplgm7m6Hy3woB5s/yssBWVPkvET7wGOHoYZ05iW9TDIWruk5vyqwEDrwq3t4PZUw==
   dependencies:
     "@mdx-js/mdx" "^3.1.1"
     "@standard-schema/spec" "^1.1.0"
