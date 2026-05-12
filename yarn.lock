@@ -2659,10 +2659,10 @@ fumadocs-core@16.8.10:
     unist-util-visit "^5.1.0"
     vfile "^6.0.3"
 
-fumadocs-mdx@15.0.2:
-  version "15.0.2"
-  resolved "https://registry.yarnpkg.com/fumadocs-mdx/-/fumadocs-mdx-15.0.2.tgz#8a4b0c363148334e7d9eb83f0748bd9c81b15828"
-  integrity sha512-lM8g8uoAY6MmBkBYNBnhU2phY8RrajttCbqi+tOXrBW620VT9Cd846uJvfQN6vcP5ieBvcsYv3BXIEZq+QCRGw==
+fumadocs-mdx@15.0.3:
+  version "15.0.3"
+  resolved "https://registry.yarnpkg.com/fumadocs-mdx/-/fumadocs-mdx-15.0.3.tgz#ae077cf0e6d8bf403864438356d890d720b33b45"
+  integrity sha512-TxttSMwgBA13jyFAQgNH41tpRXLYMNJuE0nZrafrSEacgu1re4pOVBijCvs7GM6i6Uae5E39FI/Yw8fIBs4P5Q==
   dependencies:
     "@mdx-js/mdx" "^3.1.1"
     "@standard-schema/spec" "^1.1.0"
@@ -2679,7 +2679,6 @@ fumadocs-mdx@15.0.2:
     unist-util-remove-position "^5.0.0"
     unist-util-visit "^5.1.0"
     vfile "^6.0.3"
-    vitefu "^1.1.3"
     zod "^4.4.3"
 
 fumadocs-ui@16.8.9:
@@ -5297,11 +5296,6 @@ vfile@^6.0.0, vfile@^6.0.3:
   dependencies:
     "@types/unist" "^3.0.0"
     vfile-message "^4.0.0"
-
-vitefu@^1.1.3:
-  version "1.1.3"
-  resolved "https://registry.yarnpkg.com/vitefu/-/vitefu-1.1.3.tgz#59b9885b1c200856319d7e9ceb0e99a065430009"
-  integrity sha512-ub4okH7Z5KLjb6hDyjqrGXqWtWvoYdU3IGm/NorpgHncKoLTCfRIbvlhBm7r0YstIaQRYlp4yEbFqDcKSzXSSg==
 
 web-namespaces@^2.0.0:
   version "2.0.1"
