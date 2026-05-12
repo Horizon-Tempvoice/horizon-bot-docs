@@ -2681,10 +2681,10 @@ fumadocs-mdx@15.0.3:
     vfile "^6.0.3"
     zod "^4.4.3"
 
-fumadocs-ui@16.8.9:
-  version "16.8.9"
-  resolved "https://registry.yarnpkg.com/fumadocs-ui/-/fumadocs-ui-16.8.9.tgz#0099914403429bf9c297a91d9ac7f5dc87a47067"
-  integrity sha512-TvIDt7pGuPYP8I1OkMx1t5k4tTPXkzyZMsv7hBs2EtYqdelYtIywEApP+UuHXGIE+fkqMJ0h+VgNqGT00WKbbQ==
+fumadocs-ui@16.8.10:
+  version "16.8.10"
+  resolved "https://registry.yarnpkg.com/fumadocs-ui/-/fumadocs-ui-16.8.10.tgz#a8e6dea9261280ec03006bf6cc722430c0db7ba9"
+  integrity sha512-sw+ZBoNBFRqiKVK7Ig5r0E4TgOhdY/Eq2+rFRTpxN/eq0Bys9OSoIXxLNkUBzaj+YGaXU8jHY4qOsDQgymHVTQ==
   dependencies:
     "@fumadocs/tailwind" "0.0.5"
     "@radix-ui/react-accordion" "^1.2.12"
