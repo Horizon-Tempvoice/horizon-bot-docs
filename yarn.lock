@@ -2681,10 +2681,10 @@ fumadocs-mdx@15.0.4:
     vfile "^6.0.3"
     zod "^4.4.3"
 
-fumadocs-ui@16.8.10:
-  version "16.8.10"
-  resolved "https://registry.yarnpkg.com/fumadocs-ui/-/fumadocs-ui-16.8.10.tgz#a8e6dea9261280ec03006bf6cc722430c0db7ba9"
-  integrity sha512-sw+ZBoNBFRqiKVK7Ig5r0E4TgOhdY/Eq2+rFRTpxN/eq0Bys9OSoIXxLNkUBzaj+YGaXU8jHY4qOsDQgymHVTQ==
+fumadocs-ui@16.8.11:
+  version "16.8.11"
+  resolved "https://registry.yarnpkg.com/fumadocs-ui/-/fumadocs-ui-16.8.11.tgz#f654021a1c3cf7f50e7e4df4a101de6d88209149"
+  integrity sha512-+yQVy1/wPLuw6X7plmz8fiuQu/xJd8pCEApUoUXaB14Ts658GC+1bXuz97yDFslL0uLrA6y2yAaaMdztNlLeeQ==
   dependencies:
     "@fumadocs/tailwind" "0.0.5"
     "@radix-ui/react-accordion" "^1.2.12"
@@ -2705,7 +2705,7 @@ fumadocs-ui@16.8.10:
     rehype-raw "^7.0.0"
     scroll-into-view-if-needed "^3.1.0"
     shiki "^4.0.2"
-    tailwind-merge "^3.5.0"
+    tailwind-merge "^3.6.0"
     unist-util-visit "^5.1.0"
 
 function-bind@^1.1.2:
@@ -5003,7 +5003,7 @@ supports-preserve-symlinks-flag@^1.0.0:
   resolved "https://registry.yarnpkg.com/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz#6eda4bd344a3c94aea376d4cc31bc77311039e09"
   integrity sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==
 
-tailwind-merge@^3.4.1, tailwind-merge@^3.5.0:
+tailwind-merge@^3.4.1, tailwind-merge@^3.6.0:
   version "3.6.0"
   resolved "https://registry.yarnpkg.com/tailwind-merge/-/tailwind-merge-3.6.0.tgz#88d83242d1dd7bc847223f73dcf210dd1f2ee11c"
   integrity sha512-uxL7qAVQriqRQPAyK3pj66VqskWqoZ37PW94jwOTwNfq/z9oyu1V+eqrZqtR2+fCiXdYOZe/Modt8GtvqNzu+w==
