@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@formatjs/intl-localematcher": "^0.8.1",
-    "fumadocs-core": "16.8.10",
+    "fumadocs-core": "16.8.11",
     "fumadocs-mdx": "15.0.4",
     "fumadocs-ui": "16.8.10",
     "geist": "^1.7.0",
