@@ -414,9 +414,9 @@
   integrity sha512-KLi3fan6WnCHmigd9pmEEN8Hid0v4wiFBW576M/d07KMWYecf1CvyMI3n34vCmHT4AoVqG2n702kiHbXjzZX2A==
 
 "@formatjs/intl-localematcher@^0.8.1":
-  version "0.8.7"
-  resolved "https://registry.yarnpkg.com/@formatjs/intl-localematcher/-/intl-localematcher-0.8.7.tgz#86aedef4a8d68eaddf7dbfdc3cbd48779901ae76"
-  integrity sha512-1R/ljfRKG1fUhKG4F0lUmrEKPkr/PlHqbgQ8xeYQYYunXu5/0+vbQeeVgGAgydp13Tq+S1X5Qjn6L90hijXjHg==
+  version "0.8.8"
+  resolved "https://registry.yarnpkg.com/@formatjs/intl-localematcher/-/intl-localematcher-0.8.8.tgz#1de8a06e7964299c67ba6c9efd033f70f79e8612"
+  integrity sha512-pBr2hVKWvkHVnfXegW+53NT9U2uaVQCc+EgzLPCCwXqBA3nvM5fPbK9IcJlNjV+NMKGyZ2F3ZSG78iGdxAAqbA==
   dependencies:
     "@formatjs/fast-memoize" "3.1.5"
 
