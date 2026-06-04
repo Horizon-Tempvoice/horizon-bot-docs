@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@formatjs/intl-localematcher':
         specifier: ^0.8.1
-        version: 0.8.9
+        version: 0.8.10
       fumadocs-core:
         specifier: 16.9.3
         version: 16.9.3(@mdx-js/mdx@3.1.1)(@types/estree-jsx@1.0.5)(@types/hast@3.0.4)(@types/mdast@4.0.4)(@types/react@19.2.15)(lucide-react@1.14.0(react@19.2.5))(next@16.2.6(@babel/core@7.29.0)(react-dom@19.2.5(react@19.2.5))(react@19.2.5))(react-dom@19.2.5(react@19.2.5))(react@19.2.5)(zod@4.4.3)
@@ -364,11 +364,11 @@ packages:
   '@floating-ui/utils@0.2.11':
     resolution: {integrity: sha512-RiB/yIh78pcIxl6lLMG0CgBXAZ2Y0eVHqMPYugu+9U0AeT6YBeiJpf7lbdJNIugFP5SIjwNRgo4DhR1Qxi26Gg==}
 
-  '@formatjs/fast-memoize@3.1.5':
-    resolution: {integrity: sha512-KLi3fan6WnCHmigd9pmEEN8Hid0v4wiFBW576M/d07KMWYecf1CvyMI3n34vCmHT4AoVqG2n702kiHbXjzZX2A==}
+  '@formatjs/fast-memoize@3.1.6':
+    resolution: {integrity: sha512-H5aexk1Le7T9TPmscacZ+1pR6CTa2n1wq+HDVGXhH8TzUlQQpeXzZs91dRtmFHrbeNbjPFPfQujUqm7MHgVoXQ==}
 
-  '@formatjs/intl-localematcher@0.8.9':
-    resolution: {integrity: sha512-GmB0F/gYh4Hdl4rLWjgDsgT+x4pB54fkJeRh8kAZ4XFzKeCK8dGs+SBJWXO42QZtOUni+IDWKNuCw6wiL4lTvw==}
+  '@formatjs/intl-localematcher@0.8.10':
+    resolution: {integrity: sha512-P/IC3qws3jH+1fEs+o0RIFgXKRaQlFehjS5W0FPAqdo6hgzawLl+eD0q0JjheQ3XtoOe5n8WSYfX06KQZI/QJA==}
 
   '@fumadocs/tailwind@0.0.5':
     resolution: {integrity: sha512-ENKPWUDRmriccsrUDE4bDBq3FNr/ms3BP2rWlsAEMV1yP23pcCaan+ceGfeBUsAQjw7sj9Q3R4Kl3g/TCStPzQ==}
@@ -3548,11 +3548,11 @@ snapshots:
 
   '@floating-ui/utils@0.2.11': {}
 
-  '@formatjs/fast-memoize@3.1.5': {}
+  '@formatjs/fast-memoize@3.1.6': {}
 
-  '@formatjs/intl-localematcher@0.8.9':
+  '@formatjs/intl-localematcher@0.8.10':
     dependencies:
-      '@formatjs/fast-memoize': 3.1.5
+      '@formatjs/fast-memoize': 3.1.6
 
   '@fumadocs/tailwind@0.0.5(@tailwindcss/oxide@4.3.0)(tailwindcss@4.3.0)':
     optionalDependencies:
