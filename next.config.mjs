@@ -14,6 +14,8 @@ try {
 const config = {
   reactStrictMode: true,
   output: 'standalone',
+  // Served under horizon-bot.me/docs. Keep in sync with BASE_PATH in src/lib/base.ts.
+  basePath: '/docs',
   allowedDevOrigins: ['192.168.1.26', '127.0.0.1'],
   env: {
     NEXT_PUBLIC_GIT_REVISION: revision,

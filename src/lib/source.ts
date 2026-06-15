@@ -13,6 +13,9 @@ export function getPageImage(page: InferPageType<typeof source>) {
   const segments = [...page.slugs, 'image.png'];
 
   return {
+    // Path relative to the docs root. It is consumed as Open Graph metadata,
+    // which Next resolves against `metadataBase` (already includes /docs), so
+    // this must NOT be basePath-prefixed or it would double up.
     segments,
     url: `/og/${segments.join('/')}`,
   };

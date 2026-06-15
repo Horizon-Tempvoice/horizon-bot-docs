@@ -1,4 +1,5 @@
 import type { BaseLayoutProps } from 'fumadocs-ui/layouts/shared';
+import { withBase } from '@/lib/base';
 
 export const gitConfig = {
   user: 'horizon-tempvoice',
@@ -12,7 +13,7 @@ export const baseOptions: BaseLayoutProps = {
       <>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="/img/horizon-prod.png"
+          src={withBase('/img/horizon-prod.png')}
           alt="Horizon"
           width={24}
           height={24}

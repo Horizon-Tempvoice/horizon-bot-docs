@@ -1,0 +1,12 @@
+apiVersion: traefik.io/v1alpha1
+kind: Middleware
+metadata:
+  name: docs-redirect
+  namespace: horizon-bot
+spec:
+  # The docs now live under horizon-bot.me/docs. Permanently redirect every
+  # request on the old subdomain to the matching path under the new sub-path.
+  redirectRegex:
+    regex: "^https?://docs\\.horizon-bot\\.me/(.*)"
+    replacement: "https://horizon-bot.me/docs/${1}"
+    permanent: true

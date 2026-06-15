@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { DocsImage as Image } from "@/components/DocsImage";
 import type { ReactNode } from "react";
 
 interface ImageWithCaptionProps {
