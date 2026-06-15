@@ -27,13 +27,14 @@ spec:
             memory: 256Mi
         livenessProbe:
           httpGet:
-            path: /
+            # App is served under basePath /docs, so "/" returns 404.
+            path: /docs
             port: 3000
           initialDelaySeconds: 30
           periodSeconds: 15
         readinessProbe:
           httpGet:
-            path: /
+            path: /docs
             port: 3000
           initialDelaySeconds: 10
           periodSeconds: 10

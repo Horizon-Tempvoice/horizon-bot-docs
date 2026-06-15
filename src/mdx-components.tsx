@@ -7,9 +7,6 @@ import { withBase } from '@/lib/base';
 
 const DefaultImage = defaultMdxComponents.img!;
 
-// Markdown images reference public assets by app-absolute path (/img/...),
-// which is not basePath-prefixed automatically. Prefix string srcs, then defer
-// to the fumadocs default image (keeps zoom/styling).
 function Image(props: ComponentProps<typeof DefaultImage>) {
   const { src } = props;
   return <DefaultImage {...props} src={typeof src === 'string' ? withBase(src) : src} />;

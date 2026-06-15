@@ -8,6 +8,7 @@ import { gitConfig } from '@/lib/layout.shared';
 import Link from 'next/link';
 import { icons } from 'lucide-react';
 import { findPath } from 'fumadocs-core/page-tree';
+import { DOCS_URL, SITE_URL } from '@/lib/base';
 
 export default async function Page(props: {
   params: Promise<{ slug?: string[] }>;
@@ -28,8 +29,54 @@ export default async function Page(props: {
   const treePath = findPath(tree.children, (node) => node.type === 'page' && node.url === page.url, { includeSeparator: true });
   const categoryLabel = treePath?.find((n) => n.type === 'separator')?.name ?? null;
 
+  const pageUrl = `${DOCS_URL}${page.url === '/' ? '' : page.url}`;
+  const crumbs: { name: string; url: string }[] = [
+    { name: 'Home', url: `${SITE_URL}/` },
+    { name: 'Docs', url: DOCS_URL },
+  ];
+  if (page.url !== '/') {
+    if (parentPage) {
+      crumbs.push({ name: parentPage.data.title, url: `${DOCS_URL}${parentPage.url}` });
+    }
+    crumbs.push({ name: page.data.title, url: pageUrl });
+  }
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: crumbs.map((c, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: c.name,
+      item: c.url,
+    })),
+  };
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'TechArticle',
+    headline: page.data.title,
+    description: page.data.description,
+    inLanguage: 'en',
+    url: pageUrl,
+    mainEntityOfPage: pageUrl,
+    image: `${DOCS_URL}${getPageImage(page).url}`,
+    ...(page.data.lastModified
+      ? { dateModified: new Date(page.data.lastModified).toISOString() }
+      : {}),
+    author: { '@type': 'Organization', name: 'Diamondforge Labs', url: SITE_URL },
+    publisher: { '@type': 'Organization', name: 'Diamondforge Labs', url: SITE_URL },
+  };
+
   return (
-    <DocsPage toc={page.data.toc} full={page.data.full} breadcrumb={{ enabled: false }}>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <DocsPage toc={page.data.toc} full={page.data.full} breadcrumb={{ enabled: false }}>
       {(parentPage || categoryLabel) && (
         <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-widest mb-1">
           {parentPage ? (
@@ -83,7 +130,8 @@ export default async function Page(props: {
           </>
         )}
       </div>
-    </DocsPage>
+      </DocsPage>
+    </>
   );
 }
 
@@ -101,6 +149,9 @@ export async function generateMetadata(props: {
   return {
     title: page.data.title,
     description: page.data.description,
+    alternates: {
+      canonical: `${DOCS_URL}${page.url === '/' ? '' : page.url}`,
+    },
     openGraph: {
       images: getPageImage(page).url,
     },
