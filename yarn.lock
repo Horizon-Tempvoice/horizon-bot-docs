@@ -2686,10 +2686,10 @@ fumadocs-mdx@15.0.12:
     vfile "^6.0.3"
     zod "^4.4.3"
 
-fumadocs-ui@16.10.2:
-  version "16.10.2"
-  resolved "https://registry.yarnpkg.com/fumadocs-ui/-/fumadocs-ui-16.10.2.tgz#7d36d95e5faa0919acc0ee4df61634e5a0165415"
-  integrity sha512-l8fYpahaLVA73XUktsjTdq6iwG6V0/UGAnN1uuCeVuV4ea/8RDduOo9CcMM62SCup0EnT1zEAk+FGFCdKQ4BhQ==
+fumadocs-ui@16.10.3:
+  version "16.10.3"
+  resolved "https://registry.yarnpkg.com/fumadocs-ui/-/fumadocs-ui-16.10.3.tgz#ae7c5dc72c744f06655730b3274fb8bfdcbe036e"
+  integrity sha512-0aSLdQ73EWoCmYcQYr2uNHlSB/s2fD+NMugtdZF3vC4lqs0MfyOtwnZPyYAskUnXNs6HECly/Hu6oY5JqmlkHg==
   dependencies:
     "@fuma-translate/react" "^1.0.2"
     "@fumadocs/tailwind" "0.0.5"
