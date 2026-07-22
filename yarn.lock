@@ -2728,10 +2728,10 @@ framer-motion@^12.42.2:
     motion-utils "^12.39.0"
     tslib "^2.4.0"
 
-fumadocs-core@16.11.5:
-  version "16.11.5"
-  resolved "https://registry.yarnpkg.com/fumadocs-core/-/fumadocs-core-16.11.5.tgz#155bac74c4472ba05a82d3582967205ff562fa5a"
-  integrity sha512-YrHjS09+QYYKOSTGyiZbxF/VDs7ciMcjurYBGfmYqtzdj14k7Ho0HX9c6VuvG54YsYHQs5mGWemT1TXm7vDBaA==
+fumadocs-core@16.12.0:
+  version "16.12.0"
+  resolved "https://registry.yarnpkg.com/fumadocs-core/-/fumadocs-core-16.12.0.tgz#38e4fb18525ce0ba365d231d7dd67d217b419c1d"
+  integrity sha512-zWzZg0dwAxwrZkEGUnWRzfQvkIJO+Qr6z5pgW7tkc6J+eWKGd/W0/YFM/kV1lcKZqQYwwNl7wfA2D13F73KNpA==
   dependencies:
     "@orama/orama" "^3.1.18"
     estree-util-value-to-estree "^3.5.0"
@@ -2740,6 +2740,7 @@ fumadocs-core@16.11.5:
     hast-util-to-jsx-runtime "^2.3.6"
     mdast-util-mdx "^3.0.0"
     mdast-util-to-markdown "^2.1.2"
+    npm-to-yarn "3.1.0"
     remark "^15.0.1"
     remark-gfm "^4.0.1"
     remark-rehype "^11.1.2"
@@ -4300,6 +4301,11 @@ node-releases@^2.0.36:
   version "2.0.37"
   resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-2.0.37.tgz#9bd4f10b77ba39c2b9402d4e8399c482a797f671"
   integrity sha512-1h5gKZCF+pO/o3Iqt5Jp7wc9rH3eJJ0+nh/CIoiRwjRxde/hAHyLPXYN4V3CqKAbiZPSeJFSWHmJsbkicta0Eg==
+
+npm-to-yarn@3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/npm-to-yarn/-/npm-to-yarn-3.1.0.tgz#ed6b161b8952cf559121d0fcf59134be949c1f2b"
+  integrity sha512-9gNsO/JB3LeWOZXBX09cKMsCPwVcu1ExIf+GUuTN9G+0zZvLIK0nU9+lE9jue3MSKAxPdrh0rO072mWNvciqeQ==
 
 object-assign@^4.1.1:
   version "4.1.1"
