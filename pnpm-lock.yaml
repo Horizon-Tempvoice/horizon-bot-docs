@@ -15,8 +15,8 @@ importers:
         specifier: 16.13.0
         version: 16.13.0(@mdx-js/mdx@3.1.1(supports-color@7.2.0))(@types/estree-jsx@1.0.5)(@types/hast@3.0.4)(@types/mdast@4.0.4)(@types/react@19.2.17)(lucide-react@1.25.0(react@19.2.7))(next@16.2.12(@babel/core@7.29.0(supports-color@7.2.0))(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(react-dom@19.2.7(react@19.2.7))(react@19.2.7)(supports-color@7.2.0)(zod@4.4.3)
       fumadocs-mdx:
-        specifier: 15.2.0
-        version: 15.2.0(@types/mdast@4.0.4)(@types/mdx@2.0.14)(@types/react@19.2.17)(fumadocs-core@16.13.0(@mdx-js/mdx@3.1.1(supports-color@7.2.0))(@types/estree-jsx@1.0.5)(@types/hast@3.0.4)(@types/mdast@4.0.4)(@types/react@19.2.17)(lucide-react@1.25.0(react@19.2.7))(next@16.2.12(@babel/core@7.29.0(supports-color@7.2.0))(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(react-dom@19.2.7(react@19.2.7))(react@19.2.7)(supports-color@7.2.0)(zod@4.4.3))(next@16.2.12(@babel/core@7.29.0(supports-color@7.2.0))(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(react@19.2.7)(supports-color@7.2.0)
+        specifier: 15.2.1
+        version: 15.2.1(@types/mdast@4.0.4)(@types/mdx@2.0.14)(@types/react@19.2.17)(fumadocs-core@16.13.0(@mdx-js/mdx@3.1.1(supports-color@7.2.0))(@types/estree-jsx@1.0.5)(@types/hast@3.0.4)(@types/mdast@4.0.4)(@types/react@19.2.17)(lucide-react@1.25.0(react@19.2.7))(next@16.2.12(@babel/core@7.29.0(supports-color@7.2.0))(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(react-dom@19.2.7(react@19.2.7))(react@19.2.7)(supports-color@7.2.0)(zod@4.4.3))(next@16.2.12(@babel/core@7.29.0(supports-color@7.2.0))(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(react@19.2.7)(supports-color@7.2.0)
       fumadocs-ui:
         specifier: 16.11.5
         version: 16.11.5(@types/mdx@2.0.14)(@types/react-dom@19.2.3(@types/react@19.2.17))(@types/react@19.2.17)(fumadocs-core@16.13.0(@mdx-js/mdx@3.1.1(supports-color@7.2.0))(@types/estree-jsx@1.0.5)(@types/hast@3.0.4)(@types/mdast@4.0.4)(@types/react@19.2.17)(lucide-react@1.25.0(react@19.2.7))(next@16.2.12(@babel/core@7.29.0(supports-color@7.2.0))(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(react-dom@19.2.7(react@19.2.7))(react@19.2.7)(supports-color@7.2.0)(zod@4.4.3))(next@16.2.12(@babel/core@7.29.0(supports-color@7.2.0))(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(react-dom@19.2.7(react@19.2.7))(react@19.2.7)(tailwindcss@4.3.3)
@@ -1361,72 +1361,69 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@yuku-analyzer/binding-darwin-arm64@0.6.9':
-    resolution: {integrity: sha512-YUQ6g8hb88a02YdX7Q0twl6r7bvz7iL3LJyYh1WMH7VTeD9IP8AcRVB217n3aQUKOrcemComeP9eQv8CqJJXFg==}
+  '@yuku-analyzer/binding-darwin-arm64@0.8.1':
+    resolution: {integrity: sha512-p1LROfS/Fcz+10UFf+uSlVrawlJNdWKHLSH1jOnVdcaa82oaWbehoEdocS6DkYJxcARzG2QpkAGLBrIiMKCRBg==}
     cpu: [arm64]
     os: [darwin]
 
-  '@yuku-analyzer/binding-darwin-x64@0.6.9':
-    resolution: {integrity: sha512-BdnuUlKVCnnoYzShFlckglgM+fRErH+44mW6SPSmMyLeOinWoJ8IHE5VpM2TQeOSUDQKfCY7DaYwjwSl4p+15g==}
+  '@yuku-analyzer/binding-darwin-x64@0.8.1':
+    resolution: {integrity: sha512-do28aZr3eQ0R61f3RiVOF+vvCw6oq7y/FcOU0KVCZOozH8Tr9ervprgAy7KbfWBezRODu5oa/XMdzP26vnstaA==}
     cpu: [x64]
     os: [darwin]
 
-  '@yuku-analyzer/binding-freebsd-x64@0.6.9':
-    resolution: {integrity: sha512-IYLPH1qOxeyTJlmQjMGPPNBHCx1dneM2WyknDIJzV7fhpQxFjAr6mWio7i/OgKmo6Yw1wLyBN0qMe0RIf2B1Qw==}
+  '@yuku-analyzer/binding-freebsd-x64@0.8.1':
+    resolution: {integrity: sha512-9pZxagkj2SOVWs7EF/XArW+1OiY4DHJCxoT/nybYrqNPxrDqk8KmSw3vdkE1GAOp00eaZ256230omoGTm8JdWA==}
     cpu: [x64]
     os: [freebsd]
 
-  '@yuku-analyzer/binding-linux-arm-gnu@0.6.9':
-    resolution: {integrity: sha512-M/FSnkpXcTywV2ZKE8WYrK3uE26NbROLASwFb/aVKtY3UQvs7YMZj68erFVaBnNrPSrwAvJW/iy5E8TRrDA7GQ==}
+  '@yuku-analyzer/binding-linux-arm-gnu@0.8.1':
+    resolution: {integrity: sha512-uvXjAUndqZQIdqOHdWZMj/rwMVYGr44zLIULkfW/7FhIqMWAoC4PxTp94NsX2X3jj4B6RYF0GGO2ChOW8Ge3+Q==}
     cpu: [arm]
     os: [linux]
     libc: [glibc]
 
-  '@yuku-analyzer/binding-linux-arm-musl@0.6.9':
-    resolution: {integrity: sha512-gKWjQcSd8vWtn3/XoK2OIdmQAhZvZeJdNMwlyV8Jj8QbVWnSOUNj1liHXPe2zX1dZ2Ou6YrSb5eAA7D1LMCUsg==}
+  '@yuku-analyzer/binding-linux-arm-musl@0.8.1':
+    resolution: {integrity: sha512-f1dPM/0KCwv02dynHF0dmbW4iL7KfXIypWOCO4lh/VSLwPQYjd6RcI+LmKN6oaVhtELzBFguordipnIWbjpsKg==}
     cpu: [arm]
     os: [linux]
     libc: [musl]
 
-  '@yuku-analyzer/binding-linux-arm64-gnu@0.6.9':
-    resolution: {integrity: sha512-QZR2h7gGCj/TzvExKcpMM/XMSdDdPAxQvQJnVCGWhflaW75ChiFLW/qRKTLiAAQr5UuhBEPp1M0rXqdG5MobSg==}
+  '@yuku-analyzer/binding-linux-arm64-gnu@0.8.1':
+    resolution: {integrity: sha512-NmtkwKscALPIZNlvHAdGMYQ0J9Ss7skKGdlom8ikWPF6L/5dH/TibqLhW7w8BwACCNYTAgKQN6B4uYfomL4fZw==}
     cpu: [arm64]
     os: [linux]
     libc: [glibc]
 
-  '@yuku-analyzer/binding-linux-arm64-musl@0.6.9':
-    resolution: {integrity: sha512-/QQ0QkMLBvA1rqZwxR7swZEMh6q3zTcr2ad8EOrPg4O1ITzAwf/LZA64lD0nJxnpFCT6JUtUkIFnKf97fzl1oQ==}
+  '@yuku-analyzer/binding-linux-arm64-musl@0.8.1':
+    resolution: {integrity: sha512-RGU5VLGYzHqIH0lbHv5qWGEeaDo5Cy5AG4Y3bIO/79nvS4fR2MamHzgRzTYmlgYLZVeK9RfL52hVv5sSfvp4Xg==}
     cpu: [arm64]
     os: [linux]
     libc: [musl]
 
-  '@yuku-analyzer/binding-linux-x64-gnu@0.6.9':
-    resolution: {integrity: sha512-RnjLF0R91Qs0WgQa6iKKbMftKDB8liq9xgDOcOYDdFvEGr/lcikqJTWbL4zqCSzxFIMSaNlFAMejHr/xpghZug==}
+  '@yuku-analyzer/binding-linux-x64-gnu@0.8.1':
+    resolution: {integrity: sha512-274/hhQaj0WV8E88jSWvQFpqllRTtov41uLVwPJvpa4PAfD39VDb61No21v49+jjPwv7xrDOiheVDp9GvIOslg==}
     cpu: [x64]
     os: [linux]
     libc: [glibc]
 
-  '@yuku-analyzer/binding-linux-x64-musl@0.6.9':
-    resolution: {integrity: sha512-+6ghBWi3kDxX/uUvFyZA9YxGtsRnWRQ5kQI8SaLonkg0SMo/E8+HdBR9GYPdNVdFbIkrJo/7kJdTrAzLE1MdsA==}
+  '@yuku-analyzer/binding-linux-x64-musl@0.8.1':
+    resolution: {integrity: sha512-ZkYH/op9ykMsJMGuHRGcyHlYvLvhQsTbiCClqzyu847mFukJvFP6COG8Lfq3929oBrcPwoulwuYqMUO5Jubpkw==}
     cpu: [x64]
     os: [linux]
     libc: [musl]
 
-  '@yuku-analyzer/binding-win32-arm64@0.6.9':
-    resolution: {integrity: sha512-tSs/1uEKQBa3w/VA2tjtE6CL8iOLIuBtCia9r/Z5mftFrULUgT190YxhcDAtsctXHz1YzmFSPgVMEY48tDcCMw==}
+  '@yuku-analyzer/binding-win32-arm64@0.8.1':
+    resolution: {integrity: sha512-jXlKxJdrX9lsNSIoLgxZ9m0wqqPUWc+KoPxltbZKXhJNCj5hQBQCBgwOkn+QXNDPxFbEi3tlMOpiOvKXQ0S1DQ==}
     cpu: [arm64]
     os: [win32]
 
-  '@yuku-analyzer/binding-win32-x64@0.6.9':
-    resolution: {integrity: sha512-RKp8AYU14Q6EbM4kWjYcfgRIno0wnXptSUlT38tOwZ/TC9AueYgLzRp9ZjiSi5Or8lmsdhb3Kpfq4RFtysAfUw==}
+  '@yuku-analyzer/binding-win32-x64@0.8.1':
+    resolution: {integrity: sha512-IyyYuVmFRYB/w5iTQ3QurgjQPLh3jUNMeWnE4o3Y4FKAUDWiQAEs9J5iNpBeM1f8SrX8Dy4vJwV7E/5enkL84A==}
     cpu: [x64]
     os: [win32]
 
-  '@yuku-toolchain/types@0.6.5':
-    resolution: {integrity: sha512-5tlku9eQVfNkHMLsxmEFibisbLJCfU47sYQX8SjL0SD3dnKKTYmjn5z66zzXoRNVRLfOgfoCq9Jp7f8k0hV71w==}
-
-  '@yuku-toolchain/types@0.6.8':
-    resolution: {integrity: sha512-AbUd1775RVkOxJkh8hkldIWoU6kRMTCsZFSZq8Ny53q7GkbaVe5UCfleNZ3RWCoz/ZKE8qwfeB7Cj0xqhLWsKA==}
+  '@yuku-toolchain/types@0.8.1':
+    resolution: {integrity: sha512-HcGEV3kOn9evBTm2ARYOFNKAI7sY9twQozCVd9EVdlsBlnKi0a2iv8xXxYVHFCBQpX3SvvPXBhk8lcK6NUTdNg==}
 
   acorn-jsx@5.3.2:
     resolution: {integrity: sha512-rq9s+JNhf0IChjtDXxllJ7g41oZk5SlXtp0LHwyA5cejwn7vKmKp4pPri6YEePv2PU65sAsegbXtIinmDFDXgQ==}
@@ -2026,8 +2023,8 @@ packages:
       zod:
         optional: true
 
-  fumadocs-mdx@15.2.0:
-    resolution: {integrity: sha512-+yBP8QYw5wA9LF5eVdMhwbP7KT1OF4B/YfC6PZoD2jz0amZi1B+6QHTI6XoRRSTmhWrI4cL5LU1DspW0itk+NA==}
+  fumadocs-mdx@15.2.1:
+    resolution: {integrity: sha512-lyx35MAFAj9yuLPudNoRGGvauZlT1xRLLw17P0jnvhXikrJNC8mAeg/4WIity5K+3V6ZetBQ2PYIcnli450vMg==}
     hasBin: true
     peerDependencies:
       '@fumadocs/satteri': 0.x.x
@@ -2520,6 +2517,9 @@ packages:
 
   magic-string@0.30.21:
     resolution: {integrity: sha512-vd2F4YUyEXKGcLHoq+TEyCjxueSeHnFxyyjNp80yg0XV4vUhnDer/lvvlqM/arB5bXQN5K2/3oinyCRyx8T2CQ==}
+
+  magic-string@1.1.0:
+    resolution: {integrity: sha512-kS3VHe0nEPST2saQV4Rbkchcd3UBRkVTQHo1D3h/ZTwFDhai/mfKkmtPAtD129EOI7K3HlHIsFOt0WrI2/oU9g==}
 
   markdown-extensions@2.0.0:
     resolution: {integrity: sha512-o5vL7aDWatOTX8LzaS1WMoaoxIiLRQJuIKKe2wAw6IeULDHaqbiqiggmx+pKvZDb1Sj+pE46Sn1T7lCqfFtg1Q==}
@@ -3359,11 +3359,11 @@ packages:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
 
-  yuku-analyzer@0.6.9:
-    resolution: {integrity: sha512-c4kLCaZF43zSpFqIrw/u3/h+RmxRt9IRbWZLl6Xt8aMOS+6DbqIpPdf3v8McdPOcQvWGsrcRnu6A5jrR71u8aw==}
+  yuku-analyzer@0.8.1:
+    resolution: {integrity: sha512-pe8fmP1Fv0MJh+3+i0EXWzdD2isTzUwJVQc0vmL6mTIcWypo+l0zRiNzwDruO2uZ38kvJ7/CQMhBm5hLuaYWkw==}
 
-  yuku-ast@0.6.8:
-    resolution: {integrity: sha512-ulnCbZzujU3NHT530l7Qe0eXRl/q3AgL3dA++6RtrOmALKm2NLlCMdh2EfOz9tLeoqz9IRSVoQ+sPNOkFEfXew==}
+  yuku-ast@0.8.1:
+    resolution: {integrity: sha512-+k1E2f08y0k1+vpdD1KUCzDh2JXvwirMa8YR2Jr7VCS4zAo3eT5A/HbJCqaVGd6idaPY0gwLM9C4seEY4h10Hw==}
 
   zod-validation-error@4.0.2:
     resolution: {integrity: sha512-Q6/nZLe6jxuU80qb/4uJ4t5v2VEZ44lzQjPDhYJNztRQ4wyWc6VF3D3Kb/fAuPetZQnhS3hnajCf9CsWesghLQ==}
@@ -4535,42 +4535,40 @@ snapshots:
   '@unrs/resolver-binding-win32-x64-msvc@1.11.1':
     optional: true
 
-  '@yuku-analyzer/binding-darwin-arm64@0.6.9':
+  '@yuku-analyzer/binding-darwin-arm64@0.8.1':
     optional: true
 
-  '@yuku-analyzer/binding-darwin-x64@0.6.9':
+  '@yuku-analyzer/binding-darwin-x64@0.8.1':
     optional: true
 
-  '@yuku-analyzer/binding-freebsd-x64@0.6.9':
+  '@yuku-analyzer/binding-freebsd-x64@0.8.1':
     optional: true
 
-  '@yuku-analyzer/binding-linux-arm-gnu@0.6.9':
+  '@yuku-analyzer/binding-linux-arm-gnu@0.8.1':
     optional: true
 
-  '@yuku-analyzer/binding-linux-arm-musl@0.6.9':
+  '@yuku-analyzer/binding-linux-arm-musl@0.8.1':
     optional: true
 
-  '@yuku-analyzer/binding-linux-arm64-gnu@0.6.9':
+  '@yuku-analyzer/binding-linux-arm64-gnu@0.8.1':
     optional: true
 
-  '@yuku-analyzer/binding-linux-arm64-musl@0.6.9':
+  '@yuku-analyzer/binding-linux-arm64-musl@0.8.1':
     optional: true
 
-  '@yuku-analyzer/binding-linux-x64-gnu@0.6.9':
+  '@yuku-analyzer/binding-linux-x64-gnu@0.8.1':
     optional: true
 
-  '@yuku-analyzer/binding-linux-x64-musl@0.6.9':
+  '@yuku-analyzer/binding-linux-x64-musl@0.8.1':
     optional: true
 
-  '@yuku-analyzer/binding-win32-arm64@0.6.9':
+  '@yuku-analyzer/binding-win32-arm64@0.8.1':
     optional: true
 
-  '@yuku-analyzer/binding-win32-x64@0.6.9':
+  '@yuku-analyzer/binding-win32-x64@0.8.1':
     optional: true
 
-  '@yuku-toolchain/types@0.6.5': {}
-
-  '@yuku-toolchain/types@0.6.8': {}
+  '@yuku-toolchain/types@0.8.1': {}
 
   acorn-jsx@5.3.2(acorn@8.17.0):
     dependencies:
@@ -5343,7 +5341,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  fumadocs-mdx@15.2.0(@types/mdast@4.0.4)(@types/mdx@2.0.14)(@types/react@19.2.17)(fumadocs-core@16.13.0(@mdx-js/mdx@3.1.1(supports-color@7.2.0))(@types/estree-jsx@1.0.5)(@types/hast@3.0.4)(@types/mdast@4.0.4)(@types/react@19.2.17)(lucide-react@1.25.0(react@19.2.7))(next@16.2.12(@babel/core@7.29.0(supports-color@7.2.0))(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(react-dom@19.2.7(react@19.2.7))(react@19.2.7)(supports-color@7.2.0)(zod@4.4.3))(next@16.2.12(@babel/core@7.29.0(supports-color@7.2.0))(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(react@19.2.7)(supports-color@7.2.0):
+  fumadocs-mdx@15.2.1(@types/mdast@4.0.4)(@types/mdx@2.0.14)(@types/react@19.2.17)(fumadocs-core@16.13.0(@mdx-js/mdx@3.1.1(supports-color@7.2.0))(@types/estree-jsx@1.0.5)(@types/hast@3.0.4)(@types/mdast@4.0.4)(@types/react@19.2.17)(lucide-react@1.25.0(react@19.2.7))(next@16.2.12(@babel/core@7.29.0(supports-color@7.2.0))(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(react-dom@19.2.7(react@19.2.7))(react@19.2.7)(supports-color@7.2.0)(zod@4.4.3))(next@16.2.12(@babel/core@7.29.0(supports-color@7.2.0))(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(react@19.2.7)(supports-color@7.2.0):
     dependencies:
       '@mdx-js/mdx': 3.1.1(supports-color@7.2.0)
       '@standard-schema/spec': 1.1.0
@@ -5352,7 +5350,7 @@ snapshots:
       estree-util-value-to-estree: 3.5.0
       fumadocs-core: 16.13.0(@mdx-js/mdx@3.1.1(supports-color@7.2.0))(@types/estree-jsx@1.0.5)(@types/hast@3.0.4)(@types/mdast@4.0.4)(@types/react@19.2.17)(lucide-react@1.25.0(react@19.2.7))(next@16.2.12(@babel/core@7.29.0(supports-color@7.2.0))(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(react-dom@19.2.7(react@19.2.7))(react@19.2.7)(supports-color@7.2.0)(zod@4.4.3)
       github-slugger: 2.0.0
-      magic-string: 0.30.21
+      magic-string: 1.1.0
       mdast-util-mdx: 3.0.0(supports-color@7.2.0)
       picocolors: 1.1.1
       picomatch: 4.0.5
@@ -5363,7 +5361,7 @@ snapshots:
       unist-util-visit: 5.1.0
       vfile: 6.0.3
       yaml: 2.9.0
-      yuku-analyzer: 0.6.9
+      yuku-analyzer: 0.8.1
       zod: 4.4.3
     optionalDependencies:
       '@types/mdast': 4.0.4
@@ -5893,6 +5891,10 @@ snapshots:
       react: 19.2.7
 
   magic-string@0.30.21:
+    dependencies:
+      '@jridgewell/sourcemap-codec': 1.5.5
+
+  magic-string@1.1.0:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.5.5
 
@@ -7208,26 +7210,26 @@ snapshots:
 
   yocto-queue@0.1.0: {}
 
-  yuku-analyzer@0.6.9:
+  yuku-analyzer@0.8.1:
     dependencies:
-      '@yuku-toolchain/types': 0.6.8
-      yuku-ast: 0.6.8
+      '@yuku-toolchain/types': 0.8.1
+      yuku-ast: 0.8.1
     optionalDependencies:
-      '@yuku-analyzer/binding-darwin-arm64': 0.6.9
-      '@yuku-analyzer/binding-darwin-x64': 0.6.9
-      '@yuku-analyzer/binding-freebsd-x64': 0.6.9
-      '@yuku-analyzer/binding-linux-arm-gnu': 0.6.9
-      '@yuku-analyzer/binding-linux-arm-musl': 0.6.9
-      '@yuku-analyzer/binding-linux-arm64-gnu': 0.6.9
-      '@yuku-analyzer/binding-linux-arm64-musl': 0.6.9
-      '@yuku-analyzer/binding-linux-x64-gnu': 0.6.9
-      '@yuku-analyzer/binding-linux-x64-musl': 0.6.9
-      '@yuku-analyzer/binding-win32-arm64': 0.6.9
-      '@yuku-analyzer/binding-win32-x64': 0.6.9
+      '@yuku-analyzer/binding-darwin-arm64': 0.8.1
+      '@yuku-analyzer/binding-darwin-x64': 0.8.1
+      '@yuku-analyzer/binding-freebsd-x64': 0.8.1
+      '@yuku-analyzer/binding-linux-arm-gnu': 0.8.1
+      '@yuku-analyzer/binding-linux-arm-musl': 0.8.1
+      '@yuku-analyzer/binding-linux-arm64-gnu': 0.8.1
+      '@yuku-analyzer/binding-linux-arm64-musl': 0.8.1
+      '@yuku-analyzer/binding-linux-x64-gnu': 0.8.1
+      '@yuku-analyzer/binding-linux-x64-musl': 0.8.1
+      '@yuku-analyzer/binding-win32-arm64': 0.8.1
+      '@yuku-analyzer/binding-win32-x64': 0.8.1
 
-  yuku-ast@0.6.8:
+  yuku-ast@0.8.1:
     dependencies:
-      '@yuku-toolchain/types': 0.6.5
+      '@yuku-toolchain/types': 0.8.1
 
   zod-validation-error@4.0.2(zod@4.4.3):
     dependencies:
