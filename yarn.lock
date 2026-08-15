@@ -2743,13 +2743,13 @@ for-each@^0.3.3, for-each@^0.3.5:
   dependencies:
     is-callable "^1.2.7"
 
-framer-motion@^12.43.0:
-  version "12.43.0"
-  resolved "https://registry.yarnpkg.com/framer-motion/-/framer-motion-12.43.0.tgz#f7f7f0cf792959ca6a0a7ccd2d55269e68061bc4"
-  integrity sha512-1eaL3RvR/kAlbG7UYcpMptEyzPoENO0c6w7ZnB3/hh2vSAz/6uGAFn6fdoqTBguNstf3MsFhJHsD/0DHiclG+g==
+framer-motion@^13.1.0:
+  version "13.1.0"
+  resolved "https://registry.yarnpkg.com/framer-motion/-/framer-motion-13.1.0.tgz#e9bb655cececea4bd4ceb7cd33311b74b53953e6"
+  integrity sha512-QSZrF0Id3QGuHJ+OL+9PSY9pk86C8ERFalwAGSchzTm65+ZoGH/RM26lmEARLljcHj2lqhv0jZOOks+EI3COOw==
   dependencies:
-    motion-dom "^12.43.0"
-    motion-utils "^12.39.0"
+    motion-dom "^13.0.0"
+    motion-utils "^13.0.0"
     tslib "^2.4.0"
 
 fumadocs-core@16.14.4:
@@ -2802,10 +2802,10 @@ fumadocs-mdx@15.2.3:
     yuku-analyzer "^0.8.3"
     zod "^4.4.3"
 
-fumadocs-ui@16.14.3:
-  version "16.14.3"
-  resolved "https://registry.yarnpkg.com/fumadocs-ui/-/fumadocs-ui-16.14.3.tgz#cd1ccc03e509aed82db90a5cdfae8eded8e2938c"
-  integrity sha512-ASL9BgFxSe6VrbQ60nxVfpnKBPboeADp330JQvyEAqR1U8uw0T1+Vko8ySXRAWbivdZfYK5fZbCh78EOAMTEqw==
+fumadocs-ui@16.14.4:
+  version "16.14.4"
+  resolved "https://registry.yarnpkg.com/fumadocs-ui/-/fumadocs-ui-16.14.4.tgz#db9e551682bc67c0a9219ad02f6aba861a7c37e0"
+  integrity sha512-EW3pRRqQ1G1/4RVTsEhCaJTvXGHCRe92hySyIb5fAecJ6MVO2TNymemqqB5mxmXQGxNSOprtEybrB2mR0yJc8g==
   dependencies:
     "@fuma-translate/react" "^1.0.2"
     "@fumadocs/tailwind" "0.1.1"
@@ -2821,13 +2821,13 @@ fumadocs-ui@16.14.3:
     "@radix-ui/react-tabs" "^1.1.21"
     class-variance-authority "^0.7.1"
     cnfast "^0.1.0"
-    lucide-react "^1.28.0"
-    motion "^12.43.0"
+    lucide-react "^1.31.0"
+    motion "^13.1.0"
     next-themes "^0.4.6"
     react-remove-scroll "^2.7.2"
     rehype-raw "^7.0.0"
     scroll-into-view-if-needed "^3.1.0"
-    shiki "^4.4.1"
+    shiki "^4.4.3"
     unist-util-visit "^5.1.0"
 
 function-bind@^1.1.2:
@@ -3618,7 +3618,7 @@ lru-cache@^5.1.1:
   dependencies:
     yallist "^3.0.2"
 
-lucide-react@^1.0.1, lucide-react@^1.28.0:
+lucide-react@^1.0.1, lucide-react@^1.31.0:
   version "1.31.0"
   resolved "https://registry.yarnpkg.com/lucide-react/-/lucide-react-1.31.0.tgz#1e758f3f86bc0456957d447e6e550b645d96e255"
   integrity sha512-G8u2eEtoHUnUa9f8lbvqDhCiORMnYLdUEo06EEG9MQvHQrInKcX3Pa2TH39MM5qyzRcWETxB0+aOwAPI1g1kEg==
@@ -4242,24 +4242,24 @@ minimist@^1.2.0, minimist@^1.2.6:
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.8.tgz#c1a464e7693302e082a075cee0c057741ac4772c"
   integrity sha512-2yyAR8qBkN3YuheJanUpWC5U3bb5osDywNB8RzDVlDwDHbocAJveqqj1u8+SVD7jkWT4yvsHCpWqqWqAxb0zCA==
 
-motion-dom@^12.43.0:
-  version "12.43.0"
-  resolved "https://registry.yarnpkg.com/motion-dom/-/motion-dom-12.43.0.tgz#65f618a520c4eacf49b6b1bbd023abceff8fb5dd"
-  integrity sha512-azKON4d9S65PEoFUiQTMTgPheEmzf2QngdRc50AKfJp9Q9mmcBVw22c8eMq9k8kxOFHdL7+WZY7N/5F/lwiDag==
+motion-dom@^13.0.0:
+  version "13.0.0"
+  resolved "https://registry.yarnpkg.com/motion-dom/-/motion-dom-13.0.0.tgz#1fbca308aad5140b78fa6414e187d7db10ffdc9e"
+  integrity sha512-Xk+SJas70uMAUIApg+m3lZDShxI3LBFHq7mFGbBKoRXc2PVPDyAKmzN64Bbzt4CZdP/CItTiJxWtn4TA0v53Ng==
   dependencies:
-    motion-utils "^12.39.0"
+    motion-utils "^13.0.0"
 
-motion-utils@^12.39.0:
-  version "12.39.0"
-  resolved "https://registry.yarnpkg.com/motion-utils/-/motion-utils-12.39.0.tgz#e1c66f0e912999804bc5e69b4630c3bc794ef29f"
-  integrity sha512-8nadJAJjTtqRkmRF36FoJTrywK9nnFmnPwnSMyxaOCU7GDjN9RTMJIxx9De8ErM+vpPhMccr/6fo5WciyQLnMQ==
+motion-utils@^13.0.0:
+  version "13.0.0"
+  resolved "https://registry.yarnpkg.com/motion-utils/-/motion-utils-13.0.0.tgz#b2e4dbe21e5488032592f0b0d4e0b7b776466dfa"
+  integrity sha512-7DnN7TmbLcYXcG4RVadXIihWlyuM9afoUww8Y5Agg431kGKiuL2/OMyP4mJ5wLz+pvN3t5ySClLOaVXJ+wekRQ==
 
-motion@^12.43.0:
-  version "12.43.0"
-  resolved "https://registry.yarnpkg.com/motion/-/motion-12.43.0.tgz#6f68b70aeb48045a294617d3673f3a997fea3bd7"
-  integrity sha512-BQgQbSa9Hn3/mtbib0MK53y6JSANa+YKUKlaYnWzAVDH424RYQ5LVpV3pNiWH00BA2z4ojsSdMzqT7g2FQwjuQ==
+motion@^13.1.0:
+  version "13.1.0"
+  resolved "https://registry.yarnpkg.com/motion/-/motion-13.1.0.tgz#497ec9deb07babb69f9d22714483e2d71a4d7f2e"
+  integrity sha512-qtvscq59uCPdWnNW4SdSkrxR+BS/QYsa923bx7ocA+4p+ZGNbbVQwkSnG4aukB81QWjtl3AxX36plxNyZLmHCA==
   dependencies:
-    framer-motion "^12.43.0"
+    framer-motion "^13.1.0"
     tslib "^2.4.0"
 
 ms@^2.1.1, ms@^2.1.3:
@@ -4947,7 +4947,7 @@ shebang-regex@^3.0.0:
   resolved "https://registry.yarnpkg.com/shebang-regex/-/shebang-regex-3.0.0.tgz#ae16f1644d873ecad843b0307b143362d4c42172"
   integrity sha512-7++dFhtcx3353uBaq8DDR4NuxBetBzC7ZQOhmTQInHEd6bSrXdiEyzCvG07Z44UYdLShWUyXt5M/yhz8ekcb1A==
 
-shiki@^4.4.1, shiki@^4.4.3:
+shiki@^4.4.3:
   version "4.4.3"
   resolved "https://registry.yarnpkg.com/shiki/-/shiki-4.4.3.tgz#31fb41c5c82435779a0b5a9b92a3b0377b061e15"
   integrity sha512-Mb/GvXPHBAXdgGIcnfU5L3ldpn1XcxrGkPHwqgRx17/I2XRfqlFKk2vGkHWINn1kdXvzJZeuO3is6I9KLPFm0g==
