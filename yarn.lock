@@ -2807,10 +2807,10 @@ fumadocs-mdx@15.4.0:
     yuku-analyzer "^0.9.1"
     zod "^4.4.3"
 
-fumadocs-ui@16.15.4:
-  version "16.15.4"
-  resolved "https://registry.yarnpkg.com/fumadocs-ui/-/fumadocs-ui-16.15.4.tgz#eca47e0ff10ef79b208266b971b767afccdddb4f"
-  integrity sha512-MWtQyrTEEaxop7z8TPKTuBs3xMqxW32Sr9wBlbiPAm+MxmeOSU+bfRThrOJSAgvpXo99bbx3hxhNij0441pH8g==
+fumadocs-ui@16.15.5:
+  version "16.15.5"
+  resolved "https://registry.yarnpkg.com/fumadocs-ui/-/fumadocs-ui-16.15.5.tgz#6d11148aa02e6c6beaf8e7c8cf526c68cc010500"
+  integrity sha512-nJFeia9HN1/cL/HULUUUaTSHtm0hojc+pLlanOpdQPkcCeFQqpk2Qf7IHj6T5TcT5g62Oo/IgE3uHTigcvWOUg==
   dependencies:
     "@fuma-translate/react" "^1.0.2"
     "@fumadocs/tailwind" "0.1.1"
