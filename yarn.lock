@@ -427,10 +427,10 @@
   resolved "https://registry.yarnpkg.com/@formatjs/fast-memoize/-/fast-memoize-3.1.7.tgz#5f79b3756e4bcb5faee47b3a2f01216e1212c9e4"
   integrity sha512-zXfhLpvA6T7+efdt9JLbBwZ00tT7NsBMDVnDu8rpHeNNv8KfRZAMo2gkG0k9lK/Nzc//3kJ9pImsfuJxk3KhUA==
 
-"@formatjs/intl-localematcher@^0.8.1":
-  version "0.8.13"
-  resolved "https://registry.yarnpkg.com/@formatjs/intl-localematcher/-/intl-localematcher-0.8.13.tgz#e0a47881bba6f9b2d7bddcab7ca4b091ebf22267"
-  integrity sha512-kHEAFOkeJSPNi7c5PaKaRjxcBrJwzzt81ifUu+8uve1EDW/VJl83KsxmqgqNZLzcFEhSliZGvx3+pk/RH0IOmg==
+"@formatjs/intl-localematcher@^0.9.0":
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/@formatjs/intl-localematcher/-/intl-localematcher-0.9.0.tgz#fb3d20c93f29fb32fc313571bc1004fff55f27b4"
+  integrity sha512-Z7TD3ssNry1Av1dVDoq/mzpxGyxqWwU0ClWEo+BB3k0JQTeQvUGmeK9WZGYvlqStS0UqkaKXk3dfjsb6NaHAxw==
   dependencies:
     "@formatjs/fast-memoize" "3.1.7"
 
