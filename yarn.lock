@@ -444,10 +444,10 @@
   resolved "https://registry.yarnpkg.com/@fumadocs/tailwind/-/tailwind-0.1.1.tgz#51d852a760176caee54ebcf53986ada2b6ba6756"
   integrity sha512-BnPe52UxSaG8yKlHMKBxXw8h6GpK5qO55ci6+Qd5JnquTvIw6SpfbC1P+qAi82PuPWv1KZAWY8bxRk4+x9ctXw==
 
-"@fumari/image-size@^0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@fumari/image-size/-/image-size-0.1.0.tgz#ec23d5b2f99f34c339ff00481710e5f29128113b"
-  integrity sha512-x2o9u6P8uKUK15B8XgEoRhR3PgLoLSbQKK6FUCd14JzumEw+e8FXZPelij/dZ4VQVMp4r61VD3DcvSo3aEhLAA==
+"@fumari/image-size@^0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@fumari/image-size/-/image-size-0.1.1.tgz#5a07ea9cc207ba9aa253d371f73cbccd67c9ff46"
+  integrity sha512-iaiV2wyzJ4mW358NX4CX3yGit+WjKYzpaQ+rldK9BjL/5jFpeV6ruWnZVq7MEyMn3Gd0DLi8g/79NZAAQaGscw==
 
 "@humanfs/core@^0.19.2":
   version "0.19.2"
@@ -2764,12 +2764,12 @@ framer-motion@^13.1.1:
     motion-utils "^13.0.0"
     tslib "^2.4.0"
 
-fumadocs-core@16.15.10:
-  version "16.15.10"
-  resolved "https://registry.yarnpkg.com/fumadocs-core/-/fumadocs-core-16.15.10.tgz#70022226d174cc8a18e4c3374981a8ab10ab9bca"
-  integrity sha512-ueuRbYCB3Ay8O+VlnwJTO5XRVqPyOxAWjW1i/AT19TWhIiAZoC05xjamfYiE37UYY2YyyT3wSVc8vB7XfQh9Tw==
+fumadocs-core@16.15.11:
+  version "16.15.11"
+  resolved "https://registry.yarnpkg.com/fumadocs-core/-/fumadocs-core-16.15.11.tgz#97df30b79e5655c5fce3aa7bf5d229bec62b23df"
+  integrity sha512-7pfXOorTguSZz39d4s9KZhTJxlwUJ0mpzwTbkKDQuwfwPyagvFnTCJS3+92VXTu3HW10tShE2o8U2U0DANsNww==
   dependencies:
-    "@fumari/image-size" "^0.1.0"
+    "@fumari/image-size" "^0.1.1"
     estree-util-value-to-estree "^3.5.0"
     github-slugger "^2.0.0"
     hast-util-to-estree "^3.1.3"
