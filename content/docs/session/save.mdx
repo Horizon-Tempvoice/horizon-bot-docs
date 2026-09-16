@@ -6,8 +6,10 @@ icon: Save
 
 Use `/session save [slot] [label]` to save your current channel state. This includes name, user limit, lock/hide state, trusted users, blocked users, and moderators.
 
+If your server doesn't store some of these, the reply lists them.
+
 The optional `label` helps you identify the slot (max. 32 characters).
 
 <Callout title="Note" type="info">
-    You can save up to **3 slots**. Saving to an existing slot overwrites it.
+    You can save up to **3 slots**, or fewer if your server lowered the limit. Saving to an existing slot overwrites it.
 </Callout>

@@ -1,0 +1,76 @@
+---
+title: Profiles
+description: Choose what saved channels remember and where they are loaded.
+---
+
+Members can save their channel as a profile with [`/session save`](/session/save) and get it back the next time they create a channel. As a server admin you decide which parts of a profile Horizon keeps and which Creator Channels load them.
+
+<Callout title="Where to find this?" type="info">
+    Open the [Dashboard](https://dashboard.horizon-bot.me), select your server, pick the correct Creator Channel and navigate to the **Others Tab**. The **Profiles** section has the autosave default. **Configure** opens everything else.
+</Callout>
+
+## Saved and Restored
+
+Every part of a profile has two switches:
+
+| Switch | Applies to | What it does |
+|---|---|---|
+| **Saved** | The whole server | When off, Horizon stops storing this part. Values saved earlier are ignored and get cleared the next time a member saves. |
+| **Restored** | This Creator Channel | When off, channels from this Creator Channel use their own defaults for this part. The saved value stays in the profile and other Creator Channels still apply it. |
+
+Profiles belong to a member on your server, not to a single Creator Channel. A profile saved in one Creator Channel is loaded in all the others. That's why saving is a server-wide choice and restoring is set per Creator Channel.
+
+For example, turn off **Restored** for **Channel name** on your event Creator Channel. Event channels then always use the name template, and members keep their saved names everywhere else.
+
+A part is only restored if its feature is enabled in the [Feature Tab](/configure-channel/features/toggle_features):
+
+| Part | Needs feature |
+|---|---|
+| Channel name | Rename |
+| User limit | Limit |
+| Locked | Lock / Unlock |
+| Hidden | Hide / Unhide |
+| Moderators | Mod |
+| Trusted users | Trust / Untrust |
+| Blocked users | Block / Unblock |
+
+The slot, its label and which slot is active are always stored.
+
+<Callout title="Turning Saved back on" type="warn">
+    Profiles that were not saved again while a part was off still hold the old value, and it is applied again.
+</Callout>
+
+## Max
+
+For **Moderators**, **Trusted users** and **Blocked users** you can limit how many entries a new channel takes over. Leave it empty for no limit.
+
+- Moderators: up to 7, the most recently added ones are kept
+- Blocked users: up to 90, the most recently blocked ones are kept
+- Trusted users: up to 90, taken in the order they were saved
+
+A restored user limit always has to fit the Creator Channel's user limit range. If it doesn't, the channel gets the Creator Channel's default limit instead.
+
+## Slots per member
+
+Applies to the whole server. Members can use 1 to 3 slots, 3 by default.
+
+If you lower the limit, slots above it are kept but not loaded, and they can't be activated. Members can still rename or delete them. Raising the limit makes them usable again.
+
+## Restore only for roles
+
+Applies to this Creator Channel. If you pick roles, only members with at least one of them get their profile applied here. Everyone else gets a fresh channel. Their profiles are still saved, so they get them back once they have the role, which works well as a booster perk.
+
+Leave it empty to restore profiles for everyone.
+
+<Callout title="Note" type="info">
+    A pending [`/session skip`](/session/skip) is kept when a member's profile isn't loaded because of this setting. It applies to their next channel that does load it.
+</Callout>
+
+## Autosave by default
+
+Server-wide default for [`/session autosave`](/session/autosave). Members who turned autosave on or off themselves keep their choice. It only works on Creator Channels with the Session feature enabled.
+
+## What members see
+
+- `/session save` lists the parts your server doesn't store, and says so if this Creator Channel won't load the profile because of the role setting.
+- [`/session show`](/session/show) shows those parts as *not saved on this server* and marks slots above the limit as unavailable.
