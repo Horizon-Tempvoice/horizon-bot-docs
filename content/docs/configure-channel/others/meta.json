@@ -1,5 +1,7 @@
 {
   "pages": [
-    "profiles"
+    "lfm_channel",
+    "profiles",
+    "deletion_delay"
   ]
 }

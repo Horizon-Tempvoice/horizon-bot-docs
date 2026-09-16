@@ -1,0 +1,25 @@
+---
+title: Channel Defaults
+description: Name, user limit, bitrate and position of new temporary channels.
+---
+
+These settings decide what a temporary channel looks like the moment it is created. Owners can change most of it afterwards, as long as the matching feature is enabled in the [Feature Tab](/configure-channel/features/toggle_features).
+
+<Callout title="Where to find this?" type="info">
+    Open the [Dashboard](https://dashboard.horizon-bot.me), select your server, pick the correct Creator Channel and navigate to the **Basics Tab**.
+</Callout>
+
+| Setting | Description |
+|---|---|
+| **Name Template** | The name new channels get, up to 100 characters. You can use [placeholders](/configure-channel/placeholder) like `{OWNER_NICK}`. |
+| **Custom Name Fallback** | Used instead of `{CUSTOM}` while the owner hasn't picked a name yet. See [`{CUSTOM}`](/configure-channel/placeholder/CUSTOM). |
+| **Word List** | The pool for `{RANDOM_WORD}`, up to 50 words. See [`{RANDOM_WORD}`](/configure-channel/placeholder/RANDOM_WORD). |
+| **Default User Limit** | How many members fit into a new channel, 0 to 99. 0 means unlimited. |
+| **Allowed Limit Range** | The smallest and largest limit owners may set with [`/limit`](/control-channel/limit). Outside that range Horizon refuses the change. |
+| **Default Bitrate** | Audio quality of new channels, 8 to 384 kbps. "Highest possible" always uses the best your server boost level allows. |
+| **Bitrate Cap** | The highest bitrate owners may set with [`/bitrate`](/control-channel/bitrate). |
+| **Channel Position** | Where the channel appears: top of the category, bottom of the category, or right below the Creator Channel. |
+
+<Callout title="Note" type="idea">
+    A saved [profile](/configure-channel/others/profiles) can bring back a user limit from an earlier channel. If that limit is outside the allowed range, the channel gets the default user limit instead.
+</Callout>

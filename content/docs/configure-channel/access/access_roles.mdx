@@ -1,0 +1,23 @@
+---
+title: Access Roles
+description: Limit temporary channels to members with certain roles.
+---
+
+With Access Roles you decide which roles may see and join the temporary channels of a Creator Channel. Leave the list empty and every member can use them.
+
+<Callout title="Where to find this?" type="info">
+    Open the [Dashboard](https://dashboard.horizon-bot.me), select your server, pick the correct Creator Channel and navigate to the **Access Tab**.
+</Callout>
+
+Every role in the list gets view and connect on each new channel. As soon as you add at least one role, you can also pick what happens to everyone else:
+
+| Visibility for non-role members | Result |
+|---|---|
+| **Hidden from others** | Members without one of the roles can't see the channel. |
+| **Visible to everyone** | Everyone sees the channel, and [Default Visibility](/configure-channel/basics/visibility) decides whether they can join. |
+
+<Callout title="Note" type="info">
+    Owners still control their own channel. [`/lock`](/control-channel/lock) and [`/hide`](/control-channel/hide) then apply to the access roles, and [`/trust`](/control-channel/trust) or [`/inviteuser`](/control-channel/invite) let single members in even without the role.
+</Callout>
+
+A common use is a verification role. See [Using a verification system?](/faq/verification) for the full setup, including the permissions Horizon needs on the category.

@@ -7,12 +7,14 @@ icon: RefreshCw
 Use `/session autosave [enabled]` to turn autosave on or off. When enabled, your active session slot is automatically updated with your current channel state every time you leave.
 
 <Callout title="Note" type="info">
-    Autosave requires an active session slot. Use `/session activate` first.
+    If you don't have any saved slots yet, autosave creates slot 1 for you. If you already have slots, pick one with `/session activate` first.
 </Callout>
+
+Server admins can turn autosave on by default. If you set it yourself with `/session autosave`, your choice always wins.
 
 <Callout title="When autosave is skipped" type="warn">
     Your channel state will **not** be saved automatically if:
-    - You have no active session slot set
+    - You have saved slots, but none of them is active
     - The server admin has disabled the session feature
     - The channel was transferred to you (you are not the original creator)
     - You claimed the channel from an owner who left

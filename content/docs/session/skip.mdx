@@ -4,4 +4,10 @@ description: Skip your active session profile once.
 icon: SkipForward
 ---
 
-Use `/session skip` to skip your active session for the next channel creation. Your active profile stays set, but the next channel will be created without it, as if no session was active.
+Use `/session skip active:True` to skip your active session for the next channel creation. Your active profile stays set, but the next channel will be created without it, as if no session was active.
+
+Set `permanent:True` to keep skipping until you turn it off again. Use `/session skip active:False` to stop skipping.
+
+<Callout title="Note" type="info">
+    A one-time skip expires after 2 hours if you don't create a channel in that time. `/session show` tells you whether a skip is active.
+</Callout>

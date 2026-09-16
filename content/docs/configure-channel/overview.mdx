@@ -1,4 +1,51 @@
 ---
-title: Articles work in progress
-icon: CircleAlert
+title: Dashboard
+icon: LayoutDashboard
 ---
+
+import {Card, Cards} from "fumadocs-ui/components/card";
+import {Settings2, ToggleRight, KeyRound, SlidersHorizontal, Server} from "lucide-react";
+import {BRAND_COLOR} from "@/lib/brand";
+
+Everything a server admin can change lives in the [Dashboard](https://dashboard.horizon-bot.me). Log in with Discord and pick a server. You only see servers where you have the **Manage Server** permission.
+
+<ImageWithCaption src="/img/content/the_dashboard_main.png" alt="The Horizon Dashboard" maxWidth="600px" />
+
+A server page lists your Creator Channels. Pick one to configure how its temporary channels behave. Every Creator Channel is configured separately, so you can have a strict one and a relaxed one side by side.
+
+<Callout title="Note" type="info">
+    Changes are only sent once you press **Save Changes** in the bar at the bottom. They apply to channels created from then on, not to channels that already exist.
+</Callout>
+
+<Cards>
+    <Card
+        icon={<Settings2 style={{ color: BRAND_COLOR }} />}
+        title="Basics Tab"
+        description="Name, user limit, bitrate, position and visibility."
+        href="/configure-channel/basics"
+    />
+    <Card
+        icon={<ToggleRight style={{ color: BRAND_COLOR }} />}
+        title="Feature Tab"
+        description="Which features owners may use, plus the mod log."
+        href="/configure-channel/features"
+    />
+    <Card
+        icon={<KeyRound style={{ color: BRAND_COLOR }} />}
+        title="Access Tab"
+        description="Access roles, immune roles and channel moderators."
+        href="/configure-channel/access"
+    />
+    <Card
+        icon={<SlidersHorizontal style={{ color: BRAND_COLOR }} />}
+        title="Others Tab"
+        description="Looking for members, profiles and deletion delay."
+        href="/configure-channel/others"
+    />
+    <Card
+        icon={<Server style={{ color: BRAND_COLOR }} />}
+        title="Server Settings"
+        description="Bot language, panel buttons and admin commands."
+        href="/configure-channel/server_settings"
+    />
+</Cards>

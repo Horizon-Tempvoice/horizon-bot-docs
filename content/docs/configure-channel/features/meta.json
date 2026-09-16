@@ -1,6 +1,7 @@
 {
   "pages": [
     "toggle_features",
+    "settings",
     "modlog"
   ]
 }

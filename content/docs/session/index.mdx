@@ -4,7 +4,7 @@ icon: Bookmark
 ---
 
 import {Card, Cards} from "fumadocs-ui/components/card";
-import {Save, Play, SkipForward, Eye, Trash2, RefreshCw} from "lucide-react";
+import {Save, Play, SkipForward, Eye, PencilLine, Trash2, RefreshCw} from "lucide-react";
 import {BRAND_COLOR} from "@/lib/brand";
 
 <ImageWithCaption src="/img/content/session_view_command_en.png" alt="Session View" maxWidth="300px" />
@@ -43,6 +43,12 @@ You can have up to **3 saved slots**, each with an optional label. Your server m
         title="Show"
         description="View all your saved session slots."
         href="/session/show"
+    />
+    <Card
+        icon={<PencilLine style={{ color: BRAND_COLOR }} />}
+        title="Rename"
+        description="Change the label of a saved slot."
+        href="/session/rename"
     />
     <Card
         icon={<Trash2 style={{ color: BRAND_COLOR }} />}

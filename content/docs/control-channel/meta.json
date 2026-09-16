@@ -17,6 +17,7 @@
     "transfer",
     "status",
     "bitrate",
-    "region"
+    "region",
+    "lfm"
   ]
 }

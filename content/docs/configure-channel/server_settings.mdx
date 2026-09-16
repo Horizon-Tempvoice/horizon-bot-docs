@@ -1,0 +1,39 @@
+---
+title: Server Settings
+description: Bot language, panel buttons, generators and admin commands.
+icon: Server
+---
+
+These settings apply to the whole server, not to a single Creator Channel. You find them on the server page in the [Dashboard](https://dashboard.horizon-bot.me), before you pick a Creator Channel.
+
+## Bot Language
+
+Sets the language Horizon answers in on your server. Available are English, German, Spanish and Russian. You can also change it in Discord with `/bot config`.
+
+## Generator Channels
+
+The server page lists every Creator Channel. **Add Generator / Run Setup** creates a new one, either the channel alone or together with a text channel holding the [Horizon Panel](/panel).
+
+<Callout title="Note" type="warn">
+    Removing a generator deletes its configuration and the Discord channel. The category is removed too if it ends up empty. A server can have up to 3 Creator Channels.
+</Callout>
+
+## Panel Configuration
+
+Choose which buttons the [Horizon Panel](/panel) shows and in which order. Drag to reorder, click to turn a button off, up to 15 buttons at a time. **Send Panel** posts it into a text channel of your choice.
+
+<Callout title="Note" type="info">
+    Buttons for features you turned off in the [Feature Tab](/configure-channel/features/toggle_features) don't work, so it's worth removing them here too.
+</Callout>
+
+## Admin commands
+
+Everything above is also reachable from Discord. These commands are limited to admins by default, and you can change who may use them in your server's integration settings.
+
+| Command | Description |
+|---|---|
+| `/setup` | Create a Creator Channel, optionally with a panel channel. See [Quickstart](/quickstart). |
+| `/generator config [channel]` | Configure a Creator Channel inside Discord. The dashboard has more options. |
+| `/bot config` | Change the bot language. |
+| `/panel send [channel]` | Post the panel into a text channel. |
+| `/cleanup` | Remove leftover records of channels that no longer exist on Discord. |

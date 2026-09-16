@@ -1,0 +1,20 @@
+---
+title: Visibility and Permissions
+description: Who can see and join new channels, and which permissions they inherit.
+---
+
+<Callout title="Where to find this?" type="info">
+    Open the [Dashboard](https://dashboard.horizon-bot.me), select your server, pick the correct Creator Channel and navigate to the **Basics Tab**.
+</Callout>
+
+| Setting | Description |
+|---|---|
+| **Default Visibility** | **Public**: everyone can see and join. **Locked**: everyone sees the channel but can't join. **Hidden**: nobody but the owner and members who were let in can see it. Applies to `@everyone`, not to [Access Roles](/configure-channel/access/access_roles). |
+| **Permission Sync** | **From category**: new channels copy the permissions of the category. **From generator**: they copy the permissions of the Creator Channel. **Don't sync**: they start with Horizon's own permissions only. |
+| **Inherit @everyone restrictions** | Keeps the `@everyone` denies of the sync source instead of granting view and connect. Only available with Permission Sync on. |
+
+Owners can still change the visibility of their own channel with [`/lock`](/control-channel/lock), [`/unlock`](/control-channel/unlock), [`/hide`](/control-channel/hide) and [`/show`](/control-channel/show), and a saved [profile](/configure-channel/others/profiles) can bring back the state of an earlier channel.
+
+<Callout title="Hiding channels until members verify" type="info">
+    If your server only shows channels to a verified role, see [Using a verification system?](/faq/verification). It explains both setups and what each of these settings does to the permissions.
+</Callout>
