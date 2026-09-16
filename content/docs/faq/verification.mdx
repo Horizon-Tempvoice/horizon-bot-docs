@@ -1,0 +1,101 @@
+---
+title: Using a verification system?
+description: Keep temporary channels hidden from members who aren't verified yet.
+icon: ShieldCheck
+---
+
+import { Accordion, Accordions } from 'fumadocs-ui/components/accordion';
+
+Many servers hide their voice channels until members get a role, for example `@Verified`. Horizon works with this, you just have to tell it which roles are allowed in.
+
+## Recommended: Access Roles
+
+### 1. Category permissions
+
+In Discord, open the settings of the category your Creator Channel is in and set these permissions:
+
+| Role | View Channel | Connect |
+|---|---|---|
+| `@everyone` | Deny | |
+| Your verified role(s) | Allow | Allow |
+| Horizon | Allow | Allow |
+
+<Callout title="Why Horizon needs its own allow" type="warn">
+    Horizon is part of `@everyone` too, so the deny applies to it as well. Without its own allow, Horizon can't create channels in the category and the member gets a DM listing the missing permissions. If the category denies other permissions for `@everyone`, allow those for Horizon too.
+</Callout>
+
+### 2. Access Tab
+
+Open the [Dashboard](https://dashboard.horizon-bot.me), select your server, pick the Creator Channel and go to the **Access Tab**:
+
+1. Add every verified role under **Access Roles**.
+2. Set **Visibility for non-role members** to **Hidden from others**.
+
+### Result
+
+- Only members with one of the Access Roles can see and join temporary channels.
+- [`/lock`](/control-channel/lock), [`/hide`](/control-channel/hide) and the panel buttons apply to the Access Roles, so owners can still lock verified members out.
+- Members an owner lets in with [`/trust`](/control-channel/trust) or [`/inviteuser`](/control-channel/invite) can join even if they aren't verified. Turn off **Trust / Untrust** and **Invite** in the [Feature Tab](/configure-channel/features/toggle_features) if you don't want that.
+- Immune Roles can always see and join while **Apply permission override to immune roles** is on.
+
+## Alternative: Inherit @everyone restrictions
+
+Use this if your category already allows many roles and you don't want to add them all as Access Roles.
+
+1. Set up the category permissions as above.
+2. In the **Basics Tab**, set **Permission Sync** to **From category**. Use **From generator** if the permissions are set on the Creator Channel instead.
+3. Turn on **Inherit @everyone restrictions**.
+4. Leave **Access Roles** empty.
+
+Every new channel gets the category's role permissions and keeps the `@everyone` deny. Without the toggle, **Default Visibility: Public** gives `@everyone` View Channel and Connect on every new channel, which makes it visible to unverified members.
+
+[`/unlock`](/control-channel/unlock) and [`/show`](/control-channel/show) put `@everyone` back to what the category or Creator Channel says, so an owner can't open a channel to unverified members.
+
+<Callout title="Lock and hide are limited here" type="warn">
+    `/hide` can't hide a channel from members whose role allows View Channel, and `/lock` only keeps them out if their role doesn't allow Connect in the category. If owners should be able to lock or hide their channel from verified members, use Access Roles.
+</Callout>
+
+## What each setting does
+
+### @everyone on a new channel
+
+| Setup | Default Visibility | Inherit off | Inherit on |
+|---|---|---|---|
+| Access Roles with **Hidden from others** | Any | Deny View | Deny View |
+| No Access Roles, or **Visible to everyone** | Public | Allow View and Connect | Nothing added |
+| No Access Roles, or **Visible to everyone** | Locked | Allow View, deny Connect | Deny Connect |
+| No Access Roles, or **Visible to everyone** | Hidden | Deny View and Connect | Deny View and Connect |
+
+With Permission Sync on, the new channel starts with the `@everyone` permissions of the category or Creator Channel, and the values above are applied on top. With **Don't sync**, it starts empty and **Inherit @everyone restrictions** isn't available.
+
+### Settings
+
+| Setting | Tab | Effect |
+|---|---|---|
+| **Access Roles** | Access | Each role gets View Channel and Connect on every new channel, added to its category permissions when syncing from the category. `/lock`, `/hide` and saved [profiles](/configure-channel/others/profiles) change these roles instead of `@everyone`. Default Visibility doesn't apply to them. |
+| **Visibility for non-role members** | Access | **Hidden from others**: `@everyone` can't see the channel. **Visible to everyone**: `@everyone` follows Default Visibility. Only shown while Access Roles are set. |
+| **Default Visibility** | Basics | Applies to `@everyone` only, see the table above. A member's saved profile can replace it with its own locked or hidden state. |
+| **Permission Sync** | Basics | **From category**: copies the category's role and member permissions. **From generator**: copies the Creator Channel's role permissions. Both use the source's `@everyone` permissions as the starting point. **Don't sync**: copies nothing. |
+| **Inherit @everyone restrictions** | Basics | Horizon never gives `@everyone` extra access and only adds denies. `/unlock` and `/show` reset `@everyone` to the source. Needs Permission Sync. |
+| **Immune Roles** | Access | Members with these roles bypass lock, hide and block. With **Apply permission override to immune roles** on, the roles also get View Channel and Connect on every channel. When off, they keep what Permission Sync copied. |
+| **Trust / Untrust**, **Invite** | Features | Gives one member View Channel and Connect, verified or not. |
+| **Block / Unblock** | Features | Denies Connect for one member, and View Channel too while **Block Hides Channel** is on. |
+
+The channel owner always gets View Channel, Connect and Speak, plus the **Additional Owner Permissions** from the Feature Tab. Horizon gives itself View Channel, Connect, Manage Channel and Move Members.
+
+## Troubleshooting
+
+<Accordions type="multiple">
+    <Accordion title="Unverified members can see temporary channels">
+        - No Access Roles are set and **Inherit @everyone restrictions** is off.
+        - **Visibility for non-role members** is **Visible to everyone** and **Inherit @everyone restrictions** is off.
+        - **Permission Sync** is **Don't sync**, so the inherit toggle has no effect.
+        - The channel owner trusted or invited them.
+    </Accordion>
+    <Accordion title="Channels aren't created and members get a DM about missing permissions">
+        Horizon's role has no allow on the category. See [Category permissions](#1-category-permissions).
+    </Accordion>
+    <Accordion title="Owners can't lock or hide their channel from verified members">
+        Add the verified roles as Access Roles instead of relying only on **Inherit @everyone restrictions**.
+    </Accordion>
+</Accordions>

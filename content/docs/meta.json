@@ -13,6 +13,9 @@
     "---CONFIGURE TEMPORARY VOICE CHANNELS---",
     "configure-channel/overview",
     "configure-channel/features",
-    "configure-channel/placeholder"
+    "configure-channel/others",
+    "configure-channel/placeholder",
+    "---FAQ---",
+    "...faq"
   ]
 }
