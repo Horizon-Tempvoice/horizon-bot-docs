@@ -4,6 +4,7 @@
     "activate",
     "skip",
     "show",
+    "rename",
     "delete",
     "autosave"
   ]

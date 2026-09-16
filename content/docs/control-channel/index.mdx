@@ -4,7 +4,7 @@ icon: Goal
 ---
 
 import {Card, Cards} from "fumadocs-ui/components/card";
-import {PencilLine, Users, EyeOff, Eye, Lock, LockOpen, UserPlus, UserMinus, UserX, UserCheck, DoorOpen, Mail, Download, Repeat2, MessageSquare, Info, Activity, Globe} from "lucide-react";
+import {PencilLine, Users, EyeOff, Eye, Lock, LockOpen, UserPlus, UserMinus, UserX, UserCheck, DoorOpen, Mail, Download, Repeat2, MessageSquare, Info, Activity, Globe, Megaphone} from "lucide-react";
 import {BRAND_COLOR} from "@/lib/brand";
 
 <Callout title="Note" type="info">
@@ -136,5 +136,11 @@ import {BRAND_COLOR} from "@/lib/brand";
         title="Channel Region"
         description="Set the voice server region for your channel."
         href="/control-channel/region"
+    />
+    <Card
+        icon={<Megaphone style={{ color: BRAND_COLOR }} />}
+        title="Looking for Members"
+        description="Post an announcement so others can find your channel."
+        href="/control-channel/lfm"
     />
 </Cards>

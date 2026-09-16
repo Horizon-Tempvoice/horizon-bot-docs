@@ -1,0 +1,34 @@
+---
+title: Channel Settings
+description: Age restriction, channel panel, member log and block behaviour.
+---
+
+<Callout title="Where to find this?" type="info">
+    Open the [Dashboard](https://dashboard.horizon-bot.me), select your server, pick the correct Creator Channel and navigate to the **Feature Tab**.
+</Callout>
+
+| Setting | Description |
+|---|---|
+| **Age Restriction** | Marks every temporary channel as NSFW. |
+| **Channel Panel** | Posts the [Horizon Panel](/panel) into the temporary channel right after it was created, so owners don't have to use commands. |
+| **Member Log** | Posts short messages in the channel chat when somebody joins or leaves, claims the channel or hands it over. You pick which of the four events are logged. |
+| **Block Hides Channel** | On by default. Blocked members can't see the channel at all. Turn it off to only keep them from joining. |
+| **Additional Owner Permissions** | Extra Discord permissions the owner gets in their own channel, on top of view, connect and speak. |
+
+## Additional Owner Permissions
+
+By default an owner gets no extra permissions, and Horizon handles everything through its own commands. You usually don't need to change this.
+
+| Permission | What the owner can do |
+|---|---|
+| **Create Invite** | Create Discord invites to the channel. |
+| **Manage Channel** | Rename the channel and change its settings in Discord directly. |
+| **Manage Permissions** | Edit the channel's permission overrides in Discord directly. |
+| **Video / Stream** | Turn on camera and screen share. |
+| **Voice Activity (no PTT)** | Talk without push to talk, even if the server forces it. |
+| **Priority Speaker** | Lower the volume of others while speaking. |
+| **Move Members** | Move members between voice channels. |
+
+<Callout title="Note" type="warn">
+    **Manage Channel** and **Manage Permissions** let the owner change things Horizon otherwise controls, for example the permissions of your access roles.
+</Callout>

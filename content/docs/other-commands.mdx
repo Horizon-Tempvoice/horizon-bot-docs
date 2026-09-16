@@ -1,0 +1,44 @@
+---
+title: Other Commands
+description: Help, command list, invite link, notifications and voting.
+icon: Terminal
+---
+
+These commands work everywhere in a server, you don't have to be in a temporary channel.
+
+## Help
+
+`/help` gives you a short introduction to Horizon with links to the dashboard, this documentation and the support server.
+
+`/commandlist` shows every command you can use. It has a few options:
+
+| Option | Description |
+|---|---|
+| `language` | Show the list in another language. |
+| `ephemeral` | Only admins can turn this off to post the list publicly. |
+| `hide_admin_commands` | Leave out the admin commands. |
+| `hide_support_button` | Leave out the support server button. |
+
+## Invite Horizon
+
+`/invitebot` posts the invite link for Horizon, so you can add it to another server.
+
+## Invite notifications
+
+`/invitenotif` turns the direct messages off that you get when somebody invites you to their channel with [`/inviteuser`](/control-channel/invite). Run it again to turn them back on. This applies to every server.
+
+## Vote
+
+`/vote` shows whether your vote is still valid and where you can vote. Voting keeps Horizon's features free for everyone.
+
+A vote counts for **12 hours**. These features ask for a vote:
+
+- [`/claim`](/control-channel/claim) and the panel's claim button
+- [`/transfer`](/control-channel/transfer) and the panel's transfer button
+- [`/status`](/control-channel/status)
+- [`/lfm`](/control-channel/lfm)
+- `/mod permissions`, see [Channel Moderators](/mod)
+
+<Callout title="Note" type="info">
+    Servers with Extended Access skip this. You can also turn vote reminders on and off in the `/vote` response.
+</Callout>

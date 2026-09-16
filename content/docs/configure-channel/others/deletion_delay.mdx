@@ -1,0 +1,16 @@
+---
+title: Deletion Delay
+description: Keep empty channels alive for a moment before deleting them.
+---
+
+By default a temporary channel is deleted the moment the last member leaves. With a delay, Horizon waits first, which helps when somebody drops out of voice for a second and comes right back.
+
+<Callout title="Where to find this?" type="info">
+    Open the [Dashboard](https://dashboard.horizon-bot.me), select your server, pick the correct Creator Channel and navigate to the **Others Tab**.
+</Callout>
+
+Set a value between 0 and 999 seconds. 0 deletes instantly.
+
+<Callout title="Note" type="info">
+    If somebody joins during the delay, the channel stays and keeps everything, including its owner, name and permissions.
+</Callout>
