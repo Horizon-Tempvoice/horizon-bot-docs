@@ -2769,10 +2769,10 @@ framer-motion@^13.1.1:
     motion-utils "^13.0.0"
     tslib "^2.4.0"
 
-fumadocs-core@16.15.11:
-  version "16.15.11"
-  resolved "https://registry.yarnpkg.com/fumadocs-core/-/fumadocs-core-16.15.11.tgz#97df30b79e5655c5fce3aa7bf5d229bec62b23df"
-  integrity sha512-7pfXOorTguSZz39d4s9KZhTJxlwUJ0mpzwTbkKDQuwfwPyagvFnTCJS3+92VXTu3HW10tShE2o8U2U0DANsNww==
+fumadocs-core@16.15.13:
+  version "16.15.13"
+  resolved "https://registry.yarnpkg.com/fumadocs-core/-/fumadocs-core-16.15.13.tgz#25a9c00a2dfe3bb8ea843be6945cadf19a9097bc"
+  integrity sha512-ze12PWStBn3S7LB6nuTHDoIY9EW66Hs/IQvvHDQHr3IftcKvxDkVWNeKGlnkSkmZvDPyXXkmFghMN/qo/nbicA==
   dependencies:
     "@fumari/image-size" "^0.1.1"
     estree-util-value-to-estree "^3.5.0"
@@ -2791,7 +2791,7 @@ fumadocs-core@16.15.11:
     unified "^11.0.5"
     unist-util-visit "^5.1.0"
     vfile "^6.0.3"
-    yaml "^2.9.0"
+    yaml "^2.9.1"
     zbsearch "^4.0.0"
 
 fumadocs-mdx@15.4.3:
@@ -5543,11 +5543,6 @@ yallist@^3.0.2:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/yallist/-/yallist-3.1.1.tgz#dbb7daf9bfd8bac9ab45ebf602b8cbad0d5d08fd"
   integrity sha512-a4UGQaWPH59mOXUYnAG2ewncQS4i4F43Tv3JoAM+s2VDAmS9NsK8GpDMLrCHPksFT7h3K6TOoUNn2pb7RoXx4g==
-
-yaml@^2.9.0:
-  version "2.9.0"
-  resolved "https://registry.yarnpkg.com/yaml/-/yaml-2.9.0.tgz#78274afd93598a1dfdd6130df6a566defcbf9aa4"
-  integrity sha512-2AvhNX3mb8zd6Zy7INTtSpl1F15HW6Wnqj0srWlkKLcpYl/gMIMJiyuGq2KeI2YFxUPjdlB+3Lc10seMLtL4cA==
 
 yaml@^2.9.1:
   version "2.9.1"
