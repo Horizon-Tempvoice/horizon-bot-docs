@@ -1,0 +1,30 @@
+---
+title: Knock Settings
+description: Configure how members can knock on locked channels created by a generator.
+---
+
+Members can use [`/knock`](/control-channel/knock) to ask the owner of a locked channel to let them in. As a server admin you decide per generator whether knocking is available and how it behaves.
+
+<Callout title="Where to find this?" type="info">
+    Open the [Dashboard](https://dashboard.horizon-bot.me), select your server, pick the correct Creator Channel and navigate to the **Others Tab**.
+</Callout>
+
+## Enable or disable knocking
+
+Knocking is a regular feature and can be turned off in the **Features Tab** like any other. See [Toggle Features](/configure-channel/features/toggle_features). The knock settings in the Others Tab only show up while the feature is enabled.
+
+## Settings
+
+| Setting | Default | Description |
+|---|---|---|
+| **Move accepted members in** | Off | If a member is sitting in another voice channel when their knock is accepted, they are moved into the channel automatically. |
+| **Knock expires after** | 300 seconds | How long a knock can be answered. Afterwards the message changes to "expired" and the buttons are removed. Allowed range: 60 to 900 seconds. |
+| **Cooldown between knocks** | 600 seconds | How long a member has to wait before knocking on the same channel again. Set it to 0 to disable the cooldown. Allowed range: 0 to 3600 seconds. |
+
+## Who can answer knocks
+
+The channel owner can always answer knocks. Channel moderators can answer them if they have the **Answer Knocks** permission, which is enabled by default. You can change this in the **Channel Moderators** section of the **Access Tab**. See [Channel Moderators](/mod).
+
+<Callout title="Moderation Log" type="idea">
+    Sent, accepted and denied knocks show up in the [Moderation Log](/configure-channel/features/modlog).
+</Callout>

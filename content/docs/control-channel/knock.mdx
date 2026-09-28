@@ -1,0 +1,87 @@
+---
+title: Knock
+description: Ask to join a locked channel, and answer knocks on your own channel.
+icon: BellRing
+---
+
+
+Use `/knock #channel` to ask the owner of a **locked** temporary channel to let you in. You can add an optional `reason:` (up to 100 characters) that is shown to the owner, for example *"can I join the movie night?"*.
+
+Horizon posts a message in the channel's text chat that pings the owner and shows two buttons:
+
+<DiscordMessage highlight caption="A pending knock, as the channel owner sees it.">
+    <DiscordContainer>
+        <DiscordText><DiscordMention highlight>@SomeUser</DiscordMention>, <DiscordMention>@Fabi</DiscordMention> is knocking on your channel: _can I join the movie night?_</DiscordText>
+        <DiscordSubtext>Expires <DiscordTime>in 5 minutes</DiscordTime></DiscordSubtext>
+        <DiscordActionRow>
+            <DiscordComponentButton style="success">Let in</DiscordComponentButton>
+            <DiscordComponentButton style="danger">Deny</DiscordComponentButton>
+        </DiscordActionRow>
+    </DiscordContainer>
+</DiscordMessage>
+
+
+- **Let in** gives you access to the channel, the same way [`/trust`](/control-channel/trust) does. You get a DM once you are let in.
+- **Deny** declines your knock. You get a DM that your knock was denied.
+
+If nobody answers in time, the knock expires and the buttons disappear. By default a knock expires after **5 minutes**.
+
+Once the knock is answered or expires, the message is updated and the buttons are removed:
+
+<DiscordMessage edited>
+    <DiscordContainer accent="green">
+        <DiscordText><DiscordMention>@Fabi</DiscordMention> was let in by <DiscordMention>@SomeUser</DiscordMention>.</DiscordText>
+    </DiscordContainer>
+</DiscordMessage>
+
+<DiscordMessage edited>
+    <DiscordContainer accent="red">
+        <DiscordText><DiscordMention>@SomeUser</DiscordMention> denied <DiscordMention>@Fabi</DiscordMention>'s knock.</DiscordText>
+    </DiscordContainer>
+</DiscordMessage>
+
+<DiscordMessage edited>
+    <DiscordContainer accent="grey">
+        <DiscordText><DiscordMention>@Fabi</DiscordMention>'s knock expired, no one responded.</DiscordText>
+    </DiscordContainer>
+</DiscordMessage>
+
+<Callout title="When can I knock?" type="info">
+    Knocking only works on channels that are **locked**. You cannot knock if:
+    - The channel is not locked (just join it directly)
+    - You already have access to the channel
+    - The channel is hidden
+    - You are blocked from the channel
+</Callout>
+
+<Callout title="Cooldown" type="warn">
+    You can only have **one** pending knock per channel. After knocking, you have to wait before you can knock on the same channel again (10 minutes by default). Server admins can change both times.
+</Callout>
+
+## Answering knocks
+
+As the channel owner, click **Let in** or **Deny** directly on the knock message. If you missed a message, use `/knocks` while you are in your channel. It shows all pending knocks with their reason and lets you answer each one from there.
+
+<DiscordMessage ephemeral caption="The /knocks list is only visible to you.">
+    <DiscordContainer>
+        <DiscordHeading>Pending knocks for <DiscordMention>🔊 SomeUser's Channel</DiscordMention></DiscordHeading>
+        <DiscordSeparator />
+        <DiscordText><DiscordMention>@Fabi</DiscordMention> knocked, expires <DiscordTime>in 4 minutes</DiscordTime>: _I got disconnected, can I come back?_</DiscordText>
+        <DiscordActionRow>
+            <DiscordComponentButton style="success">Let in</DiscordComponentButton>
+            <DiscordComponentButton style="danger">Deny</DiscordComponentButton>
+        </DiscordActionRow>
+        <DiscordSeparator />
+        <DiscordText><DiscordMention>@Alex</DiscordMention> knocked, expires <DiscordTime>in 2 minutes</DiscordTime></DiscordText>
+        <DiscordActionRow>
+            <DiscordComponentButton style="success">Let in</DiscordComponentButton>
+            <DiscordComponentButton style="danger">Deny</DiscordComponentButton>
+        </DiscordActionRow>
+    </DiscordContainer>
+</DiscordMessage>
+
+If the server admin enabled **auto-move**, a member you let in is moved into your channel automatically when they are sitting in another voice channel.
+
+<Callout title="Channel Moderators" type="info">
+    Channel moderators can answer knocks too. This is enabled by default for mods that are allowed to use `/trust`, and server admins can change it in the dashboard.
+</Callout>

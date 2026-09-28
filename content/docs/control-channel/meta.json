@@ -8,6 +8,7 @@
     "unlock",
     "trust",
     "untrust",
+    "knock",
     "block",
     "unblock",
     "kick",

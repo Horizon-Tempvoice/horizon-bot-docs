@@ -4,7 +4,7 @@ icon: Goal
 ---
 
 import {Card, Cards} from "fumadocs-ui/components/card";
-import {PencilLine, Users, EyeOff, Eye, Lock, LockOpen, UserPlus, UserMinus, UserX, UserCheck, DoorOpen, Mail, Download, Repeat2, MessageSquare, Info, Activity, Globe, Megaphone} from "lucide-react";
+import {PencilLine, Users, EyeOff, Eye, Lock, LockOpen, UserPlus, UserMinus, UserX, UserCheck, DoorOpen, Mail, Download, Repeat2, MessageSquare, Info, Activity, Globe, Megaphone, BellRing} from "lucide-react";
 import {BRAND_COLOR} from "@/lib/brand";
 
 <Callout title="Note" type="info">
@@ -66,6 +66,13 @@ import {BRAND_COLOR} from "@/lib/brand";
         title="Untrust User"
         description="Remove a user's trusted access from your channel."
         href="/control-channel/untrust"
+    />
+
+    <Card
+        icon={<BellRing style={{ color: BRAND_COLOR }} />}
+        title="Knock"
+        description="Ask to join a locked channel, or answer knocks on yours."
+        href="/control-channel/knock"
     />
 
     <Card

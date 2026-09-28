@@ -2,6 +2,7 @@
   "pages": [
     "lfm_channel",
     "profiles",
-    "deletion_delay"
+    "deletion_delay",
+    "knock"
   ]
 }
