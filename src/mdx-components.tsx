@@ -2,6 +2,18 @@ import defaultMdxComponents from 'fumadocs-ui/mdx';
 import type { MDXComponents } from 'mdx/types';
 import type { ComponentProps } from 'react';
 import { DiscordButton } from '@/components/DiscordButton';
+import {
+  DiscordActionRow,
+  DiscordComponentButton,
+  DiscordContainer,
+  DiscordHeading,
+  DiscordMention,
+  DiscordMessage,
+  DiscordSeparator,
+  DiscordSubtext,
+  DiscordText,
+  DiscordTime,
+} from '@/components/DiscordMessage';
 import { ImageWithCaption, ImageRow } from '@/components/ImageWithCaption';
 import { withBase } from '@/lib/base';
 
@@ -17,6 +29,16 @@ export function getMDXComponents(components?: MDXComponents): MDXComponents {
     ...defaultMdxComponents,
     img: Image,
     DiscordButton,
+    DiscordMessage,
+    DiscordContainer,
+    DiscordText,
+    DiscordHeading,
+    DiscordSubtext,
+    DiscordSeparator,
+    DiscordMention,
+    DiscordTime,
+    DiscordActionRow,
+    DiscordComponentButton,
     ImageWithCaption,
     ImageRow,
     ...components,
