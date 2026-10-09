@@ -14,7 +14,7 @@
     "@formatjs/intl-localematcher": "^0.9.0",
     "fumadocs-core": "16.17.1",
     "fumadocs-mdx": "15.4.6",
-    "fumadocs-ui": "16.16.2",
+    "fumadocs-ui": "16.17.1",
     "geist": "^1.7.0",
     "lucide-react": "^1.0.1",
     "negotiator": "^1.0.0",
