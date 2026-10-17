@@ -2769,10 +2769,10 @@ framer-motion@14.0.0:
     motion-utils "14.0.0"
     tslib "^2.4.0"
 
-fumadocs-core@16.17.4:
-  version "16.17.4"
-  resolved "https://registry.yarnpkg.com/fumadocs-core/-/fumadocs-core-16.17.4.tgz#3e602e4af361b44999ee1ecc8db6438723362839"
-  integrity sha512-UAwRNe0Bz66SyTuYOumI0P0hB7lcUfiLUKKTLIlMZELuD30WbybTk29xjBgJzOCYaU9piMkd2r24etHiFMSLig==
+fumadocs-core@16.17.5:
+  version "16.17.5"
+  resolved "https://registry.yarnpkg.com/fumadocs-core/-/fumadocs-core-16.17.5.tgz#93101bbf807a9d33df0806940b8f76f3818d3dd4"
+  integrity sha512-aCLv7ccoLt2/HCPdXc8llJmzxVwDTWcf26LhMuObMpYYsHL4f6BkKRB+6i8lmYFxjzPU7xEOT06/VNvgeRC3Mg==
   dependencies:
     "@fumari/image-size" "^0.1.1"
     estree-util-value-to-estree "^3.5.0"
