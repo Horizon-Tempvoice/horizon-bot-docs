@@ -11,7 +11,24 @@ import { Accordion, Accordions } from 'fumadocs-ui/components/accordion';
 
 ## Member Log
 
-Posts short messages in the channel chat when somebody joins or leaves, claims the channel or hands it over. Turn it on, then pick which of the four events are logged. At least one event stays on while the member log is enabled.
+Posts a short line into the temporary channel's own chat whenever something happens to its members. Everyone in the channel can see at a glance who came, who left and who owns the channel now.
+
+Turn **Member Log** on, then pick which events are posted. At least one event stays on while the member log is enabled.
+
+| Event | Posted when | Example |
+|---|---|---|
+| **Joined** | Someone joins the channel | Alex (alex.dev) `123456789012345678` |
+| **Left** | Someone leaves the channel | Alex (alex.dev) `123456789012345678` |
+| **Claimed** | Someone takes over the channel with [`/claim`](/control-channel/claim) or the panel | Sam (sam_) `234567890123456789` claimed the channel (previously: Alex (alex.dev) `123456789012345678`) |
+| **Transferred** | The owner hands the channel to someone else with [`/transfer`](/control-channel/transfer) or the panel | Alex (alex.dev) `123456789012345678` transferred ownership to Sam (sam_) `234567890123456789` |
+
+Each line starts with a small icon for its event and shows the display name, the username and the user ID, so you can tell people apart even if they share a name. Nobody gets pinged.
+
+<Callout title="Note" type="info">
+    Horizon needs **Send Messages** in the temporary channel to post the log. If it can't send there, the line is skipped.
+</Callout>
+
+The member log is only a quick overview for the people in the channel. For a permanent record that admins can check later, use the moderation log below.
 
 ## Moderation Log
 

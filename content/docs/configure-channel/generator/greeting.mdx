@@ -1,0 +1,58 @@
+---
+title: Greeting
+description: A message Horizon sends into every new temporary channel, with placeholders and an optional ping.
+---
+
+The greeting is a message Horizon posts into a temporary channel's chat right after the channel was created. Use it for house rules, the limits owners can set, or commands that aren't on the panel.
+
+<Callout title="Where to find this?" type="info">
+    Open the [Dashboard](https://dashboard.horizon-bot.me), pick your server, open **Generators** and choose the generator. This is the **Greeting** section of its page.
+</Callout>
+
+{/* TODO(screenshot): Greeting section with the placeholder menu open, new dashboard. */}
+
+## Turning it on and off
+
+Write a message to turn the greeting on. Leave the field empty to turn it off. The message can be up to 1000 characters long.
+
+## Channel Panel
+
+The **Channel Panel** switch in the same section posts the [Horizon Panel](/panel) into every new temporary channel, so owners don't have to use commands.
+
+If the panel and a greeting are both set, they are sent as one message, with your text above the panel.
+
+## Placeholders
+
+Click **{}** next to the field to insert a placeholder at the cursor. Horizon fills them in when it sends the message.
+
+| Placeholder | Becomes |
+|---|---|
+| `{OWNER_MENTION}` | A mention of the channel owner |
+| `{OWNER_NICK}` | The owner's display name on your server |
+| `{OWNER_USERNAME}` | The owner's Discord username |
+| `{OWNER_ID}` | The owner's user ID |
+| `{CHANNEL}` | A link to the new channel |
+| `{CHANNEL_NAME}` | The new channel's name |
+| `{USER_LIMIT}` | The channel's current user limit, or ∞ if there is none |
+| `{MIN_USER_LIMIT}` | The lowest user limit owners can set (0 if you set none) |
+| `{MAX_USER_LIMIT}` | The highest user limit owners can set (99 if you set none) |
+| `{MAX_BITRATE}` | The highest bitrate owners can set in kbps (your server's maximum if you set none) |
+
+The limit placeholders follow what you configured in [Size and audio](/configure-channel/generator/size_and_audio).
+
+## Pings
+
+The bell next to the field decides whether mentions in the greeting notify anyone.
+
+- **Bell off** (default): the message is sent silently. Mentions are shown, but nobody gets a notification.
+- **Bell on**: user and role mentions notify as usual. `@everyone` and `@here` never ping, even if they are in the text.
+
+## Example
+
+```
+Your channel is ready, {OWNER_NICK}.
+You can set the user limit anywhere from {MIN_USER_LIMIT} to {MAX_USER_LIMIT}.
+Locked channels: use /knock to ask the owner to let you in.
+```
+
+The greeting is copied along when you [duplicate, export or import](/configure-channel/generator/import_export) a generator.
