@@ -4,48 +4,56 @@ icon: LayoutDashboard
 ---
 
 import {Card, Cards} from "fumadocs-ui/components/card";
-import {Settings2, ToggleRight, KeyRound, SlidersHorizontal, Server} from "lucide-react";
+import {Settings2, Server, Braces} from "lucide-react";
 import {BRAND_COLOR} from "@/lib/brand";
 
-Everything a server admin can change lives in the [Dashboard](https://dashboard.horizon-bot.me). Log in with Discord and pick a server. You only see servers where you have the **Manage Server** permission.
+Everything a server admin can change lives in the [Dashboard](https://dashboard.horizon-bot.me). Log in with Discord and pick a server. You only see servers where you have the **Manage Server** permission. Servers without Horizon are listed separately under **Add Horizon**, with a link to invite it.
 
-<ImageWithCaption src="/img/content/the_dashboard_main.png" alt="The Horizon Dashboard" maxWidth="600px" />
+{/* TODO(screenshot): server overview page of the new dashboard. */}
 
-A server page lists your Creator Channels. Pick one to configure how its temporary channels behave. Every Creator Channel is configured separately, so you can have a strict one and a relaxed one side by side.
+## Finding your way around
 
-<Callout title="Note" type="info">
-    Changes are only sent once you press **Save Changes** in the bar at the bottom. They apply to channels created from then on, not to channels that already exist.
+Each server has a menu on the left. On a phone it's a row of tabs you can swipe.
+
+| Page | What's there |
+|---|---|
+| **Overview** | Your generators, the bot language, how many temporary channels are open and how many panel buttons are enabled. |
+| **Generators** | All generators. Add, [duplicate, export and import](/configure-channel/generator/import_export), delete. See [Generators](/configure-channel/server/generators). |
+| **Live channels** | The temporary channels open right now: name, owner, generator and when it was opened. Read-only, refreshes every 15 seconds. |
+| **Panel** | Which buttons the panel shows, and posting it. See [Panel Configuration](/configure-channel/server/panel_configuration). |
+| **Settings** | Bot language and server-wide profile rules. See [Server Settings](/configure-channel/server/settings). |
+
+## The generator page
+
+Every generator has one page with all its settings, grouped into sections from top to bottom: channel name, size and audio, placement and privacy, owner tools, who can join, channel moderators, logging, saved profiles, knocking, looking for members and deleting empty channels.
+
+- **Jump to a section:** on wide screens, the list on the right shows where you are; click an entry to jump there. On smaller screens, use the section picker that stays at the top while you scroll.
+- **Search:** **Search settings** (or `Ctrl K`, `⌘K` on a Mac) finds any setting by name and scrolls to it.
+- **Actions:** duplicate, export, import or delete the generator. See [Duplicate, Export and Import](/configure-channel/generator/import_export).
+
+<Callout title="Saving" type="info">
+    Changes are only sent once you press **Save Changes** in the bar at the bottom. While you have unsaved changes, the bar stays visible and shakes if you try to leave the page. Changes apply to channels created from then on, not to channels that already exist.
+
+    The mod log target and the looking-for-members channel are the exception: their **Set and save** button applies them right away.
 </Callout>
 
 <Cards>
     <Card
         icon={<Settings2 style={{ color: BRAND_COLOR }} />}
-        title="Basics Tab"
-        description="Name, user limit, bitrate, position and visibility."
-        href="/configure-channel/basics"
-    />
-    <Card
-        icon={<ToggleRight style={{ color: BRAND_COLOR }} />}
-        title="Feature Tab"
-        description="Which features owners may use, plus the mod log."
-        href="/configure-channel/features"
-    />
-    <Card
-        icon={<KeyRound style={{ color: BRAND_COLOR }} />}
-        title="Access Tab"
-        description="Access roles, immune roles and channel moderators."
-        href="/configure-channel/access"
-    />
-    <Card
-        icon={<SlidersHorizontal style={{ color: BRAND_COLOR }} />}
-        title="Others Tab"
-        description="Looking for members, profiles and deletion delay."
-        href="/configure-channel/others"
+        title="Generator Settings"
+        description="Every setting on the generator page, section by section."
+        href="/configure-channel/generator"
     />
     <Card
         icon={<Server style={{ color: BRAND_COLOR }} />}
-        title="Server Settings"
-        description="Bot language, panel buttons and admin commands."
-        href="/configure-channel/server_settings"
+        title="Server Pages"
+        description="Generators, panel and server settings."
+        href="/configure-channel/server"
+    />
+    <Card
+        icon={<Braces style={{ color: BRAND_COLOR }} />}
+        title="Placeholders"
+        description="Variables like {OWNER_NICK} for channel names."
+        href="/configure-channel/placeholder"
     />
 </Cards>

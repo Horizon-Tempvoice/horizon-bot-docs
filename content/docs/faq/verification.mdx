@@ -24,9 +24,9 @@ In Discord, open the settings of the category your Creator Channel is in and set
     Horizon is part of `@everyone` too, so the deny applies to it as well. Without its own allow, Horizon can't create channels in the category and the member gets a DM listing the missing permissions. If the category denies other permissions for `@everyone`, allow those for Horizon too.
 </Callout>
 
-### 2. Access Tab
+### 2. Who can join
 
-Open the [Dashboard](https://dashboard.horizon-bot.me), select your server, pick the Creator Channel and go to the **Access Tab**:
+Open the [Dashboard](https://dashboard.horizon-bot.me), pick your server, open **Generators**, choose the generator and scroll to **Who can join**:
 
 1. Add every verified role under **Access Roles**.
 2. Set **Visibility for non-role members** to **Hidden from others**.
@@ -35,7 +35,7 @@ Open the [Dashboard](https://dashboard.horizon-bot.me), select your server, pick
 
 - Only members with one of the Access Roles can see and join temporary channels.
 - [`/lock`](/control-channel/lock), [`/hide`](/control-channel/hide) and the panel buttons apply to the Access Roles, so owners can still lock verified members out.
-- Members an owner lets in with [`/trust`](/control-channel/trust) or [`/inviteuser`](/control-channel/invite) can join even if they aren't verified. Turn off **Trust / Untrust** and **Invite** in the [Feature Tab](/configure-channel/features/toggle_features) if you don't want that.
+- Members an owner lets in with [`/trust`](/control-channel/trust) or [`/inviteuser`](/control-channel/invite) can join even if they aren't verified. Turn off **Trust / Untrust** and **Invite** in [Owner Tools](/configure-channel/generator/owner_tools) if you don't want that.
 - Immune Roles can always see and join while **Apply permission override to immune roles** is on.
 
 ## Alternative: Inherit @everyone restrictions
@@ -43,7 +43,7 @@ Open the [Dashboard](https://dashboard.horizon-bot.me), select your server, pick
 Use this if your category already allows many roles and you don't want to add them all as Access Roles.
 
 1. Set up the category permissions as above.
-2. In the **Basics Tab**, set **Permission Sync** to **From category**. Use **From generator** if the permissions are set on the Creator Channel instead.
+2. Under **Placement and privacy**, set **Permission Sync** to **From category**. Use **From generator** if the permissions are set on the generator channel instead.
 3. Turn on **Inherit @everyone restrictions**.
 4. Leave **Access Roles** empty.
 
@@ -70,18 +70,18 @@ With Permission Sync on, the new channel starts with the `@everyone` permissions
 
 ### Settings
 
-| Setting | Tab | Effect |
+| Setting | Section | Effect |
 |---|---|---|
-| **Access Roles** | Access | Each role gets View Channel and Connect on every new channel, added to its category permissions when syncing from the category. `/lock`, `/hide` and saved [profiles](/configure-channel/others/profiles) change these roles instead of `@everyone`. Default Visibility doesn't apply to them. |
-| **Visibility for non-role members** | Access | **Hidden from others**: `@everyone` can't see the channel. **Visible to everyone**: `@everyone` follows Default Visibility. Only shown while Access Roles are set. |
-| **Default Visibility** | Basics | Applies to `@everyone` only, see the table above. A member's saved profile can replace it with its own locked or hidden state. |
-| **Permission Sync** | Basics | **From category**: copies the category's role and member permissions. **From generator**: copies the Creator Channel's role permissions. Both use the source's `@everyone` permissions as the starting point. **Don't sync**: copies nothing. |
-| **Inherit @everyone restrictions** | Basics | Horizon never gives `@everyone` extra access and only adds denies. `/unlock` and `/show` reset `@everyone` to the source. Needs Permission Sync. |
-| **Immune Roles** | Access | Members with these roles bypass lock, hide and block. With **Apply permission override to immune roles** on, the roles also get View Channel and Connect on every channel. When off, they keep what Permission Sync copied. |
-| **Trust / Untrust**, **Invite** | Features | Gives one member View Channel and Connect, verified or not. |
-| **Block / Unblock** | Features | Denies Connect for one member, and View Channel too while **Block Hides Channel** is on. |
+| **Access Roles** | Who can join | Each role gets View Channel and Connect on every new channel, added to its category permissions when syncing from the category. `/lock`, `/hide` and saved [profiles](/configure-channel/generator/saved_profiles) change these roles instead of `@everyone`. Default Visibility doesn't apply to them. |
+| **Visibility for non-role members** | Who can join | **Hidden from others**: `@everyone` can't see the channel. **Visible to everyone**: `@everyone` follows Default Visibility. Only shown while Access Roles are set. |
+| **Default Visibility** | Placement and privacy | Applies to `@everyone` only, see the table above. A member's saved profile can replace it with its own locked or hidden state. |
+| **Permission Sync** | Placement and privacy | **From category**: copies the category's role and member permissions. **From generator**: copies the Creator Channel's role permissions. Both use the source's `@everyone` permissions as the starting point. **Don't sync**: copies nothing. |
+| **Inherit @everyone restrictions** | Placement and privacy | Horizon never gives `@everyone` extra access and only adds denies. `/unlock` and `/show` reset `@everyone` to the source. Needs Permission Sync. |
+| **Immune Roles** | Who can join | Members with these roles bypass lock, hide and block. With **Apply permission override to immune roles** on, the roles also get View Channel and Connect on every channel. When off, they keep what Permission Sync copied. |
+| **Trust / Untrust**, **Invite** | Owner tools | Gives one member View Channel and Connect, verified or not. |
+| **Block / Unblock** | Owner tools | Denies Connect for one member, and View Channel too while **Block Hides Channel** is on. |
 
-The channel owner always gets View Channel, Connect and Speak, plus the **Additional Owner Permissions** from the Feature Tab. Horizon gives itself View Channel, Connect, Manage Channel and Move Members.
+The channel owner always gets View Channel, Connect and Speak, plus the **Additional Owner Permissions** from [Owner Tools](/configure-channel/generator/owner_tools#additional-owner-permissions). Horizon gives itself View Channel, Connect, Manage Channel and Move Members.
 
 ## Troubleshooting
 

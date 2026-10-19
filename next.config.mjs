@@ -59,6 +59,37 @@ const legacyAliases = [
   ['/inviteuser', '/control-channel/invite'],
   ['/setup', '/quickstart'],
   ['/commands', '/control-channel'],
+  // Dashboard rework 2026-10: the docs used to follow the old dashboard tabs
+  // (Basics, Feature, Access, Others). Old links, including the ones older
+  // dashboard builds point to, land on the matching new page.
+  ['/configure-channel/basics', '/configure-channel/generator'],
+  ['/configure-channel/basics/channel_defaults', '/configure-channel/generator/size_and_audio'],
+  ['/configure-channel/basics/visibility', '/configure-channel/generator/placement_and_privacy'],
+  ['/configure-channel/features', '/configure-channel/generator/owner_tools'],
+  ['/configure-channel/features/toggle_features', '/configure-channel/generator/owner_tools'],
+  ['/configure-channel/features/settings', '/configure-channel/generator/owner_tools'],
+  ['/configure-channel/features/modlog', '/configure-channel/generator/logging'],
+  ['/configure-channel/access', '/configure-channel/generator/who_can_join'],
+  ['/configure-channel/access/access_roles', '/configure-channel/generator/who_can_join#access-roles'],
+  ['/configure-channel/access/immune_roles', '/configure-channel/generator/who_can_join#immune-roles'],
+  ['/configure-channel/others', '/configure-channel/generator'],
+  ['/configure-channel/others/lfm_channel', '/configure-channel/generator/looking_for_members'],
+  ['/configure-channel/others/profiles', '/configure-channel/generator/saved_profiles'],
+  ['/configure-channel/others/deletion_delay', '/configure-channel/generator/deleting_empty_channels'],
+  ['/configure-channel/others/knock', '/configure-channel/generator/knocking'],
+  ['/configure-channel/server_settings', '/configure-channel/server/settings'],
+  // Short aliases of the removed pages (the flat aliases are built from
+  // current file names, so these would otherwise 404).
+  ['/channel_defaults', '/configure-channel/generator/size_and_audio'],
+  ['/visibility', '/configure-channel/generator/placement_and_privacy'],
+  ['/toggle_features', '/configure-channel/generator/owner_tools'],
+  ['/modlog', '/configure-channel/generator/logging'],
+  ['/access_roles', '/configure-channel/generator/who_can_join#access-roles'],
+  ['/immune_roles', '/configure-channel/generator/who_can_join#immune-roles'],
+  ['/lfm_channel', '/configure-channel/generator/looking_for_members'],
+  ['/profiles', '/configure-channel/generator/saved_profiles'],
+  ['/deletion_delay', '/configure-channel/generator/deleting_empty_channels'],
+  ['/server_settings', '/configure-channel/server/settings'],
 ];
 
 /** @type {import('next').NextConfig} */

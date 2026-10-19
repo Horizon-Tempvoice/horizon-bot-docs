@@ -1,0 +1,69 @@
+---
+title: Logging
+description: The member log in the channel chat, and the moderation log for everything that happens in temporary channels.
+---
+
+import { Accordion, Accordions } from 'fumadocs-ui/components/accordion';
+
+<Callout title="Where to find this?" type="info">
+    Open the [Dashboard](https://dashboard.horizon-bot.me), pick your server, open **Generators** and choose the generator. This is the **Logging** section of its page.
+</Callout>
+
+## Member Log
+
+Posts short messages in the channel chat when somebody joins or leaves, claims the channel or hands it over. Turn it on, then pick which of the four events are logged. At least one event stays on while the member log is enabled.
+
+## Moderation Log
+
+The moderation log records all significant actions in temporary channels created by this generator. Each event is posted as a formatted message to a channel or webhook of your choice.
+
+{/* TODO(screenshot): Logging section with the mod log target, new dashboard. */}
+
+### What gets logged
+
+<Accordions type="multiple">
+    <Accordion title="Channel">
+        - Channel created and deleted
+        - Channel renamed
+        - User limit changed
+        - Bitrate changed
+        - Region changed
+        - Channel claimed or ownership transferred
+    </Accordion>
+    <Accordion title="Visibility and access">
+        - Channel locked or unlocked
+        - Channel hidden or made visible again
+        - User trusted or untrusted
+        - User blocked or unblocked
+        - Knock sent, accepted or denied
+        - User kicked
+        - Invite created
+    </Accordion>
+    <Accordion title="Moderation">
+        - Channel Moderator role added or removed from a user
+    </Accordion>
+    <Accordion title="Sessions">
+        - Session saved, activated or deleted
+        - Autosave toggled
+    </Accordion>
+    <Accordion title="Other">
+        - Channel status set or removed
+        - Looking for members post created
+    </Accordion>
+</Accordions>
+
+### Setup
+
+You can send logs to a text channel or a Discord webhook. The box above the switch shows where logs go right now, with **Remove** to stop logging.
+
+Pick **Channel** to let Horizon create a webhook in a channel of your choice. Once the webhook is set up, the mode switches to **Webhook** on its own. This is expected.
+
+Pick **Webhook** and paste your own URL to use an existing webhook.
+
+<Callout title="Saved right away" type="info">
+    **Set and save** applies the target immediately. It isn't part of the unsaved-changes bar at the bottom of the page.
+</Callout>
+
+<Callout title="Note" type="info">
+    If the webhook becomes invalid, Horizon removes it automatically to avoid errors.
+</Callout>

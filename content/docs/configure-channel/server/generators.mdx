@@ -1,0 +1,33 @@
+---
+title: Generators
+description: Add, duplicate and remove generators.
+---
+
+A generator is a voice channel that opens a temporary channel for whoever joins it. Every generator is configured separately, so you can have a strict one and a relaxed one side by side.
+
+<Callout title="Where to find this?" type="info">
+    Open the [Dashboard](https://dashboard.horizon-bot.me), pick your server and open **Generators**.
+</Callout>
+
+The page lists every generator with its name template. Click one to open its [settings](/configure-channel/generator). The **⋯** button on each row has [Duplicate, Export, Import](/configure-channel/generator/import_export) and **Delete**.
+
+## Add a generator
+
+**Add generator** offers two options:
+
+| Option | Result |
+|---|---|
+| **Generator only** | Creates the voice channel that opens temporary channels. |
+| **Full setup** | Also creates a text channel with the [Horizon Panel](/panel). |
+
+The dashboard opens the new generator's page right away. **New from file** creates a generator from an [exported file](/configure-channel/generator/import_export) instead.
+
+<Callout title="Generator limit" type="info">
+    A server can have up to 3 generators. The count is shown under the page title. When the limit is reached, **Add generator**, **Duplicate** and **New from file** aren't available.
+</Callout>
+
+## Delete a generator
+
+<Callout title="Note" type="warn">
+    Deleting a generator removes its settings and its Discord channel. The category is removed too if it ends up empty. This can't be undone; [export](/configure-channel/generator/import_export) it first if you might need the settings again.
+</Callout>

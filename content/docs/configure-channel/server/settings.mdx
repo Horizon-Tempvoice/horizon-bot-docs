@@ -1,0 +1,30 @@
+---
+title: Server Settings
+description: Bot language, server-wide profile rules and admin commands.
+---
+
+These settings apply to the whole server, not to a single generator.
+
+<Callout title="Where to find this?" type="info">
+    Open the [Dashboard](https://dashboard.horizon-bot.me), pick your server and open **Settings**.
+</Callout>
+
+## Bot Language
+
+Sets the language Horizon answers in on your server. Available are English, German, Spanish and Russian.
+
+This is separate from the dashboard's own language, which you change with the flag at the top of the page.
+
+## Profiles
+
+What a saved profile stores, how many slots each member gets, and whether autosave is on by default. Each generator then decides what it restores. See [Saved Profiles](/configure-channel/generator/saved_profiles).
+
+## Admin commands
+
+Some of this is also available directly in Discord. These commands are limited to admins by default, and you can change who may use them in your server's integration settings.
+
+| Command | Description |
+|---|---|
+| `/setup` | Create a generator, optionally with a panel channel. See [Quickstart](/quickstart). |
+| `/panel send [channel]` | Post the panel into a text channel. |
+| `/cleanup` | Remove leftover records of channels that no longer exist on Discord. |

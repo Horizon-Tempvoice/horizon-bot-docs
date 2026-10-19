@@ -1,0 +1,21 @@
+---
+title: Size and Audio
+description: Default user limit and bitrate of new channels, and how far owners may change them.
+---
+
+These settings decide how big a temporary channel is and how it sounds the moment it's created. Owners can change them afterwards, as long as the matching feature is enabled in [Owner Tools](/configure-channel/generator/owner_tools).
+
+<Callout title="Where to find this?" type="info">
+    Open the [Dashboard](https://dashboard.horizon-bot.me), pick your server, open **Generators** and choose the generator. This is the **Size and audio** section of its page.
+</Callout>
+
+| Setting | Description |
+|---|---|
+| **Default User Limit** | How many members fit into a new channel, 0 to 99. 0 means unlimited. |
+| **Allowed Limit Range** | The smallest and largest limit owners may set with [`/limit`](/control-channel/limit). Outside that range Horizon refuses the change. |
+| **Default Bitrate** | Audio quality of new channels, 8 to 384 kbps. "Highest possible" always uses the best your server boost level allows. Options above your boost level are greyed out. |
+| **Bitrate Cap** | The highest bitrate owners may set with [`/bitrate`](/control-channel/bitrate). |
+
+<Callout title="Note" type="idea">
+    A saved [profile](/configure-channel/generator/saved_profiles) can bring back a user limit from an earlier channel. If that limit is outside the allowed range, the channel gets the default user limit instead.
+</Callout>

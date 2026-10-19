@@ -1,0 +1,16 @@
+{
+  "pages": [
+    "channel_name",
+    "size_and_audio",
+    "placement_and_privacy",
+    "owner_tools",
+    "who_can_join",
+    "[Channel moderators](/mod#server-admin-configuration)",
+    "logging",
+    "saved_profiles",
+    "knocking",
+    "looking_for_members",
+    "deleting_empty_channels",
+    "import_export"
+  ]
+}

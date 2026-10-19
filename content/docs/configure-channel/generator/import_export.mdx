@@ -1,0 +1,52 @@
+---
+title: Duplicate, Export and Import
+description: Copy a generator, or move its settings to another generator or server with a signed file.
+---
+
+Every generator has an **Actions** menu: on its page next to **Search settings**, and as the **⋯** button on each row of the **Generators** list.
+
+## Duplicate
+
+Creates a new generator channel with the same settings, including the mod log channel and the looking-for-members channel. It counts towards the generator limit, so it isn't available while the server is at its limit.
+
+## Export
+
+Downloads the generator's settings as a `.json` file. The file contains every setting from the generator page, the mod log channel and the looking-for-members channel.
+
+<Callout title="Not in the file" type="info">
+    Webhook URLs are never exported. A webhook URL lets anyone post into that channel, so it doesn't belong in a file you might pass around. Set the mod log webhook again after importing.
+</Callout>
+
+## Import
+
+**Import settings** replaces the settings of an existing generator with the ones from a file. **New from file** on the **Generators** page creates a new generator and applies the file to it.
+
+Before anything is saved, the dashboard checks the file and shows a preview:
+
+1. **Signature.** The file must come from the Horizon dashboard and be unchanged. See [Why files are signed](#why-files-are-signed).
+2. **Values.** Every setting is checked for valid values and sizes. A file with an invalid value is refused and the dashboard names the setting.
+3. **Roles and channels.** Roles and channels belong to the server they were created on. Any that don't exist on this server are left out, and the preview lists each one so you can pick replacements afterwards.
+4. **Changes.** When importing into an existing generator, the preview lists which settings will change.
+
+Nothing is saved until you confirm.
+
+<Callout title="Moving settings to another server" type="idea">
+    Export on server A, import on server B. Access roles, immune roles, the mod log channel and the looking-for-members channel won't exist on B, so they're left out and listed in the preview. Everything else carries over.
+</Callout>
+
+## Why files are signed
+
+An export file is plain JSON, and anyone can open it in a text editor. Without a signature, somebody could edit a file and send it to you, and importing it would apply whatever they put in.
+
+That's why the dashboard signs every export. Changing a single value in the file breaks the signature, and the dashboard then refuses to import it. Reformatting the file (indentation, line breaks) doesn't matter.
+
+- A file is **valid** if it was exported from the Horizon dashboard and hasn't been changed since. It works on any server you manage, with no expiry.
+- A file is **refused** if it isn't signed, was edited after export, or was signed with a key this dashboard doesn't know. Export the generator again and use the new file.
+
+<Callout title="A valid signature isn't a recommendation" type="warn">
+    The signature proves Horizon created the file and nobody changed it. It doesn't prove the settings suit your server: anyone who manages a server can export a valid file and send it to you. Read the preview before you confirm.
+</Callout>
+
+<Callout title="Readable, not secret" type="info">
+    Signing doesn't encrypt anything. An export shows your settings, the server and generator it came from, and the Discord ID of whoever exported it.
+</Callout>

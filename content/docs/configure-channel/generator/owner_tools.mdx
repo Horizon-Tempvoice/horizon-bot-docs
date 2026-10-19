@@ -1,0 +1,48 @@
+---
+title: Owner Tools
+description: Which features channel owners may use, extra owner permissions and channel behaviour.
+---
+
+As a server admin you decide which features channel owners are allowed to use. Disabled features are hidden from owners and their commands don't work.
+
+<Callout title="Where to find this?" type="info">
+    Open the [Dashboard](https://dashboard.horizon-bot.me), pick your server, open **Generators** and choose the generator. This is the **Owner tools** section of its page.
+</Callout>
+
+{/* TODO(screenshot): Owner tools section of the generator page, new dashboard. */}
+
+## Features
+
+Each feature has its own switch with a short description next to it. Turning one off also stops a saved [profile](/configure-channel/generator/saved_profiles) from restoring that part.
+
+<Callout title="Channel Moderators" type="info">
+    Channel moderators have their own section further down the page, with permission delegation and protection settings. See [Channel Moderators](/mod#server-admin-configuration).
+</Callout>
+
+## Channel behaviour
+
+| Setting | Description |
+|---|---|
+| **Age Restriction** | Marks every temporary channel as NSFW. |
+| **Channel Panel** | Posts the [Horizon Panel](/panel) into the temporary channel right after it was created, so owners don't have to use commands. |
+| **Block Hides Channel** | Only shown while **Block / Unblock** is enabled. On by default: blocked members can't see the channel at all. Turn it off to only keep them from joining. |
+
+## Additional Owner Permissions
+
+Extra Discord permissions the owner gets in their own channel, on top of view, connect and speak. By default an owner gets none, and Horizon handles everything through its own commands. You usually don't need to change this.
+
+| Permission | What the owner can do |
+|---|---|
+| **Create Invite** | Create Discord invites to the channel. |
+| **Manage Channel** | Rename the channel and change its settings in Discord directly. |
+| **Manage Permissions** | Edit the channel's permission overrides in Discord directly. |
+| **Video / Stream** | Turn on camera and screen share. |
+| **Voice Activity (no PTT)** | Talk without push to talk, even if the server forces it. |
+| **Priority Speaker** | Lower the volume of others while speaking. |
+| **Move Members** | Move members between voice channels. |
+
+A warning sign next to a permission means Horizon itself lacks it on the generator channel, so it can't hand it out.
+
+<Callout title="Note" type="warn">
+    **Manage Channel** and **Manage Permissions** let the owner change things Horizon otherwise controls, for example the permissions of your access roles.
+</Callout>

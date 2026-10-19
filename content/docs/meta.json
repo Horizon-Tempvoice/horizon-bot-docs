@@ -13,12 +13,9 @@
     "other-commands",
     "---CONFIGURE TEMPORARY VOICE CHANNELS---",
     "configure-channel/overview",
-    "configure-channel/basics",
-    "configure-channel/features",
-    "configure-channel/access",
-    "configure-channel/others",
+    "configure-channel/generator",
+    "configure-channel/server",
     "configure-channel/placeholder",
-    "configure-channel/server_settings",
     "---FAQ---",
     "...faq"
   ]
