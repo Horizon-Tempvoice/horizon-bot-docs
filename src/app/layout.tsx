@@ -6,6 +6,7 @@ import { DocsLayout } from 'fumadocs-ui/layouts/docs';
 import { baseOptions } from '@/lib/layout.shared';
 import React from "react";
 import { Analytics } from '@/components/analytics';
+import { DashboardButton } from '@/components/DashboardButton';
 import type { Metadata } from 'next';
 import { BRAND_COLOR } from '@/lib/brand';
 import { withBase } from '@/lib/base';
@@ -33,6 +34,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <DocsLayout
             {...baseOptions}
             tree={source.getPageTree()}
+            sidebar={{ banner: <DashboardButton /> }}
           >
             {children}
           </DocsLayout>
