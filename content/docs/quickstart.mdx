@@ -10,7 +10,7 @@ import {BRAND_COLOR} from "@/lib/brand";
 import {DocsImage as Image} from "@/components/DocsImage";
 import {Callout} from "fumadocs-ui/components/callout";
 
-# 1. Invite Horizon to your server
+## 1. Invite Horizon to your server
 
 Bring <strong style={{ color: BRAND_COLOR }}>Horizon</strong> to your server – just head to <a href={INVITE_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1">invite.horizon-bot.me <ExternalLink size={14} /></a> and you're good to go.
 
@@ -18,7 +18,7 @@ Bring <strong style={{ color: BRAND_COLOR }}>Horizon</strong> to your server –
   <DiscordButton label="Invite Horizon" href={INVITE_URL} variant="native" />
 </div>
 
-# 2. Setup Horizon in your server
+## 2. Setup Horizon in your server
 
 Using the `/setup` command, you can setup Horizon in your server. Click on ``Setup Horizon`` and it will generate you a <strong style={{ color: BRAND_COLOR }}>Join to Create</strong> and a <strong style={{ color: BRAND_COLOR }}>Horizon-Panel</strong>.
 
@@ -31,7 +31,7 @@ Using the `/setup` command, you can setup Horizon in your server. Click on ``Set
 
 Further customization is available in the <a href="https://dashboard.horizon-bot.me" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1">Dashboard <ExternalLink size={14} /></a>.
 
-# 3. Do you need help?
+## 3. Do you need help?
 <div className="mt-2 mb-8">
     <DiscordButton label="Join Support Server" href="https://horizon-bot.me/docs/" variant="native" />
 </div>
@@ -40,17 +40,19 @@ This <a href="https://horizon-bot.me/docs/" target="_blank" rel="noopener norefe
 
 ---
 
-# Generator Channel
+## Key concepts
+
+### Generator Channel
 These specialized voice channels automatically generate a temporary channel when joined. You can set up multiple Generator Channels by repeating the configuration steps; each one can be customized independently to define how its temporary channels behave.
 
 <Callout title="Notice" type="warn">
     You can have a maximum of 3 Generator Channels <strong>(Not user channels, they can be as much as you want)</strong> per server. Deleting a Generator will also delete the record in the database of the Bot.
 </Callout>
 
-# Tempvoice Panel
+### Tempvoice Panel
 The Tempvoice Panel, <em>referred as the <strong style={{ color: BRAND_COLOR }}>Horizon-Panel</strong></em>, is a Discord native interface that allows you to manage your temporary voice channels as a alternative to the Slash Commands.
 
-# The Dashboard
+### The Dashboard
 
 <div className="mt-2 mb-8">
     <DiscordButton label="Open Dashboard" href="https://dashboard.horizon-bot.me/" variant="native" />
