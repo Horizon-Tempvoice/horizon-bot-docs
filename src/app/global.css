@@ -102,3 +102,20 @@ button[data-search-full] {
     border-end-start-radius: 5px;
     pointer-events: none;
 }
+
+/* Homepage motif: a brand line that grows like a channel appearing. */
+.motif-line {
+    background: var(--brand-color);
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 1s ease-out;
+}
+
+.motif-line-x {
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.motif-line.is-visible {
+    transform: none;
+}

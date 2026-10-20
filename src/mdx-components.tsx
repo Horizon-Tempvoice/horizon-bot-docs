@@ -15,6 +15,7 @@ import {
   DiscordTime,
 } from '@/components/DiscordMessage';
 import { ImageWithCaption, ImageRow } from '@/components/ImageWithCaption';
+import { TempChannelSteps } from '@/components/TempChannelSteps';
 import { withBase } from '@/lib/base';
 
 const DefaultImage = defaultMdxComponents.img!;
@@ -41,6 +42,7 @@ export function getMDXComponents(components?: MDXComponents): MDXComponents {
     DiscordComponentButton,
     ImageWithCaption,
     ImageRow,
+    TempChannelSteps,
     ...components,
   };
 }

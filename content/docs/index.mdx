@@ -9,7 +9,7 @@ import {DownloadCloud, MessageCircle, LayoutDashboard} from "lucide-react";
 import {BRAND_COLOR} from "@/lib/brand";
 import {INVITE_URL, SUPPORT_URL} from "@/lib/constants";
 
-# Thanks for choosing Horizon
+## Thanks for choosing Horizon
 
 In this documentation, you'll find everything you need to know about using Horizon to create and manage temporary voice channels in your Discord server. Whether you're new to Horizon or looking to explore advanced features, we've got you covered. Feel free to join our Discord Server if you have any questions or just want to stay up to date with the latest news and updates about Horizon.
 
@@ -41,12 +41,16 @@ In this documentation, you'll find everything you need to know about using Horiz
 
 ---
 
-## What is a temporary voice channel and how do I benefit from it?
+## What is a temporary voice channel?
 
-Think of it as a voice channel that only exists when someone actually needs it. When a user joins a <strong style={{ color: BRAND_COLOR }}>Join to Create-Kanal</strong>, Horizon spins up a private room for them - and once everyone leaves, it's gone. No leftovers, no cleanup needed.
+A voice channel that Horizon creates the moment you join the [Join to Create channel](/configure-channel/generator), and deletes again once everyone has left.
+
+<TempChannelSteps />
+
+### How you benefit
 
 * **No more empty channels:** The channel list only shows channels that are actually being used.
-* **Members manage their own space:** As the channel owner, you can rename it, lock it, set a user limit and more, either via `/commands` or the <strong style={{ color: BRAND_COLOR }}>Horizon-Panel</strong>. No admin required.
+* **Members manage their own space:** As the channel owner, you can rename it, lock it, set a user limit and more, either via [`/commands`](/control-channel) or the [Horizon-Panel](/panel). No admin required.
 * **Fully configurable for admins:** Server admins decide exactly what members are allowed to change in their channels.
 * **Scales automatically:** Whether it's 2 people or 200, the server just keeps itself clean.
 * **Private by default:** Each room belongs to the person who created it, for as long as they need it.
