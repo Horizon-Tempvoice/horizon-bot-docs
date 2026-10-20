@@ -2764,10 +2764,10 @@ framer-motion@14.0.0:
     motion-utils "14.0.0"
     tslib "^2.4.0"
 
-fumadocs-core@16.17.5:
-  version "16.17.5"
-  resolved "https://registry.yarnpkg.com/fumadocs-core/-/fumadocs-core-16.17.5.tgz#93101bbf807a9d33df0806940b8f76f3818d3dd4"
-  integrity sha512-aCLv7ccoLt2/HCPdXc8llJmzxVwDTWcf26LhMuObMpYYsHL4f6BkKRB+6i8lmYFxjzPU7xEOT06/VNvgeRC3Mg==
+fumadocs-core@16.17.7:
+  version "16.17.7"
+  resolved "https://registry.yarnpkg.com/fumadocs-core/-/fumadocs-core-16.17.7.tgz#f3ce9468fcab7751c7d175df9ee29356909618cf"
+  integrity sha512-o8uR1JuFgAHrUSbX/hzThOsvW8tFXfV4vlrWf7VeFd+lbQsRqwr8R7gvs96Vwwzn5xSDfgg0boQalyv1llJAQQ==
   dependencies:
     "@fumari/image-size" "^0.1.1"
     estree-util-value-to-estree "^3.5.0"
@@ -2814,10 +2814,10 @@ fumadocs-mdx@15.4.7:
     yuku-analyzer "^0.17.0"
     zod "^4.6.5"
 
-fumadocs-ui@16.17.5:
-  version "16.17.5"
-  resolved "https://registry.yarnpkg.com/fumadocs-ui/-/fumadocs-ui-16.17.5.tgz#8b8f2ebf0bfa410d58b94dfeecbc291c3a402db6"
-  integrity sha512-aAM5dMHsOYlIMdR/mxiHILeZp0rrnWFkJ0VTiwp2uSbkYunMwrpTbK0La62AWI9z9ha0nB6l2fGjg9lS5iHj7g==
+fumadocs-ui@16.17.7:
+  version "16.17.7"
+  resolved "https://registry.yarnpkg.com/fumadocs-ui/-/fumadocs-ui-16.17.7.tgz#d939cd040e292c43d6a3a8294c9ab9c11d196515"
+  integrity sha512-3zqnVKUnDoGRLu2I0IniEwnurW/eGQeZNS80bgrebPdfp1BYd+51EeBEwxgGJgNWBAFLFxQvuE0TBDgqKVndsQ==
   dependencies:
     "@fuma-translate/react" "^1.0.2"
     "@fumadocs/tailwind" "0.1.4"
