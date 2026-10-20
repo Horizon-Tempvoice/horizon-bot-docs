@@ -1,0 +1,18 @@
+---
+title: What happens when I kick Horizon from my server?
+description: Kicking Horizon deletes every generator on the server.
+icon: LogOut
+---
+
+When Horizon is kicked from your server, it deletes all of the server's generators and their settings. If you invite Horizon again later, you start without any generators and have to set them up again.
+
+Your [server settings](/configure-channel/server/settings) and members' [saved profiles](/configure-channel/generator/saved_profiles) are kept. They're still there when you invite Horizon again.
+
+## Why the generators are deleted
+
+- **Horizon can't guarantee their state.** While Horizon is gone, it can't see what changes on your server. Channels, categories and roles can be renamed, moved or deleted, and Horizon has no way to tell whether a generator still matches the server.
+- **The permissions are gone anyway.** Kicking Horizon removes its role and every permission override it had on your categories, Creator Channels and temporary channels. A generator can't work without those overrides, so keeping it would only leave a broken setup behind.
+
+<Callout title="Keep a copy before you kick" type="idea">
+    [Export](/configure-channel/generator/import_export#export) each generator before you remove Horizon. After inviting it again, use **New from file** to bring the settings back. Roles and channels that no longer exist are left out and listed in the preview.
+</Callout>
