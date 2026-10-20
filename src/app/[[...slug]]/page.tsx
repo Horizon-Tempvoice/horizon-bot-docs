@@ -76,7 +76,13 @@ export default async function Page(props: {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
-      <DocsPage toc={page.data.toc} full={page.data.full} breadcrumb={{ enabled: false }}>
+      <DocsPage
+        toc={page.data.toc}
+        full={page.data.full}
+        breadcrumb={{ enabled: false }}
+        tableOfContent={{ style: 'clerk' }}
+        tableOfContentPopover={{ style: 'clerk' }}
+      >
       {(parentPage || categoryLabel) && (
         <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-widest mb-1">
           {parentPage ? (
