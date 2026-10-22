@@ -22,7 +22,7 @@ importers:
         version: 16.17.7(@types/mdx@2.0.14)(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(fumadocs-core@16.17.7(@mdx-js/mdx@3.1.1(supports-color@7.2.0))(@types/estree-jsx@1.0.5)(@types/hast@3.0.5)(@types/mdast@4.0.4)(@types/react@19.3.0)(lucide-react@1.59.0(@types/react@19.3.0)(react@19.3.1))(next@16.4.2(@babel/core@7.29.0(supports-color@7.2.0))(@types/node@25.9.9)(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(supports-color@7.2.0)(zod@4.6.5))(next@16.4.2(@babel/core@7.29.0(supports-color@7.2.0))(@types/node@25.9.9)(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(supports-color@7.2.0)(tailwindcss@4.3.3)
       geist:
         specifier: ^1.7.0
-        version: 1.8.1(next@16.4.2(@babel/core@7.29.0(supports-color@7.2.0))(@types/node@25.9.9)(react-dom@19.3.1(react@19.3.1))(react@19.3.1))
+        version: 1.8.2(next@16.4.2(@babel/core@7.29.0(supports-color@7.2.0))(@types/node@25.9.9)(react-dom@19.3.1(react@19.3.1))(react@19.3.1))
       lucide-react:
         specifier: ^1.0.1
         version: 1.59.0(@types/react@19.3.0)(react@19.3.1)
@@ -2111,8 +2111,8 @@ packages:
   functions-have-names@1.2.3:
     resolution: {integrity: sha512-xckBUXyTIqT97tq2x2AMb+g163b5JFysYk0x4qxNFwbfQkmNZoiRHb6sPzI9/QV33WeuvVYBUIiD4NzNIyqaRQ==}
 
-  geist@1.8.1:
-    resolution: {integrity: sha512-oSBhuzTvwZqGAZVC4swTRo61G/JHojtEVNR3DCToU+4nUBkG48ndKNvj4Ma7zZ+OlJkYDLT66HS+hrFszkovTg==}
+  geist@1.8.2:
+    resolution: {integrity: sha512-fRF4sbJ9qcCxPb35cVtKBAwYlTt1IbU9nkbPi0a+xyZqPIjCJ2BY8ekGhx6/SGSZKrR7/UuL57r/eeDQ1Xy11g==}
     peerDependencies:
       next: '>=13.2.0'
 
@@ -5469,7 +5469,7 @@ snapshots:
 
   functions-have-names@1.2.3: {}
 
-  geist@1.8.1(next@16.4.2(@babel/core@7.29.0(supports-color@7.2.0))(@types/node@25.9.9)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)):
+  geist@1.8.2(next@16.4.2(@babel/core@7.29.0(supports-color@7.2.0))(@types/node@25.9.9)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)):
     dependencies:
       next: 16.4.2(@babel/core@7.29.0(supports-color@7.2.0))(@types/node@25.9.9)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
 
