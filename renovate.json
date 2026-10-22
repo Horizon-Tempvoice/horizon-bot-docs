@@ -3,5 +3,19 @@
   "extends": [
     "config:recommended"
   ],
-  "automerge": true
+  "automerge": true,
+  "minimumReleaseAge": "7 days",
+  "packageRules": [
+    {
+      "description": "Majors need a manual look before they ship",
+      "matchUpdateTypes": ["major"],
+      "automerge": false
+    },
+    {
+      "description": "typescript-eslint does not support TypeScript 7 yet",
+      "matchPackageNames": ["typescript"],
+      "matchUpdateTypes": ["major"],
+      "enabled": false
+    }
+  ]
 }
