@@ -10,7 +10,7 @@ on:
       - 'content/**'
       - 'Dockerfile'
       - 'package.json'
-      - 'pnpm-lock.yaml'
+      - 'yarn.lock'
       - 'next.config.mjs'
       - 'source.config.ts'
       - 'tsconfig.json'
