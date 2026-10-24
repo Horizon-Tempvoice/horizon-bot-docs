@@ -2761,19 +2761,18 @@ framer-motion@14.6.0:
     motion-utils "14.6.0"
     tslib "^2.4.0"
 
-fumadocs-core@16.17.7:
-  version "16.17.7"
-  resolved "https://registry.yarnpkg.com/fumadocs-core/-/fumadocs-core-16.17.7.tgz#f3ce9468fcab7751c7d175df9ee29356909618cf"
-  integrity sha512-o8uR1JuFgAHrUSbX/hzThOsvW8tFXfV4vlrWf7VeFd+lbQsRqwr8R7gvs96Vwwzn5xSDfgg0boQalyv1llJAQQ==
+fumadocs-core@16.17.8:
+  version "16.17.8"
+  resolved "https://registry.yarnpkg.com/fumadocs-core/-/fumadocs-core-16.17.8.tgz#c9aab9d482a178ef31567a4de659bd1ff71c3b56"
+  integrity sha512-6MCVT2gy5i2U8i7MLQEy6eImd5/AJ69zzg3XvuHQmPi0w/V2u5QTTfK8dLLSfxniQU7obs9nSpzh+adEEL1QUQ==
   dependencies:
     "@fumari/image-size" "^0.1.1"
     estree-util-value-to-estree "^3.5.0"
     github-slugger "^2.0.0"
     hast-util-from-dom "^5.0.1"
     hast-util-to-estree "^3.1.3"
-    hast-util-to-jsx-runtime "^2.3.6"
     mdast-util-mdx "^3.0.0"
-    micromark "^4.0.2"
+    micromark "^4.0.3"
     micromark-extension-gfm-table "^2.1.2"
     npm-to-yarn "3.2.0"
     remark "^15.0.1"
@@ -4185,7 +4184,7 @@ micromark@^4.0.0:
     micromark-util-symbol "^2.0.0"
     micromark-util-types "^2.0.0"
 
-micromark@^4.0.2:
+micromark@^4.0.3:
   version "4.0.3"
   resolved "https://registry.yarnpkg.com/micromark/-/micromark-4.0.3.tgz#6d29c0a5383c1dda7975a6c897e0e18d5694f10d"
   integrity sha512-oGYfQzHSG5dOMovQcJ3fyTmZlWAWpi0XA0sJwJs+i6OT88o1+Jtw/8z0CmdowSLxGhhFK89rQ/oXph/wN02PNw==
