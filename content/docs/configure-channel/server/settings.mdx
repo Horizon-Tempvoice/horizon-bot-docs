@@ -1,6 +1,6 @@
 ---
 title: Server Settings
-description: Bot language, server-wide profile rules and admin commands.
+description: Bot language, server-wide profile rules, block behavior and admin commands.
 ---
 
 These settings apply to the whole server, not to a single generator.
@@ -18,6 +18,25 @@ This is separate from the dashboard's own language, which you change with the fl
 ## Profiles
 
 What a saved profile stores, how many slots each member gets, and whether autosave is on by default. Each generator then decides what it restores. See [Saved Profiles](/configure-channel/generator/saved_profiles).
+
+## Blocks
+
+How [blocks](/control-channel/block) behave when a blocked member leaves the server and comes back. Both options are off by default.
+
+| Setting | What it does |
+|---|---|
+| **Re-apply blocks on rejoin** | When a blocked member rejoins the server, Horizon blocks them again in every temporary channel that still exists. |
+| **Log possible block bypasses** | When a member rejoins the server within 15 minutes of being blocked, Horizon posts a **Possible Block Bypass** entry to the [moderation log](/configure-channel/generator/logging#moderation-log) of that channel's generator. |
+
+With logging on, you can pick a **Role to notify**. That role is pinged with every possible block bypass, and nobody else is.
+
+<Callout title="Not proof of intent" type="info">
+    Leaving and rejoining shortly after a block isn't necessarily an attempt to get around it. The entry is a hint that looking into it is recommended, not a verdict.
+</Callout>
+
+<Callout title="Note" type="warn">
+    Entries are only posted if the generator has a moderation log set up. For the ping to work, the role has to be mentionable, or Horizon needs the **Mention @everyone, @here and All Roles** permission. The dashboard warns you if Horizon might not be able to ping the role you picked.
+</Callout>
 
 ## Admin commands
 

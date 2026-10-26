@@ -7,6 +7,8 @@ icon: UserX
 
 Use `/block @user` to permanently prevent a user from joining your channel. If they are currently inside, they will be disconnected. By default, blocked users can't see your channel at all. If the server admin turned off **Block Hides Channel**, they can still see it but can't join.
 
+Blocks are kept even if the user leaves the server. Server admins can have Horizon re-apply them when the user rejoins, and log a rejoin shortly after a block as a possible bypass attempt. See [Server Settings](/configure-channel/server/settings#blocks).
+
 <Callout title="Note" type="info">
     You cannot block yourself or the channel owner. Some members may also be protected by server admins and cannot be blocked (e.g. server moderators).
 </Callout>
