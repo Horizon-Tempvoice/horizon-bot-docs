@@ -1,1 +1,1 @@
-export const BRAND_COLOR = '#00A0FF';
+export const BRAND_COLOR = '#6CC4FE';
