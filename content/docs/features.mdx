@@ -22,11 +22,32 @@ For more information, see [Channel Moderators](/mod).
 
 ## In-Channel Log for Members
 
-import Image from "next/image";
+import {CircleMinus, CirclePlus, Repeat} from "lucide-react";
 
 Horizon can post automatic log messages directly inside your temporary voice channel, so members always know what's going on without needing any external bot or audit log access.
 
-![In-Channel Log Showcase](/img/content/in_channel_log_showcase.png)
+<DiscordChat caption="The text chat of a temporary channel with the member log turned on.">
+    <DiscordChatMessage time="15:32">
+        <DiscordText><CirclePlus className="inline size-5 align-[-4px] text-[#3fae5f]" /> Fabi (fabi) <DiscordCode>1494690832790323300</DiscordCode></DiscordText>
+        <DiscordText><CirclePlus className="inline size-5 align-[-4px] text-[#3fae5f]" /> Alex (alex) <DiscordCode>799333173205008404</DiscordCode></DiscordText>
+    </DiscordChatMessage>
+    <DiscordChatMessage author="Fabi" avatar="/img/fabi.png" zoomAvatar bot={false} time="15:33">
+        <DiscordText>Hi!</DiscordText>
+        <DiscordText>Time to go for me, bye. I will give you the channel!</DiscordText>
+    </DiscordChatMessage>
+    <DiscordChatMessage command="transfer" time="15:35" ephemeral>
+        <DiscordText>You have successfully transferred ownership of the temporary voice channel to <DiscordMention>@Alex</DiscordMention>.</DiscordText>
+    </DiscordChatMessage>
+    <DiscordChatMessage time="15:35">
+        <DiscordText><Repeat className="inline size-5 align-[-4px] text-[#00a8fc]" /> Fabi (fabi) <DiscordCode>1494690832790323300</DiscordCode> transferred ownership to Alex (alex) <DiscordCode>799333173205008404</DiscordCode></DiscordText>
+    </DiscordChatMessage>
+    <DiscordChatMessage author="Alex" avatar="/img/user-avatar.png" bot={false} time="15:36">
+        <DiscordText>Bye 👋</DiscordText>
+    </DiscordChatMessage>
+    <DiscordChatMessage time="15:36">
+        <DiscordText><CircleMinus className="inline size-5 align-[-4px] text-[#f23f43]" /> Fabi (fabi) <DiscordCode>1494690832790323300</DiscordCode></DiscordText>
+    </DiscordChatMessage>
+</DiscordChat>
 
 When enabled, Horizon tracks the following events and posts a short message in the channel the moment they happen:
 

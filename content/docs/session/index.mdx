@@ -6,7 +6,18 @@ icon: Bookmark
 import {Card, Cards} from "fumadocs-ui/components/card";
 import {Save, Play, SkipForward, Eye, PencilLine, Trash2, RefreshCw} from "lucide-react";
 
-<ImageWithCaption src="/img/content/session_view_command_en.png" alt="Session View" maxWidth="300px" />
+<DiscordMessage command="session show" time="16:39" ephemeral>
+    <DiscordContainer>
+        <DiscordHeading large>Your Session Profiles</DiscordHeading>
+        <DiscordSeparator />
+        <DiscordHeading>Slot 1: Gaming ✦</DiscordHeading>
+        <DiscordText>**Channel Name:** Fabi's Channel<br />**Limit:** Unlimited</DiscordText>
+        <DiscordText>Locked: <DiscordCode>❌</DiscordCode><br />Hidden: <DiscordCode>❌</DiscordCode><br />Skip active: <DiscordCode>No</DiscordCode></DiscordText>
+        <DiscordText>**Mods**<br /><DiscordMention>@Alex</DiscordMention></DiscordText>
+        <DiscordText>**Blocked**<br /><DiscordMention>@Some user</DiscordMention></DiscordText>
+        <DiscordText>**Allowed**<br />_none_</DiscordText>
+    </DiscordContainer>
+</DiscordMessage>
 
 Session profiles let you save your current channel configuration, including name, user limit, lock/hide state, trusted users, blocked users, and moderators, and automatically apply it the next time you create a channel.
 

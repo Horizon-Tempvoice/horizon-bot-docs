@@ -11,17 +11,22 @@ const ACCENTS: Record<Accent, string> = {
   grey: "border-l-[#99AAB5]",
 };
 
-interface DiscordMessageProps {
+interface MessageRowProps {
   author?: string;
   avatar?: string;
   highlight?: boolean;
+  bot?: boolean;
+  zoomAvatar?: boolean;
   verified?: boolean;
   ephemeral?: boolean;
   edited?: boolean;
   command?: string;
   time?: string;
-  caption?: string;
   children: ReactNode;
+}
+
+interface DiscordMessageProps extends MessageRowProps {
+  caption?: string;
 }
 
 function CommandIcon() {
@@ -56,32 +61,42 @@ function CommandReply({ command }: { command: string }) {
   );
 }
 
-export function DiscordMessage({
+const FRAME =
+  "w-fit max-w-full [zoom:0.875] rounded-xl border border-dc-border bg-dc-chat py-3 pr-4 text-[15px] leading-[1.375] text-dc-text shadow-[0_8px_24px_rgba(0,0,0,0.08)] dark:shadow-[0_8px_24px_rgba(0,0,0,0.3)]";
+
+function MessageRow({
   author = "Horizon",
   avatar = "/img/horizon-prod.png",
   highlight,
+  bot = true,
+  zoomAvatar,
   verified = true,
   ephemeral,
   edited,
   command,
   time = "Today at 20:15",
-  caption,
   children,
-}: DiscordMessageProps) {
+}: MessageRowProps) {
   return (
-    <figure className="not-prose my-6">
-      <div className="w-fit max-w-full rounded-xl border border-dc-border bg-dc-chat py-3 pr-4 text-[15px] leading-[1.375] text-dc-text shadow-[0_8px_24px_rgba(0,0,0,0.08)] dark:shadow-[0_8px_24px_rgba(0,0,0,0.3)]">
-        {command && <CommandReply command={command} />}
-        <div
-          className={`flex gap-4 px-4 py-1 ${
-            highlight ? "border-l-2 border-[#f0b232] bg-[#f0b232]/10 pl-[14px]" : ""
-          }`}
-        >
+    <div>
+      {command && <CommandReply command={command} />}
+      <div
+        className={`flex gap-4 px-4 py-1 ${
+          highlight ? "border-l-2 border-[#f0b232] bg-[#f0b232]/10 pl-[14px]" : ""
+        }`}
+      >
+        <span className={`mt-0.5 block size-10 shrink-0 overflow-hidden rounded-full ${zoomAvatar ? "bg-white" : ""}`}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={withBase(avatar)} alt="" className="mt-0.5 h-10 w-10 shrink-0 rounded-full" />
-          <div className="min-w-0 flex-1">
-            <div className="flex items-center gap-1.5">
-              <span className="font-semibold text-dc-text-strong">{author}</span>
+          <img
+            src={withBase(avatar)}
+            alt=""
+            className={`size-full object-cover ${zoomAvatar ? "scale-[1.45]" : ""}`}
+          />
+        </span>
+        <div className="min-w-0 flex-1">
+          <div className="flex items-center gap-1.5">
+            <span className="font-semibold text-dc-text-strong">{author}</span>
+            {bot && (
               <span className="inline-flex items-center gap-0.5 rounded bg-[#5865f2] px-1 text-[10px] font-semibold leading-4 text-white">
                 {verified && (
                   <svg aria-label="Verified app" viewBox="0 0 16 15.2" className="h-[10px] w-[10px]">
@@ -90,24 +105,50 @@ export function DiscordMessage({
                 )}
                 APP
               </span>
-              <span className="text-xs text-dc-muted">{time}</span>
-            </div>
-            {children}
-            {edited && <p className="mt-1 text-xs text-dc-muted">(edited)</p>}
-            {ephemeral && (
-              <p className="mt-2 flex items-center gap-1.5 text-sm text-dc-muted">
-                <Eye className="size-4" />
-                Only you can see this •<span className="text-[#006ce7] dark:text-[#00a8fc]">Dismiss message</span>
-              </p>
             )}
+            <span className="text-xs text-dc-muted">{time}</span>
           </div>
+          {children}
+          {edited && <p className="mt-1 text-xs text-dc-muted">(edited)</p>}
+          {ephemeral && (
+            <p className="mt-2 flex items-center gap-1.5 text-sm text-dc-muted">
+              <Eye className="size-4" />
+              Only you can see this •<span className="text-[#006ce7] dark:text-[#00a8fc]">Dismiss message</span>
+            </p>
+          )}
         </div>
       </div>
-      {caption && (
-        <figcaption className="mt-2 text-center text-sm text-fd-muted-foreground">{caption}</figcaption>
-      )}
+    </div>
+  );
+}
+
+function Caption({ children }: { children?: string }) {
+  if (!children) return null;
+  return <figcaption className="mt-2 text-center text-sm text-fd-muted-foreground">{children}</figcaption>;
+}
+
+export function DiscordMessage({ caption, ...props }: DiscordMessageProps) {
+  return (
+    <figure className="not-prose my-6">
+      <div className={FRAME}>
+        <MessageRow {...props} />
+      </div>
+      <Caption>{caption}</Caption>
     </figure>
   );
+}
+
+export function DiscordChat({ caption, children }: { caption?: string; children: ReactNode }) {
+  return (
+    <figure className="not-prose my-6">
+      <div className={`${FRAME} flex flex-col gap-3`}>{children}</div>
+      <Caption>{caption}</Caption>
+    </figure>
+  );
+}
+
+export function DiscordChatMessage(props: MessageRowProps) {
+  return <MessageRow {...props} />;
 }
 
 export function DiscordContainer({
@@ -136,8 +177,12 @@ export function DiscordText({ children }: { children: ReactNode }) {
   return <p className="m-0">{children}</p>;
 }
 
-export function DiscordHeading({ children }: { children: ReactNode }) {
-  return <p className="m-0 text-base font-bold leading-tight text-dc-text-strong">{children}</p>;
+export function DiscordHeading({ children, large }: { children: ReactNode; large?: boolean }) {
+  return (
+    <p className={`m-0 font-bold leading-tight text-dc-text-strong ${large ? "text-xl" : "text-base"}`}>
+      {children}
+    </p>
+  );
 }
 
 export function DiscordSubtext({ children }: { children: ReactNode }) {

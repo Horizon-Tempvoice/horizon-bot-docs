@@ -4,7 +4,24 @@ description: View information about your temporary voice channel.
 icon: Info
 ---
 
-![Channel Info](/img/content/info_command_en.png)
+<DiscordMessage command="info" time="16:36" ephemeral>
+    <DiscordContainer>
+        <div>
+            <DiscordHeading large>Fabi's Channel</DiscordHeading>
+            <DiscordSubtext>Temporary Voice Channel Information</DiscordSubtext>
+        </div>
+        <DiscordSeparator />
+        <DiscordText>**Owner** <DiscordMention>@Fabi</DiscordMention><br />**Created** <DiscordTime>42 seconds ago</DiscordTime></DiscordText>
+        <DiscordSeparator />
+        <DiscordText>Locked: <DiscordCode>❌</DiscordCode><br />Hidden: <DiscordCode>❌</DiscordCode><br />Users: <DiscordCode>1 / ∞</DiscordCode></DiscordText>
+        <DiscordSeparator />
+        <DiscordText>**Mods**<br />-</DiscordText>
+        <DiscordSeparator />
+        <DiscordText>**Trusted Members**<br />-</DiscordText>
+        <DiscordSeparator />
+        <DiscordText>**Blocked Members**<br /><DiscordMention>@Some user</DiscordMention></DiscordText>
+    </DiscordContainer>
+</DiscordMessage>
 
 Use `/info` to get an overview of your current temporary channel.
 
@@ -13,6 +30,7 @@ Use `/info` to get an overview of your current temporary channel.
 | Owner | Everyone |
 | Created | Everyone |
 | Privacy (locked / hidden) | Everyone |
+| Users (current / limit) | Everyone |
 | Moderators | Everyone |
 | Trusted users | Owner & Mods |
 | Blocked users | Owner & Mods |
