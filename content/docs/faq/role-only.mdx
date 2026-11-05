@@ -1,0 +1,39 @@
+---
+title: Only for members with a specific role?
+description: Let only members with a certain role create and join temporary channels.
+icon: KeyRound
+---
+
+Two things decide who can use temporary channels: who can join the Creator Channel, and who can see and join the channels Horizon creates. Set up both. Otherwise members without the role can still create a channel, or join someone else's.
+
+## 1. Who can create channels
+
+Horizon creates a channel for everyone who joins the Creator Channel and doesn't check roles at that point. Restrict the Creator Channel itself in Discord: open its settings and set these permissions:
+
+| Role | View Channel | Connect |
+|---|---|---|
+| `@everyone` | Deny | |
+| Your role(s) | Allow | Allow |
+| Horizon | Allow | Allow |
+
+<Callout title="Why Horizon needs its own allow" type="warn">
+    Horizon is part of `@everyone` too, so the deny applies to it as well. It needs to see the Creator Channel and move members out of it, so also allow **Move Members** for Horizon.
+</Callout>
+
+If the Creator Channel is synced with its category, you can set the permissions on the category instead.
+
+## 2. Who can join the channels
+
+Open the [Dashboard](https://dashboard.horizon-bot.me), pick your server, open **Generators**, choose the generator and scroll to **Who can join**:
+
+1. Add the role under **Access Roles**.
+2. Set **Visibility for non-role members** to **Hidden from others**.
+
+Members without the role can't see or join the temporary channels anymore. See [Who Can Join](/configure-channel/generator/who_can_join) for all options.
+
+## Good to know
+
+- With several roles, add all of them in both places. A member only needs one of them.
+- Owners can still let single members in with [`/trust`](/control-channel/trust) or [`/inviteuser`](/control-channel/invite), even without the role. Turn off **Trust / Untrust** and **Invite** in [Owner Tools](/configure-channel/generator/owner_tools) if you don't want that.
+- Members with an [Immune Role](/configure-channel/generator/who_can_join#immune-roles) can always see and join temporary channels.
+- Running a verification system? [Using a verification system?](/faq/verification) covers the same setup with category permissions and an alternative without Access Roles.
