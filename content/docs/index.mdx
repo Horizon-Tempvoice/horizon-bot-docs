@@ -1,6 +1,6 @@
 ---
 title: Welcome
-description: Give your users total control with Horizon's temporary voice channels. They get to customize their own rooms, while you enjoy a perfectly organized server that cleans itself up.
+description: Horizon creates a voice channel when a member joins the Join to Create channel and deletes it once everyone has left. Members run their own channel, admins set the rules.
 icon: House
 ---
 
@@ -10,7 +10,7 @@ import {INVITE_URL, SUPPORT_URL} from "@/lib/constants";
 
 ## Thanks for choosing Horizon
 
-In this documentation, you'll find everything you need to know about using Horizon to create and manage temporary voice channels in your Discord server. Whether you're new to Horizon or looking to explore advanced features, we've got you covered. Feel free to join our Discord Server if you have any questions or just want to stay up to date with the latest news and updates about Horizon.
+These docs cover setting up Horizon on your server and everything members and admins can do with their temporary voice channels. Questions the docs don't answer go to our Discord server, where we also post updates.
 
 <Cards className="grid-cols-3">
     <Card
@@ -46,12 +46,8 @@ A voice channel that Horizon creates the moment you join the [Join to Create cha
 
 <TempChannelSteps />
 
-### How you benefit
+### Why use them
 
-* **No more empty channels:** The channel list only shows channels that are actually being used.
-* **Members manage their own space:** As the channel owner, you can rename it, lock it, set a user limit and more, either via [`/commands`](/control-channel) or the [Horizon-Panel](/panel). No admin required.
-* **Fully configurable for admins:** Server admins decide exactly what members are allowed to change in their channels.
-* **Scales automatically:** Whether it's 2 people or 200, the server just keeps itself clean.
-* **Private by default:** Each room belongs to the person who created it, for as long as they need it.
-
-No clutter. No manual work. It just handles itself.
+* Channels only exist while someone is in them, so your channel list doesn't fill up with empty rooms.
+* The member who created a channel owns it. They can rename it, lock it, set a user limit and more with [commands](/control-channel) or the [Horizon-Panel](/panel), without asking an admin.
+* Server admins decide what owners are allowed to change.

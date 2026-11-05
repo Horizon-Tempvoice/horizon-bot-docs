@@ -1,24 +1,24 @@
 ---
 title: Quickstart
-description: Temporary channels for your server - ready when you are.
+description: Invite Horizon and run /setup to get your first Join to Create channel.
 icon: Feather
 ---
 
 import {CirclePlus, CloudDownload, ExternalLink, PenLine} from "lucide-react";
-import {INVITE_URL} from "@/lib/constants";
+import {INVITE_URL, SUPPORT_URL} from "@/lib/constants";
 import {Callout} from "fumadocs-ui/components/callout";
 
 ## 1. Invite Horizon to your server
 
-Bring <strong className="text-fd-primary">Horizon</strong> to your server – just head to <a href={INVITE_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1">invite.horizon-bot.me <ExternalLink size={14} /></a> and you're good to go.
+Open <a href={INVITE_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1">invite.horizon-bot.me <ExternalLink size={14} /></a> and add <strong className="text-fd-primary">Horizon</strong> to your server.
 
 <div className="mt-2 mb-8">
   <DiscordButton label="Invite Horizon" href={INVITE_URL} variant="native" />
 </div>
 
-## 2. Setup Horizon in your server
+## 2. Set up Horizon in your server
 
-Using the `/setup` command, you can setup Horizon in your server. Click on ``Setup Horizon`` and it will generate you a <strong className="text-fd-primary">Join to Create</strong> and a [Horizon-Panel](/panel).
+Run `/setup` and click **Setup Horizon**. Horizon creates a <strong className="text-fd-primary">Join to Create</strong> channel and a channel with the [Horizon-Panel](/panel).
 
 <MockStep n={1}>Run `/setup` in any text channel</MockStep>
 
@@ -50,30 +50,30 @@ Using the `/setup` command, you can setup Horizon in your server. Click on ``Set
     </DiscordContainer>
 </DiscordMessage>
 
-<strong className="text-fd-primary">Horizon</strong> is now ready to be used in your server. Just join the <strong className="text-fd-primary">Join to Create</strong> and your own Channel will be created.
+Join the <strong className="text-fd-primary">Join to Create</strong> channel and Horizon creates your own channel and moves you into it.
 
-Further customization is available in the <a href="https://dashboard.horizon-bot.me" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1">Dashboard <ExternalLink size={14} /></a>.
+Everything else is set up in the <a href="https://dashboard.horizon-bot.me" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1">Dashboard <ExternalLink size={14} /></a>.
 
 ## 3. Do you need help?
 <div className="mt-2 mb-8">
-    <DiscordButton label="Join Support Server" href="https://horizon-bot.me/docs/" variant="native" />
+    <DiscordButton label="Join Support Server" href={SUPPORT_URL} variant="native" />
 </div>
 
-This <a href="https://horizon-bot.me/docs/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1">Documentation <ExternalLink size={14} /></a> is a great place to start. If you have any questions, feel free to join our <a href="https://support.horizon-bot.me/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1">Support Server <ExternalLink size={14} /></a>.
+If these docs don't answer your question, ask in our <a href={SUPPORT_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1">Support Server <ExternalLink size={14} /></a>.
 
 ---
 
 ## Key concepts
 
 ### Generator Channel
-These specialized voice channels automatically generate a temporary channel when joined. You can set up multiple Generator Channels by repeating the configuration steps; each one can be customized independently to define how its temporary channels behave.
+The Join to Create channel is a Generator Channel. Horizon creates a temporary channel for every member who joins it. A server can have several Generator Channels, and each one has its own settings for the channels it creates.
 
 <Callout title="Notice" type="warn">
-    You can have a maximum of 3 Generator Channels <strong>(Not user channels, they can be as much as you want)</strong> per server. Deleting a Generator will also delete the record in the database of the Bot.
+    A server can have up to 3 Generator Channels. There's no limit on the temporary channels they create. Deleting a generator also deletes its settings.
 </Callout>
 
 ### Tempvoice Panel
-The Tempvoice Panel, <em>referred as the <strong className="text-fd-primary">Horizon-Panel</strong></em>, is a Discord native interface that allows you to manage your temporary voice channels as a alternative to the Slash Commands.
+The Tempvoice Panel, also called the <strong className="text-fd-primary">Horizon-Panel</strong>, is a Discord message with buttons. Channel owners use it to manage their channel instead of typing slash commands.
 
 ### The Dashboard
 
@@ -81,7 +81,7 @@ The Tempvoice Panel, <em>referred as the <strong className="text-fd-primary">Hor
     <DiscordButton label="Open Dashboard" href="https://dashboard.horizon-bot.me/" variant="native" />
 </div>
 
-The <a href="https://dashboard.horizon-bot.me" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1">Dashboard <ExternalLink size={14} /></a> is a web interface that allows you to manage your server's Generator Channels and Tempvoice Panel.
+The <a href="https://dashboard.horizon-bot.me" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1">Dashboard <ExternalLink size={14} /></a> is the website where admins configure Generator Channels, the panel and server settings.
 
 ![Server overview in the Horizon Dashboard](/img/content/dashboard_overview_en.png)
 
