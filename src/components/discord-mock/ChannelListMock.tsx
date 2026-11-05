@@ -43,7 +43,6 @@ const DEFAULT_MOCK: ChannelListMockText = {
 
 const MUTED = "text-dc-muted";
 
-// The cat sits small in a wide white frame, so it's zoomed in to fill the circle
 function Avatar({ size = "size-7" }: { size?: string }) {
   return (
     <span
@@ -77,10 +76,6 @@ function ChannelRow({
   );
 }
 
-/**
- * The channel you're connected to. A fresh temp channel also gets the status
- * line, the call timer and the motif line; the generator is only passed through.
- */
 function ConnectedChannel({
   name,
   mock,
@@ -116,7 +111,6 @@ function ConnectedChannel({
       <div
         className={`flex items-center gap-2 py-1.5 pl-9 pr-2 text-sm ${MUTED}`}
       >
-        {/* Green ring is Discord's speaking indicator */}
         <span className="rounded-full ring-2 ring-[#23a55a] ring-offset-2 ring-offset-dc-bg">
           <Avatar size="size-6" />
         </span>
@@ -126,7 +120,6 @@ function ConnectedChannel({
   );
 }
 
-/** A Discord channel list frozen at one stage of a temporary channel's life. */
 export default function ChannelListMock({
   stage,
   mock = DEFAULT_MOCK,
@@ -167,7 +160,6 @@ export default function ChannelListMock({
           </div>
         )}
       </div>
-      {/* Discord's floating panel: connection status while in voice, then the user bar */}
       <div className="m-2 rounded-lg border border-dc-button bg-dc-panel px-2.5 py-2">
         {stage < 2 && (
           <div className="pb-1">

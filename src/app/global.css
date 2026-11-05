@@ -187,7 +187,6 @@ button[data-search-full] {
     pointer-events: none;
 }
 
-/* Homepage motif: a brand line that grows like a channel appearing. */
 .motif-line {
     background: var(--color-fd-primary);
     transform: scaleY(0);

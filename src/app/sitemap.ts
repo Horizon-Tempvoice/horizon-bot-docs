@@ -1,8 +1,6 @@
 import type { MetadataRoute } from 'next';
 import { source } from '@/lib/source';
 
-// The docs are served under horizon-bot.me/docs. page.url is root-relative
-// ("/", "/mod", ...) because the loader baseUrl stays "/", so prefix the base.
 const BASE_URL = 'https://horizon-bot.me/docs';
 
 export default function sitemap(): MetadataRoute.Sitemap {

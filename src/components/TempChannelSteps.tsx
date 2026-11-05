@@ -16,7 +16,6 @@ const STEPS = [
   },
 ];
 
-/** The life of a temporary channel in three Discord channel list mockups. */
 export function TempChannelSteps() {
   return (
     <ol className="not-prose my-8 grid gap-10 sm:grid-cols-3 sm:gap-4">

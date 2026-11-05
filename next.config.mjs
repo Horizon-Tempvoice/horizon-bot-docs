@@ -8,8 +8,8 @@ const withMDX = createMDX();
 let revision = 'unknown';
 try {
   revision = execSync('git rev-parse --short HEAD').toString().trim();
-} catch (e) {
-  // ignore
+} catch {
+  revision = 'unknown';
 }
 
 const DOCS_CONTENT = join(process.cwd(), 'content', 'docs');
@@ -59,9 +59,6 @@ const legacyAliases = [
   ['/inviteuser', '/control-channel/invite'],
   ['/setup', '/quickstart'],
   ['/commands', '/control-channel'],
-  // Dashboard rework 2026-10: the docs used to follow the old dashboard tabs
-  // (Basics, Feature, Access, Others). Old links, including the ones older
-  // dashboard builds point to, land on the matching new page.
   ['/configure-channel/basics', '/configure-channel/generator'],
   ['/configure-channel/basics/channel_defaults', '/configure-channel/generator/size_and_audio'],
   ['/configure-channel/basics/visibility', '/configure-channel/generator/placement_and_privacy'],
@@ -78,8 +75,6 @@ const legacyAliases = [
   ['/configure-channel/others/deletion_delay', '/configure-channel/generator/deleting_empty_channels'],
   ['/configure-channel/others/knock', '/configure-channel/generator/knocking'],
   ['/configure-channel/server_settings', '/configure-channel/server/settings'],
-  // Short aliases of the removed pages (the flat aliases are built from
-  // current file names, so these would otherwise 404).
   ['/channel_defaults', '/configure-channel/generator/size_and_audio'],
   ['/visibility', '/configure-channel/generator/placement_and_privacy'],
   ['/toggle_features', '/configure-channel/generator/owner_tools'],
@@ -90,8 +85,6 @@ const legacyAliases = [
   ['/profiles', '/configure-channel/generator/saved_profiles'],
   ['/deletion_delay', '/configure-channel/generator/deleting_empty_channels'],
   ['/server_settings', '/configure-channel/server/settings'],
-  // Docs restructure 2026-11: command pairs and session commands were
-  // merged into one page each.
   ['/features', '/configure-channel/generator/logging#member-log'],
   ['/control-channel/show', '/control-channel/hide#show'],
   ['/control-channel/unlock', '/control-channel/lock#unlock'],

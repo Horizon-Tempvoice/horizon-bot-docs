@@ -1,6 +1,3 @@
-// Discord UI glyphs redrawn as inline SVG for the mockups. Decorative only:
-// the surrounding mock is aria-hidden.
-
 type IconProps = { className?: string };
 
 export function SpeakerIcon({ className = "size-5" }: IconProps) {

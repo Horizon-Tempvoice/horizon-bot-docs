@@ -2,10 +2,6 @@
 
 import { useInView } from "@/lib/useInView";
 
-/**
- * The page's motif line, grown once when it scrolls into view. Positioning
- * comes from the caller.
- */
 export default function MotifLine({
   className = "",
   horizontal = false,

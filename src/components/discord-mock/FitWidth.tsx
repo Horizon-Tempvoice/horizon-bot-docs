@@ -2,10 +2,6 @@
 
 import { type ReactNode, useEffect, useRef, useState } from "react";
 
-/**
- * Fills its column, but below `width` lays the children out at `width` and
- * zooms them down, so a mockup shrinks as a whole instead of reflowing.
- */
 export function FitWidth({
   width,
   children,
