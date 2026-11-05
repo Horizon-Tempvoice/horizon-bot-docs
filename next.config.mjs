@@ -90,8 +90,9 @@ const legacyAliases = [
   ['/profiles', '/configure-channel/generator/saved_profiles'],
   ['/deletion_delay', '/configure-channel/generator/deleting_empty_channels'],
   ['/server_settings', '/configure-channel/server/settings'],
-  // Docs restructure 2026-11: command pairs, session commands and
-  // placeholders were merged into one page each.
+  // Docs restructure 2026-11: command pairs and session commands were
+  // merged into one page each.
+  ['/features', '/configure-channel/generator/logging#member-log'],
   ['/control-channel/show', '/control-channel/hide#show'],
   ['/control-channel/unlock', '/control-channel/lock#unlock'],
   ['/control-channel/untrust', '/control-channel/trust#untrust'],
@@ -113,18 +114,6 @@ const legacyAliases = [
   ['/rename', '/session#rename'],
   ['/delete', '/session#delete'],
   ['/autosave', '/session#autosave'],
-  ['/configure-channel/placeholder/CUSTOM', '/configure-channel/placeholder#custom'],
-  ['/CUSTOM', '/configure-channel/placeholder#custom'],
-  ['/configure-channel/placeholder/OWNER_USERNAME', '/configure-channel/placeholder#owner_username'],
-  ['/OWNER_USERNAME', '/configure-channel/placeholder#owner_username'],
-  ['/configure-channel/placeholder/OWNER_NICK', '/configure-channel/placeholder#owner_nick'],
-  ['/OWNER_NICK', '/configure-channel/placeholder#owner_nick'],
-  ['/configure-channel/placeholder/OWNER_ID', '/configure-channel/placeholder#owner_id'],
-  ['/OWNER_ID', '/configure-channel/placeholder#owner_id'],
-  ['/configure-channel/placeholder/RANDOM_WORD', '/configure-channel/placeholder#random_word'],
-  ['/RANDOM_WORD', '/configure-channel/placeholder#random_word'],
-  ['/configure-channel/placeholder/NUMBER', '/configure-channel/placeholder#number'],
-  ['/NUMBER', '/configure-channel/placeholder#number'],
 ];
 
 /** @type {import('next').NextConfig} */
