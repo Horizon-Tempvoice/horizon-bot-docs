@@ -5,7 +5,6 @@ icon: LayoutDashboard
 
 import {Card, Cards} from "fumadocs-ui/components/card";
 import {Settings2, Server, Braces} from "lucide-react";
-import {BRAND_COLOR} from "@/lib/brand";
 
 Everything a server admin can change lives in the [Dashboard](https://dashboard.horizon-bot.me). Log in with Discord and pick a server. You only see servers where you have the **Manage Server** permission. Servers without Horizon are listed separately under **Add Horizon**, with a link to invite it.
 
@@ -39,19 +38,19 @@ Every generator has one page with all its settings, grouped into sections from t
 
 <Cards>
     <Card
-        icon={<Settings2 style={{ color: BRAND_COLOR }} />}
+        icon={<Settings2 className="text-fd-primary" />}
         title="Generator Settings"
         description="Every setting on the generator page, section by section."
         href="/configure-channel/generator"
     />
     <Card
-        icon={<Server style={{ color: BRAND_COLOR }} />}
+        icon={<Server className="text-fd-primary" />}
         title="Server Pages"
         description="Generators, panel and server settings."
         href="/configure-channel/server"
     />
     <Card
-        icon={<Braces style={{ color: BRAND_COLOR }} />}
+        icon={<Braces className="text-fd-primary" />}
         title="Placeholders"
         description="Variables like {OWNER_NICK} for channel names."
         href="/configure-channel/placeholder"

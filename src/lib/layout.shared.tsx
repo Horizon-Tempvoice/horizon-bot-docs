@@ -15,13 +15,13 @@ export const baseOptions: BaseLayoutProps = {
         <img
           src={withBase('/img/horizon-prod.png')}
           alt="Horizon"
-          width={24}
-          height={24}
-          className="rounded-full"
+          width={32}
+          height={32}
+          className="size-8 rounded-full"
         />
-        Horizon
+        <span className="font-display text-xl font-extrabold tracking-tight">Horizon</span>
       </>
     ),
   },
-  githubUrl: `https://github.com/${gitConfig.user}/${gitConfig.repo}`,
+  themeSwitch: { enabled: false },
 };

@@ -1,5 +1,5 @@
 import { getPageImage, source } from '@/lib/source';
-import { DocsBody, DocsDescription, DocsPage, DocsTitle } from 'fumadocs-ui/layouts/docs/page';
+import { DocsBody, DocsDescription, DocsPage, DocsTitle } from 'fumadocs-ui/layouts/notebook/page';
 import { notFound } from 'next/navigation';
 import { getMDXComponents } from '@/mdx-components';
 import type { Metadata } from 'next';
@@ -100,7 +100,7 @@ export default async function Page(props: {
           <span className="text-fd-primary">{page.data.title}</span>
         </div>
       )}
-      <DocsTitle>{page.data.title}</DocsTitle>
+      <DocsTitle className="font-display font-extrabold tracking-tight">{page.data.title}</DocsTitle>
       <DocsDescription className="mb-0">{page.data.description}</DocsDescription>
       <DocsBody>
         <MDX

@@ -6,7 +6,6 @@ icon: House
 
 import {Card, Cards} from "fumadocs-ui/components/card";
 import {DownloadCloud, MessageCircle, LayoutDashboard} from "lucide-react";
-import {BRAND_COLOR} from "@/lib/brand";
 import {INVITE_URL, SUPPORT_URL} from "@/lib/constants";
 
 ## Thanks for choosing Horizon
@@ -15,7 +14,7 @@ In this documentation, you'll find everything you need to know about using Horiz
 
 <Cards className="grid-cols-3">
     <Card
-        icon={<MessageCircle style={{ color: BRAND_COLOR }} />}
+        icon={<MessageCircle className="text-fd-primary" />}
         title="Support Server"
         description="Join our Discord for the latest news and help with Horizon."
         href={SUPPORT_URL}
@@ -23,7 +22,7 @@ In this documentation, you'll find everything you need to know about using Horiz
     />
 
     <Card
-        icon={<DownloadCloud style={{ color: BRAND_COLOR }} />}
+        icon={<DownloadCloud className="text-fd-primary" />}
         title="Invite Horizon"
         description="Invite Horizon to your server and start using it right away."
         href={INVITE_URL}
@@ -31,7 +30,7 @@ In this documentation, you'll find everything you need to know about using Horiz
     />
 
     <Card
-        icon={<LayoutDashboard style={{ color: BRAND_COLOR }} />}
+        icon={<LayoutDashboard className="text-fd-primary" />}
         title="Dashboard"
         description="Configure Horizon and manage your server settings."
         href="https://dashboard.horizon-bot.me"

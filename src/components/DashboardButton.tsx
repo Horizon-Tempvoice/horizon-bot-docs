@@ -1,4 +1,4 @@
-import { ExternalLink, LayoutDashboard } from "lucide-react";
+import { LayoutDashboard } from 'lucide-react';
 
 export function DashboardButton() {
   return (
@@ -6,11 +6,10 @@ export function DashboardButton() {
       href="https://dashboard.horizon-bot.me"
       target="_blank"
       rel="noopener noreferrer"
-      className="inline-flex items-center gap-2 rounded-lg border bg-fd-secondary/50 p-1.5 ps-2 text-sm text-fd-muted-foreground transition-colors hover:bg-fd-accent hover:text-fd-accent-foreground"
+      className="inline-flex h-9 items-center justify-center gap-2 rounded-lg bg-fd-primary px-4 text-sm font-semibold text-fd-primary-foreground transition-colors hover:bg-fd-primary/85"
     >
       <LayoutDashboard className="size-4" />
-      Open Bot Dashboard
-      <ExternalLink className="ms-auto me-1 size-3.5 opacity-60" />
+      Open Dashboard
     </a>
   );
 }

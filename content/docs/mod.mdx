@@ -6,7 +6,6 @@ icon: Shield
 
 import {Card, Cards} from "fumadocs-ui/components/card";
 import {PencilLine, Users, DoorOpen, UserX, UserCheck, UserPlus, UserMinus, Mail, Info, Activity, Globe, Lock, Eye, MessageCircle, BellRing} from "lucide-react";
-import {BRAND_COLOR} from "@/lib/brand";
 
 As a channel owner, you can promote members to **channel moderators**. Mods can help you manage your channel and use a configurable set of commands on your behalf.
 
@@ -22,61 +21,61 @@ The following commands are available to channel moderators by default:
 
 <Cards>
     <Card
-        icon={<Users style={{ color: BRAND_COLOR }} />}
+        icon={<Users className="text-fd-primary" />}
         title="User Limit"
         description="Set the user limit of the channel."
         href="/control-channel/limit"
     />
     <Card
-        icon={<DoorOpen style={{ color: BRAND_COLOR }} />}
+        icon={<DoorOpen className="text-fd-primary" />}
         title="Kick"
         description="Disconnect members from the channel."
         href="/control-channel/kick"
     />
     <Card
-        icon={<UserX style={{ color: BRAND_COLOR }} />}
+        icon={<UserX className="text-fd-primary" />}
         title="Block"
         description="Block members from joining."
         href="/control-channel/block"
     />
     <Card
-        icon={<UserCheck style={{ color: BRAND_COLOR }} />}
+        icon={<UserCheck className="text-fd-primary" />}
         title="Unblock"
         description="Lift a block from a member."
         href="/control-channel/unblock"
     />
     <Card
-        icon={<UserPlus style={{ color: BRAND_COLOR }} />}
+        icon={<UserPlus className="text-fd-primary" />}
         title="Trust"
         description="Grant a member access to a locked or hidden channel."
         href="/control-channel/trust"
     />
     <Card
-        icon={<UserMinus style={{ color: BRAND_COLOR }} />}
+        icon={<UserMinus className="text-fd-primary" />}
         title="Untrust"
         description="Remove trusted access from a member."
         href="/control-channel/untrust"
     />
     <Card
-        icon={<BellRing style={{ color: BRAND_COLOR }} />}
+        icon={<BellRing className="text-fd-primary" />}
         title="Answer Knocks"
         description="Let in or deny members knocking on the channel."
         href="/control-channel/knock"
     />
     <Card
-        icon={<Mail style={{ color: BRAND_COLOR }} />}
+        icon={<Mail className="text-fd-primary" />}
         title="Invite"
         description="Invite a member to the channel."
         href="/control-channel/invite"
     />
     <Card
-        icon={<Activity style={{ color: BRAND_COLOR }} />}
+        icon={<Activity className="text-fd-primary" />}
         title="Bitrate"
         description="Adjust the audio bitrate of the channel."
         href="/control-channel/bitrate"
     />
     <Card
-        icon={<Globe style={{ color: BRAND_COLOR }} />}
+        icon={<Globe className="text-fd-primary" />}
         title="Region"
         description="Set the voice server region of the channel."
         href="/control-channel/region"
@@ -89,25 +88,25 @@ The following commands are **disabled for mods by default**. They can be enabled
 
 <Cards>
     <Card
-        icon={<PencilLine style={{ color: BRAND_COLOR }} />}
+        icon={<PencilLine className="text-fd-primary" />}
         title="Rename"
         description="Rename the channel."
         href="/control-channel/name"
     />
     <Card
-        icon={<Lock style={{ color: BRAND_COLOR }} />}
+        icon={<Lock className="text-fd-primary" />}
         title="Lock / Unlock"
         description="Lock or unlock the channel."
         href="/control-channel/lock"
     />
     <Card
-        icon={<Eye style={{ color: BRAND_COLOR }} />}
+        icon={<Eye className="text-fd-primary" />}
         title="Hide / Show"
         description="Hide or show the channel."
         href="/control-channel/hide"
     />
     <Card
-        icon={<MessageCircle style={{ color: BRAND_COLOR }} />}
+        icon={<MessageCircle className="text-fd-primary" />}
         title="Status"
         description="Set or remove the channel status."
         href="/control-channel/status"

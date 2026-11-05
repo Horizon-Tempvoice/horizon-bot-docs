@@ -4,8 +4,12 @@ import type { ComponentProps } from 'react';
 import { DiscordButton } from '@/components/DiscordButton';
 import {
   DiscordActionRow,
+  DiscordCode,
   DiscordComponentButton,
   DiscordContainer,
+  DiscordField,
+  DiscordFields,
+  DiscordFooter,
   DiscordHeading,
   DiscordMention,
   DiscordMessage,
@@ -15,6 +19,8 @@ import {
   DiscordTime,
 } from '@/components/DiscordMessage';
 import { ImageWithCaption, ImageRow } from '@/components/ImageWithCaption';
+import { MockStep } from '@/components/MockStep';
+import PanelMock from '@/components/discord-mock/PanelMock';
 import { TempChannelSteps } from '@/components/TempChannelSteps';
 import { withBase } from '@/lib/base';
 
@@ -39,10 +45,16 @@ export function getMDXComponents(components?: MDXComponents): MDXComponents {
     DiscordMention,
     DiscordTime,
     DiscordActionRow,
+    DiscordCode,
+    DiscordField,
+    DiscordFields,
+    DiscordFooter,
     DiscordComponentButton,
     ImageWithCaption,
     ImageRow,
     TempChannelSteps,
+    PanelMock,
+    MockStep,
     ...components,
   };
 }

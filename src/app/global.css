@@ -3,47 +3,84 @@
 @import 'fumadocs-ui/css/preset.css';
 
 @theme {
-    --color-fd-muted: hsl(0, 0%, 96.1%);
-    --color-fd-popover: hsl(0, 0%, 100%);
-    --color-fd-popover-foreground: hsl(0, 0%, 15.1%);
-    --color-fd-card-foreground: hsl(0, 0%, 3.9%);
-    --color-fd-border: hsl(0, 0%, 89.8%);
-    --color-fd-primary-foreground: hsl(0, 0%, 98%);
-    --color-fd-secondary-foreground: hsl(0, 0%, 9%);
-    --color-fd-accent: hsl(0, 0%, 94.1%);
-    --color-fd-ring: hsl(0, 0%, 63.9%);
+    --font-display: var(--font-bricolage), system-ui, sans-serif;
 
-    --color-fd-background: hsl(0, 0%, 100%);
-    --color-fd-card: hsl(0, 0%, 100%);
-    --color-fd-foreground: hsl(240, 6%, 25%);
-    --color-fd-muted-foreground: hsl(240, 6%, 50%);
-    --color-fd-secondary: hsl(240, 6%, 97%);
-    --color-fd-accent-foreground: hsl(240, 6%, 25%);
-    --color-fd-primary: #1a8fdb;
+    --color-fd-background: #f7f8fa;
+    --color-fd-foreground: #0f1115;
+    --color-fd-muted: #eceef2;
+    --color-fd-muted-foreground: #3d4049;
+    --color-fd-popover: #ffffff;
+    --color-fd-popover-foreground: #0f1115;
+    --color-fd-card: #ffffff;
+    --color-fd-card-foreground: #0f1115;
+    --color-fd-border: #e1e3e8;
+    --color-fd-primary: #0e70b3;
+    --color-fd-primary-foreground: #ffffff;
+    --color-fd-secondary: #eceef2;
+    --color-fd-secondary-foreground: #0f1115;
+    --color-fd-accent: #e4e6eb;
+    --color-fd-accent-foreground: #0f1115;
+    --color-fd-ring: #0e70b3;
+
+    --color-brand: #1a8fdb;
+    --color-dc-bg: #f2f3f5;
+    --color-dc-chat: #ffffff;
+    --color-dc-border: #e1e2e5;
+    --color-dc-selected: #dfe1e5;
+    --color-dc-hover: #e8e9ec;
+    --color-dc-panel: #ebedef;
+    --color-dc-button: #dcdee3;
+    --color-dc-embed: #f2f3f5;
+    --color-dc-embed-button: #e6e7ea;
+    --color-dc-embed-border: #d4d7dc;
+    --color-dc-dashed: #c4c7cc;
+    --color-dc-text-strong: #060607;
+    --color-dc-text: #313338;
+    --color-dc-icon: #4e5058;
+    --color-dc-muted: #5c5e66;
+    --color-dc-connected: #248046;
 }
 
 .dark {
-    --color-fd-ring: #6cc4fe;
+    --color-fd-background: #2b2d31;
+    --color-fd-foreground: #dde2f0;
+    --color-fd-muted: #1e1f22;
+    --color-fd-muted-foreground: #b3b7c2;
+    --color-fd-popover: #1e1f22;
+    --color-fd-popover-foreground: #dde2f0;
+    --color-fd-card: #313338;
+    --color-fd-card-foreground: #dde2f0;
+    --color-fd-border: #3d3f45;
     --color-fd-primary: #6cc4fe;
-    --color-fd-secondary-foreground: hsl(60, 100%, 98%);
-    --color-fd-card-foreground: hsl(60, 100%, 98%);
-    --color-fd-background: hsl(240, 7%, 11%);
-    --color-fd-foreground: hsl(60, 100%, 98%);
-    --color-fd-popover: hsl(240, 7%, 11%);
-    --color-fd-popover-foreground: hsl(60, 100%, 98%);
-    --color-fd-primary-foreground: hsl(240, 7%, 11%);
-    --color-fd-card: hsl(240, 7%, 11%);
-    --color-fd-muted: hsl(0, 0%, 13%);
-    --color-fd-border: hsl(240, 4%, 19%);
-    --color-fd-accent: hsl(0, 0%, 15%);
-    --color-fd-secondary: hsl(240, 4%, 9%);
-    --color-fd-accent-foreground: hsl(0, 0%, 100%);
-    --color-fd-muted-foreground: hsl(240, 4%, 65%);
+    --color-fd-primary-foreground: #080a10;
+    --color-fd-secondary: #1e1f22;
+    --color-fd-secondary-foreground: #dde2f0;
+    --color-fd-accent: #35373c;
+    --color-fd-accent-foreground: #ffffff;
+    --color-fd-ring: #6cc4fe;
+
+    --color-brand: #6cc4fe;
+    --color-dc-bg: #121214;
+    --color-dc-chat: #1a1a1e;
+    --color-dc-border: #2a2a30;
+    --color-dc-selected: #2a2a2f;
+    --color-dc-hover: #1f1f23;
+    --color-dc-panel: #1c1c20;
+    --color-dc-button: #26262b;
+    --color-dc-embed: #232327;
+    --color-dc-embed-button: #2a2a2e;
+    --color-dc-embed-border: #34343a;
+    --color-dc-dashed: #3a3a40;
+    --color-dc-text-strong: #f2f3f5;
+    --color-dc-text: #dfe0e2;
+    --color-dc-icon: #b5bac1;
+    --color-dc-muted: #94949c;
+    --color-dc-connected: #3fae5f;
 }
 
 .prose {
-    --tw-prose-body: color-mix(in oklab, var(--color-fd-foreground) 85%, transparent);
-    --tw-prose-headings: color-mix(in oklab, var(--color-fd-foreground) 85%, transparent);
+    --tw-prose-body: var(--color-fd-foreground);
+    --tw-prose-headings: var(--color-fd-foreground);
     --tw-prose-links: var(--color-fd-primary);
     --tw-prose-code: var(--color-fd-primary);
 }
@@ -53,13 +90,60 @@
     background-color: color-mix(in oklab, var(--color-fd-primary) 10%, transparent);
 }
 
-#nd-sidebar {
-    background-color: hsl(240, 6%, 97%);
-    border-color: transparent;
+.prose :where(h1, h2, h3, h4):not(:where([class~='not-prose'], [class~='not-prose'] *)) {
+    font-family: var(--font-display);
+    letter-spacing: -0.025em;
 }
 
+.prose :where(h2):not(:where([class~='not-prose'], [class~='not-prose'] *)) {
+    font-weight: 800;
+}
+
+#nd-subnav {
+    --subnav-bg: color-mix(in oklab, var(--color-fd-background) 55%, transparent);
+    background-color: var(--subnav-bg);
+    box-shadow: 0 0 0 100vmax var(--subnav-bg);
+    clip-path: inset(0 -100vmax);
+}
+
+#nd-subnav [data-header-body] {
+    border-bottom-color: transparent;
+}
+
+#nd-subnav::after {
+    content: '';
+    position: absolute;
+    inset-inline: -100vmax;
+    bottom: 0;
+    border-bottom: 1px solid var(--color-fd-border);
+    pointer-events: none;
+}
+
+#nd-subnav button[aria-controls='nd-sidebar'][data-collapsed='false'] {
+    display: none;
+}
+
+#nd-sidebar,
 .dark #nd-sidebar {
-    background-color: hsl(240, 4%, 9%);
+    --color-fd-muted-foreground: inherit;
+    background-color: transparent;
+}
+
+:is(#nd-sidebar, #nd-sidebar-mobile) p:not(:has(a)) {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--color-fd-foreground);
+}
+
+:is(#nd-sidebar, #nd-sidebar-mobile) a[data-active] svg,
+:is(#nd-sidebar, #nd-sidebar-mobile) button[aria-expanded] svg:first-child:not(:last-child) {
+    color: var(--color-fd-primary);
+}
+
+:is(#nd-sidebar, #nd-sidebar-mobile) a[data-active='true'] {
+    font-weight: 600;
 }
 
 button[data-search-full] {

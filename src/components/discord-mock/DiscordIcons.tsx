@@ -33,16 +33,12 @@ export function SignalIcon({ className = "size-4" }: IconProps) {
   );
 }
 
-// Cut-outs in the call buttons are drawn in the button color (#26262b), which
-// is the only place these four icons appear.
-const CUT = "#26262b";
-
 export function CameraOffIcon({ className = "size-5" }: IconProps) {
   return (
     <svg aria-hidden="true" viewBox="0 0 24 24" className={className}>
       <rect x="2" y="6" width="14" height="12" rx="2.5" fill="currentColor" />
       <path d="M17 10.5 22 7.5v9l-5-3Z" fill="currentColor" />
-      <path d="M3 21.5 21 3.5" stroke={CUT} strokeWidth="4.5" />
+      <path d="M3 21.5 21 3.5" className="stroke-dc-button" strokeWidth="4.5" />
       <path
         d="M3 21.5 21 3.5"
         stroke="currentColor"
@@ -60,7 +56,7 @@ export function ScreenShareIcon({ className = "size-5" }: IconProps) {
       <path
         d="M8.5 13.5c0-3.5 2.5-5.5 6-5.5M12.5 5.25 15.5 8l-3 2.75"
         fill="none"
-        stroke={CUT}
+        className="stroke-dc-button"
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -106,7 +102,7 @@ export function SoundboardIcon({ className = "size-5" }: IconProps) {
         rx="6.2"
         ry="2.4"
         transform="rotate(45 7 11.8)"
-        fill={CUT}
+        className="fill-dc-button"
         stroke="currentColor"
         strokeWidth="1.5"
       />

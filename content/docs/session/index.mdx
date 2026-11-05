@@ -5,7 +5,6 @@ icon: Bookmark
 
 import {Card, Cards} from "fumadocs-ui/components/card";
 import {Save, Play, SkipForward, Eye, PencilLine, Trash2, RefreshCw} from "lucide-react";
-import {BRAND_COLOR} from "@/lib/brand";
 
 <ImageWithCaption src="/img/content/session_view_command_en.png" alt="Session View" maxWidth="300px" />
 
@@ -21,43 +20,43 @@ You can have up to **3 saved slots**, each with an optional label. Your server m
 
 <Cards>
     <Card
-        icon={<Save style={{ color: BRAND_COLOR }} />}
+        icon={<Save className="text-fd-primary" />}
         title="Save"
         description="Save your current channel to a slot."
         href="/session/save"
     />
     <Card
-        icon={<Play style={{ color: BRAND_COLOR }} />}
+        icon={<Play className="text-fd-primary" />}
         title="Activate"
         description="Set a slot as your active profile for the next channel."
         href="/session/activate"
     />
     <Card
-        icon={<SkipForward style={{ color: BRAND_COLOR }} />}
+        icon={<SkipForward className="text-fd-primary" />}
         title="Skip"
         description="Skip your active session once."
         href="/session/skip"
     />
     <Card
-        icon={<Eye style={{ color: BRAND_COLOR }} />}
+        icon={<Eye className="text-fd-primary" />}
         title="Show"
         description="View all your saved session slots."
         href="/session/show"
     />
     <Card
-        icon={<PencilLine style={{ color: BRAND_COLOR }} />}
+        icon={<PencilLine className="text-fd-primary" />}
         title="Rename"
         description="Change the label of a saved slot."
         href="/session/rename"
     />
     <Card
-        icon={<Trash2 style={{ color: BRAND_COLOR }} />}
+        icon={<Trash2 className="text-fd-primary" />}
         title="Delete"
         description="Delete a saved session slot."
         href="/session/delete"
     />
     <Card
-        icon={<RefreshCw style={{ color: BRAND_COLOR }} />}
+        icon={<RefreshCw className="text-fd-primary" />}
         title="Autosave"
         description="Automatically update your active session when you leave."
         href="/session/autosave"

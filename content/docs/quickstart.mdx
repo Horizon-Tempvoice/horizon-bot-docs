@@ -4,15 +4,13 @@ description: Temporary channels for your server - ready when you are.
 icon: Feather
 ---
 
-import {ExternalLink} from "lucide-react";
+import {CirclePlus, CloudDownload, ExternalLink, PenLine} from "lucide-react";
 import {INVITE_URL} from "@/lib/constants";
-import {BRAND_COLOR} from "@/lib/brand";
-import {DocsImage as Image} from "@/components/DocsImage";
 import {Callout} from "fumadocs-ui/components/callout";
 
 ## 1. Invite Horizon to your server
 
-Bring <strong style={{ color: BRAND_COLOR }}>Horizon</strong> to your server – just head to <a href={INVITE_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1">invite.horizon-bot.me <ExternalLink size={14} /></a> and you're good to go.
+Bring <strong className="text-fd-primary">Horizon</strong> to your server – just head to <a href={INVITE_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1">invite.horizon-bot.me <ExternalLink size={14} /></a> and you're good to go.
 
 <div className="mt-2 mb-8">
   <DiscordButton label="Invite Horizon" href={INVITE_URL} variant="native" />
@@ -20,14 +18,39 @@ Bring <strong style={{ color: BRAND_COLOR }}>Horizon</strong> to your server –
 
 ## 2. Setup Horizon in your server
 
-Using the `/setup` command, you can setup Horizon in your server. Click on ``Setup Horizon`` and it will generate you a <strong style={{ color: BRAND_COLOR }}>Join to Create</strong> and a <strong style={{ color: BRAND_COLOR }}>Horizon-Panel</strong>.
+Using the `/setup` command, you can setup Horizon in your server. Click on ``Setup Horizon`` and it will generate you a <strong className="text-fd-primary">Join to Create</strong> and a [Horizon-Panel](/panel).
 
-<div className="flex gap-4 mt-4">
-    <Image src="/img/content/setupcommand_en.png" alt="The /setup command" width={400} height={200} className="rounded-lg" />
-    <Image src="/img/content/setupcommand_done_en.png" alt="Finished Setup" width={400} height={200} className="rounded-lg" />
-</div>
+<MockStep n={1}>Run `/setup` in any text channel</MockStep>
 
-<strong style={{ color: BRAND_COLOR }}>Horizon</strong> is now ready to be used in your server. Just join the <strong style={{ color: BRAND_COLOR }}>Join to Create</strong> and your own Channel will be created.
+<DiscordMessage command="setup" time="21:11" ephemeral>
+    <DiscordContainer thumbnail="/img/horizon-prod.png">
+        <DiscordHeading>Welcome to Horizon!</DiscordHeading>
+        <DiscordText>Horizon lets your server members create and manage their own temporary voice channels.</DiscordText>
+        <DiscordText>**Setup Horizon** - Creates a <DiscordCode>Join to Create</DiscordCode> channel and a dedicated panel channel.<br />**Create Generator Channel** - Creates a <DiscordCode>Join to Create</DiscordCode> channel only.<br />**Create Tempvoice Panel** - Posts the Tempvoice panel in this channel.</DiscordText>
+        <DiscordFooter />
+    </DiscordContainer>
+    <DiscordActionRow>
+        <DiscordComponentButton style="primary" highlight icon={<CloudDownload className="size-4" />}>Setup Horizon</DiscordComponentButton>
+        <DiscordComponentButton icon={<CirclePlus className="size-4 text-[#3fae5f]" />}>Create Generator Channel</DiscordComponentButton>
+        <DiscordComponentButton icon={<PenLine className="size-4 text-[#6cc4fe]" />}>Create Tempvoice Panel</DiscordComponentButton>
+    </DiscordActionRow>
+</DiscordMessage>
+
+<MockStep n={2}>Click **Setup Horizon** and the message turns into a confirmation</MockStep>
+
+<DiscordMessage command="setup" time="13:06" ephemeral edited>
+    <DiscordContainer accent="green" thumbnail="/img/horizon-prod.png">
+        <DiscordHeading>All done - Horizon is ready!</DiscordHeading>
+        <DiscordText>The temporary voice channel system is now active on your server. Members can join the channel below to create their own voice channel instantly. The Tempvoice panel has been posted in this channel.</DiscordText>
+        <DiscordFields>
+            <DiscordField name="Category"><DiscordCode>Tempvoice</DiscordCode></DiscordField>
+            <DiscordField name="Join to Create"><DiscordMention>🔊 Join to create</DiscordMention></DiscordField>
+        </DiscordFields>
+        <DiscordFooter />
+    </DiscordContainer>
+</DiscordMessage>
+
+<strong className="text-fd-primary">Horizon</strong> is now ready to be used in your server. Just join the <strong className="text-fd-primary">Join to Create</strong> and your own Channel will be created.
 
 Further customization is available in the <a href="https://dashboard.horizon-bot.me" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1">Dashboard <ExternalLink size={14} /></a>.
 
@@ -50,7 +73,7 @@ These specialized voice channels automatically generate a temporary channel when
 </Callout>
 
 ### Tempvoice Panel
-The Tempvoice Panel, <em>referred as the <strong style={{ color: BRAND_COLOR }}>Horizon-Panel</strong></em>, is a Discord native interface that allows you to manage your temporary voice channels as a alternative to the Slash Commands.
+The Tempvoice Panel, <em>referred as the <strong className="text-fd-primary">Horizon-Panel</strong></em>, is a Discord native interface that allows you to manage your temporary voice channels as a alternative to the Slash Commands.
 
 ### The Dashboard
 
