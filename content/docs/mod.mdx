@@ -5,7 +5,7 @@ icon: Shield
 ---
 
 import {Card, Cards} from "fumadocs-ui/components/card";
-import {PencilLine, Users, DoorOpen, UserX, UserCheck, UserPlus, UserMinus, Mail, Info, Activity, Globe, Lock, Eye, MessageCircle, BellRing} from "lucide-react";
+import {PencilLine, Users, DoorOpen, UserX, UserPlus, Mail, Info, Activity, Globe, Lock, Eye, MessageCircle, BellRing} from "lucide-react";
 
 As a channel owner, you can promote members to **channel moderators**. Mods can help you manage your channel and use a configurable set of commands on your behalf.
 
@@ -34,27 +34,15 @@ The following commands are available to channel moderators by default:
     />
     <Card
         icon={<UserX className="text-fd-primary" />}
-        title="Block"
-        description="Block members from joining."
+        title="Block / Unblock"
+        description="Block members from joining, or lift a block."
         href="/control-channel/block"
     />
     <Card
-        icon={<UserCheck className="text-fd-primary" />}
-        title="Unblock"
-        description="Lift a block from a member."
-        href="/control-channel/unblock"
-    />
-    <Card
         icon={<UserPlus className="text-fd-primary" />}
-        title="Trust"
-        description="Grant a member access to a locked or hidden channel."
+        title="Trust / Untrust"
+        description="Grant a member access to a locked or hidden channel, or take it back."
         href="/control-channel/trust"
-    />
-    <Card
-        icon={<UserMinus className="text-fd-primary" />}
-        title="Untrust"
-        description="Remove trusted access from a member."
-        href="/control-channel/untrust"
     />
     <Card
         icon={<BellRing className="text-fd-primary" />}

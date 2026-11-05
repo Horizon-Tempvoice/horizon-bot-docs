@@ -49,7 +49,7 @@ Use this if your category already allows many roles and you don't want to add th
 
 Every new channel gets the category's role permissions and keeps the `@everyone` deny. Without the toggle, **Default Visibility: Public** gives `@everyone` View Channel and Connect on every new channel, which makes it visible to unverified members.
 
-[`/unlock`](/control-channel/unlock) and [`/show`](/control-channel/show) put `@everyone` back to what the category or Creator Channel says, so an owner can't open a channel to unverified members.
+[`/unlock`](/control-channel/lock#unlock) and [`/show`](/control-channel/hide#show) put `@everyone` back to what the category or Creator Channel says, so an owner can't open a channel to unverified members.
 
 <Callout title="Lock and hide are limited here" type="warn">
     `/hide` can't hide a channel from members whose role allows View Channel, and `/lock` only keeps them out if their role doesn't allow Connect in the category. If owners should be able to lock or hide their channel from verified members, use Access Roles.

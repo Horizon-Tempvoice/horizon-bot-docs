@@ -1,0 +1,93 @@
+---
+title: Saved Channels (Sessions)
+description: Save your channel setup to a slot and get it back automatically the next time you create a channel.
+icon: Bookmark
+---
+
+<DiscordMessage command="session show" time="16:39" ephemeral>
+    <DiscordContainer>
+        <DiscordHeading large>Your Session Profiles</DiscordHeading>
+        <DiscordSeparator />
+        <DiscordHeading>Slot 1: Gaming ✦</DiscordHeading>
+        <DiscordText>**Channel Name:** Fabi's Channel<br />**Limit:** Unlimited</DiscordText>
+        <DiscordText>Locked: <DiscordCode>❌</DiscordCode><br />Hidden: <DiscordCode>❌</DiscordCode><br />Skip active: <DiscordCode>No</DiscordCode></DiscordText>
+        <DiscordText>**Mods**<br /><DiscordMention>@Alex</DiscordMention></DiscordText>
+        <DiscordText>**Blocked**<br /><DiscordMention>@Some user</DiscordMention></DiscordText>
+        <DiscordText>**Allowed**<br />_none_</DiscordText>
+    </DiscordContainer>
+</DiscordMessage>
+
+Session profiles let you save your current channel configuration, including name, user limit, lock/hide state, trusted users, blocked users, and moderators, and automatically apply it the next time you create a channel.
+
+You can have up to **3 saved slots**, each with an optional label. Your server may allow fewer.
+
+<Callout title="Note" type="info">
+    Server admins can disable the session feature. If the commands on this page don't work, sessions may not be available on your server.
+
+    Admins can also choose which parts of a profile are saved and where profiles are loaded. See [Saved Profiles](/configure-channel/generator/saved_profiles).
+</Callout>
+
+## Save
+
+Use `/session save [slot] [label]` to save your current channel state. This includes name, user limit, lock/hide state, trusted users, blocked users, and moderators.
+
+If your server doesn't store some of these, the reply lists them.
+
+The optional `label` helps you identify the slot (max. 32 characters). Saving to an existing slot overwrites it.
+
+## Activate
+
+Use `/session activate [slot]` to mark a saved slot as active. The next time you join a generator channel, your saved configuration will be applied automatically.
+
+<Callout title="Note" type="info">
+    Slots above your server's slot limit can't be activated. You can still rename or delete them.
+</Callout>
+
+Some generators only load profiles for members with certain roles, or skip parts of a profile. See [Saved Profiles](/configure-channel/generator/saved_profiles).
+
+## Skip
+
+Use `/session skip active:True` to skip your active session for the next channel creation. Your active profile stays set, but the next channel will be created without it, as if no session was active.
+
+Set `permanent:True` to keep skipping until you turn it off again. Use `/session skip active:False` to stop skipping.
+
+<Callout title="Note" type="info">
+    A one-time skip expires after 2 hours if you don't create a channel in that time. `/session show` tells you whether a skip is active.
+</Callout>
+
+## Show
+
+Use `/session show` to display an overview of all your saved slots, including name, user limit, lock/hide state, moderators, trusted and blocked users. For your active slot it also shows whether a skip is active.
+
+The active slot is marked with a ✦.
+
+Parts your server doesn't store are shown as *not saved on this server*. Slots above the server's slot limit are marked as unavailable.
+
+## Rename
+
+Use `/session rename [slot] [label]` to update the label of a saved slot. Leave `label` empty to remove it.
+
+## Delete
+
+Use `/session delete [slot]` to permanently remove a saved session slot.
+
+## Autosave
+
+Use `/session autosave [enabled]` to turn autosave on or off. When enabled, your active session slot is automatically updated with your current channel state every time you leave.
+
+<Callout title="Note" type="info">
+    If you don't have any saved slots yet, autosave creates slot 1 for you. If you already have slots, pick one with `/session activate` first.
+</Callout>
+
+Server admins can turn autosave on by default. If you set it yourself with `/session autosave`, your choice always wins.
+
+<Callout title="When autosave is skipped" type="warn">
+    Your channel state will **not** be saved automatically if:
+    - You have saved slots, but none of them is active
+    - The server admin has disabled the session feature
+    - The channel was transferred to you (you are not the original creator)
+    - You claimed the channel from an owner who left
+    - Your active slot is above the server's slot limit
+
+    You can still save manually with `/session save`, but be careful: this will overwrite your profile with the current channel state.
+</Callout>

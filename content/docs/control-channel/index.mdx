@@ -4,7 +4,7 @@ icon: Goal
 ---
 
 import {Card, Cards} from "fumadocs-ui/components/card";
-import {PencilLine, Users, EyeOff, Eye, Lock, LockOpen, UserPlus, UserMinus, UserX, UserCheck, DoorOpen, Mail, Download, Repeat2, MessageSquare, Info, Activity, Globe, Megaphone, BellRing} from "lucide-react";
+import {PencilLine, Users, EyeOff, Lock, UserPlus, UserX, DoorOpen, Mail, Download, Repeat2, MessageSquare, Info, Activity, Globe, Megaphone, BellRing} from "lucide-react";
 
 <Callout title="Note" type="info">
     Server admins can restrict which of these features are available on their server. Some commands may not be available to you depending on the server's configuration. Channels from an [unmanaged](/configure-channel/generator/owner_tools#managed-or-unmanaged) generator have no owner and can't be changed with these commands at all.
@@ -27,44 +27,23 @@ import {PencilLine, Users, EyeOff, Eye, Lock, LockOpen, UserPlus, UserMinus, Use
 
     <Card
         icon={<EyeOff className="text-fd-primary" />}
-        title="Hide Channel"
-        description="Hide your channel from other users."
+        title="Hide / Show Channel"
+        description="Hide your channel from other users, or make it visible again."
         href="/control-channel/hide"
     />
 
     <Card
-        icon={<Eye className="text-fd-primary" />}
-        title="Show Channel"
-        description="Make your channel visible again."
-        href="/control-channel/show"
-    />
-
-    <Card
         icon={<Lock className="text-fd-primary" />}
-        title="Lock Channel"
-        description="Prevent new users from joining your channel."
+        title="Lock / Unlock Channel"
+        description="Prevent new users from joining your channel, or let them in again."
         href="/control-channel/lock"
     />
 
     <Card
-        icon={<LockOpen className="text-fd-primary" />}
-        title="Unlock Channel"
-        description="Allow users to join your channel again."
-        href="/control-channel/unlock"
-    />
-
-    <Card
         icon={<UserPlus className="text-fd-primary" />}
-        title="Trust User"
-        description="Grant a user access to your locked or hidden channel."
+        title="Trust / Untrust User"
+        description="Grant a user access to your locked or hidden channel, or take it back."
         href="/control-channel/trust"
-    />
-
-    <Card
-        icon={<UserMinus className="text-fd-primary" />}
-        title="Untrust User"
-        description="Remove a user's trusted access from your channel."
-        href="/control-channel/untrust"
     />
 
     <Card
@@ -76,16 +55,9 @@ import {PencilLine, Users, EyeOff, Eye, Lock, LockOpen, UserPlus, UserMinus, Use
 
     <Card
         icon={<UserX className="text-fd-primary" />}
-        title="Block User"
-        description="Block a user from joining your channel."
+        title="Block / Unblock User"
+        description="Block a user from joining your channel, or lift the block."
         href="/control-channel/block"
-    />
-
-    <Card
-        icon={<UserCheck className="text-fd-primary" />}
-        title="Unblock User"
-        description="Remove a block from a user."
-        href="/control-channel/unblock"
     />
 
     <Card

@@ -3,3 +3,23 @@ title: Generator Settings
 description: Everything you can configure per generator, in the order the dashboard shows it.
 icon: Settings2
 ---
+
+import {Card, Cards} from "fumadocs-ui/components/card";
+
+A generator is the Creator Channel members join to get their own temporary channel. Open it in the dashboard to change these settings. Each one only affects channels created by that generator.
+
+<Cards>
+    <Card title="Channel Name" description="The name template for new temporary channels, the {CUSTOM} fallback and the word list." href="/configure-channel/generator/channel_name" />
+    <Card title="Size and Audio" description="Default user limit and bitrate of new channels, and how far owners may change them." href="/configure-channel/generator/size_and_audio" />
+    <Card title="Placement and Privacy" description="Where new channels appear, who can see and join them, and which permissions they inherit." href="/configure-channel/generator/placement_and_privacy" />
+    <Card title="Owner Tools" description="Managed or unmanaged channels, which features channel owners may use, extra owner permissions and channel behaviour." href="/configure-channel/generator/owner_tools" />
+    <Card title="Greeting" description="A message Horizon sends into every new temporary channel, with placeholders and an optional ping." href="/configure-channel/generator/greeting" />
+    <Card title="Who Can Join" description="Limit temporary channels to certain roles, and let your staff into every channel." href="/configure-channel/generator/who_can_join" />
+    <Card title="Channel Moderators" description="Which commands channel moderators may use, and whether they can act on each other." href="/mod#server-admin-configuration" />
+    <Card title="Logging" description="The member log in the channel chat, and the moderation log for everything that happens in temporary channels." href="/configure-channel/generator/logging" />
+    <Card title="Saved Profiles" description="Choose what saved channels remember and where they are loaded." href="/configure-channel/generator/saved_profiles" />
+    <Card title="Knocking" description="Configure how members can knock on locked channels created by a generator." href="/configure-channel/generator/knocking" />
+    <Card title="Looking for Members" description="Pick the channel where LFM announcements are posted." href="/configure-channel/generator/looking_for_members" />
+    <Card title="Deleting Empty Channels" description="Keep empty channels alive for a moment before deleting them." href="/configure-channel/generator/deleting_empty_channels" />
+    <Card title="Duplicate, Export and Import" description="Copy a generator, or move its settings to another generator or server with a signed file." href="/configure-channel/generator/import_export" />
+</Cards>
