@@ -15,8 +15,6 @@ interface MessageRowProps {
   author?: string;
   avatar?: string;
   highlight?: boolean;
-  bot?: boolean;
-  zoomAvatar?: boolean;
   verified?: boolean;
   ephemeral?: boolean;
   edited?: boolean;
@@ -68,8 +66,6 @@ function MessageRow({
   author = "Horizon",
   avatar = "/img/horizon-prod.png",
   highlight,
-  bot = true,
-  zoomAvatar,
   verified = true,
   ephemeral,
   edited,
@@ -85,27 +81,19 @@ function MessageRow({
           highlight ? "border-l-2 border-[#f0b232] bg-[#f0b232]/10 pl-[14px]" : ""
         }`}
       >
-        <span className={`mt-0.5 block size-10 shrink-0 overflow-hidden rounded-full ${zoomAvatar ? "bg-white" : ""}`}>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={withBase(avatar)}
-            alt=""
-            className={`size-full object-cover ${zoomAvatar ? "scale-[1.45]" : ""}`}
-          />
-        </span>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src={withBase(avatar)} alt="" className="mt-0.5 h-10 w-10 shrink-0 rounded-full object-cover" />
         <div className="min-w-0 flex-1">
           <div className="flex items-center gap-1.5">
             <span className="font-semibold text-dc-text-strong">{author}</span>
-            {bot && (
-              <span className="inline-flex items-center gap-0.5 rounded bg-[#5865f2] px-1 text-[10px] font-semibold leading-4 text-white">
-                {verified && (
-                  <svg aria-label="Verified app" viewBox="0 0 16 15.2" className="h-[10px] w-[10px]">
-                    <path d="M7.4 11.17 4 8.62l1-1.36 2 1.53L10.64 4 12 5z" fill="currentColor" />
-                  </svg>
-                )}
-                APP
-              </span>
-            )}
+            <span className="inline-flex items-center gap-0.5 rounded bg-[#5865f2] px-1 text-[10px] font-semibold leading-4 text-white">
+              {verified && (
+                <svg aria-label="Verified app" viewBox="0 0 16 15.2" className="h-[10px] w-[10px]">
+                  <path d="M7.4 11.17 4 8.62l1-1.36 2 1.53L10.64 4 12 5z" fill="currentColor" />
+                </svg>
+              )}
+              APP
+            </span>
             <span className="text-xs text-dc-muted">{time}</span>
           </div>
           {children}
@@ -136,19 +124,6 @@ export function DiscordMessage({ caption, ...props }: DiscordMessageProps) {
       <Caption>{caption}</Caption>
     </figure>
   );
-}
-
-export function DiscordChat({ caption, children }: { caption?: string; children: ReactNode }) {
-  return (
-    <figure className="not-prose my-6">
-      <div className={`${FRAME} flex flex-col gap-3`}>{children}</div>
-      <Caption>{caption}</Caption>
-    </figure>
-  );
-}
-
-export function DiscordChatMessage(props: MessageRowProps) {
-  return <MessageRow {...props} />;
 }
 
 export function DiscordContainer({

@@ -4,8 +4,6 @@ import type { ComponentProps } from 'react';
 import { DiscordButton } from '@/components/DiscordButton';
 import {
   DiscordActionRow,
-  DiscordChat,
-  DiscordChatMessage,
   DiscordCode,
   DiscordComponentButton,
   DiscordContainer,
@@ -39,8 +37,6 @@ export function getMDXComponents(components?: MDXComponents): MDXComponents {
     img: Image,
     DiscordButton,
     DiscordMessage,
-    DiscordChat,
-    DiscordChatMessage,
     DiscordCommandInput,
     DiscordContainer,
     DiscordText,
