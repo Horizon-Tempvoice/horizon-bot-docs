@@ -50,6 +50,13 @@ export default async function Page(props: {
       item: c.url,
     })),
   };
+  const organization = {
+    '@type': 'Organization',
+    '@id': `${SITE_URL}/#organization`,
+    name: 'Horizon',
+    url: SITE_URL,
+    logo: `${SITE_URL}/logo.png`,
+  };
   const articleSchema = {
     '@context': 'https://schema.org',
     '@type': 'TechArticle',
@@ -62,8 +69,8 @@ export default async function Page(props: {
     ...(page.data.lastModified
       ? { dateModified: new Date(page.data.lastModified).toISOString() }
       : {}),
-    author: { '@type': 'Organization', name: 'Diamondforge Labs', url: SITE_URL },
-    publisher: { '@type': 'Organization', name: 'Diamondforge Labs', url: SITE_URL },
+    author: organization,
+    publisher: organization,
   };
 
   return (
