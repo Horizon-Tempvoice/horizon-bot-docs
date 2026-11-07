@@ -72,7 +72,7 @@ function SetupMenuScene() {
         </span>
         <span className="inline-flex h-7 items-center gap-1 rounded-md border border-dc-embed-border bg-dc-embed-button px-2.5 text-[11px] font-medium text-dc-text-strong opacity-50">
           <CirclePlus className="size-3.5 text-[#3fae5f]" />
-          Add Creator
+          Add Generator
         </span>
       </div>
     </Scene>
