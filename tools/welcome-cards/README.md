@@ -8,7 +8,7 @@ Output:
 
 ## Run
 
-1. Start the docs dev server in the repo root: `yarn dev` (the page only exists in dev, at `/docs/welcome-cards`)
+1. Start the docs dev server in the repo root: `npm run dev` (the page only exists in dev, at `/docs/welcome-cards`)
 2. In this folder, once: `npm install && npx playwright install chromium`
 3. `npm run generate`
 

@@ -4,8 +4,8 @@ FROM base AS deps
 RUN apk add --no-cache libc6-compat git openssh-client
 WORKDIR /app
 
-COPY package.json yarn.lock source.config.ts next.config.* ./
-RUN yarn install --frozen-lockfile
+COPY package.json package-lock.json source.config.ts next.config.* ./
+RUN npm ci
 
 FROM base AS builder
 WORKDIR /app
@@ -13,7 +13,7 @@ RUN apk add --no-cache git openssh-client
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
-RUN yarn build
+RUN npm run build
 
 FROM base AS runner
 WORKDIR /app
