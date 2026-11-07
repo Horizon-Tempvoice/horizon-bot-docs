@@ -229,17 +229,19 @@ export function DiscordComponentButton({
   icon,
   style = "secondary",
   highlight,
+  disabled,
 }: {
   children: ReactNode;
   icon?: ReactNode;
   style?: ButtonStyle;
   highlight?: boolean;
+  disabled?: boolean;
 }) {
   return (
     <span
       className={`inline-flex h-8 items-center gap-1.5 rounded-lg px-3 text-sm font-medium ${BUTTON_STYLES[style]} ${
         highlight ? "ring-2 ring-fd-primary ring-offset-2 ring-offset-dc-chat" : ""
-      }`}
+      } ${disabled ? "opacity-50" : ""}`}
     >
       {icon}
       {children}

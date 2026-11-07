@@ -29,7 +29,7 @@ export type ChannelListMockText = {
 };
 
 const DEFAULT_MOCK: ChannelListMockText = {
-  category: "Voice Channels",
+  category: "Custom Channels",
   lounge: "General",
   joinToCreate: "Join to Create",
   channel: "Fabi's channel",
