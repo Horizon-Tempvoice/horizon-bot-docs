@@ -4,7 +4,7 @@ description: Invite Horizon and run /setup to get your first creator channel.
 icon: Feather
 ---
 
-import {CirclePlus, CloudDownload, ExternalLink, PenLine, Settings} from "lucide-react";
+import {ExternalLink} from "lucide-react";
 import {INVITE_URL, SUPPORT_URL} from "@/lib/constants";
 import {Callout} from "fumadocs-ui/components/callout";
 
@@ -22,39 +22,13 @@ Run `/setup` and click **Setup Horizon**. Horizon creates a <strong className="t
 
 Right after the invite, Horizon also posts a welcome message in your server. Its **Setup Horizon** button does the same as the one in `/setup`.
 
-<MockStep n={1}>Run `/setup` in any text channel</MockStep>
+![Run /setup, click Setup Horizon, and your creator channel is ready](/img/welcome/setup.png)
 
-<DiscordMessage command="setup" time="21:11" ephemeral>
-    <DiscordContainer>
-        <DiscordSubtext>Let's get Horizon running on your server...</DiscordSubtext>
-        <DiscordHeading large>Set up Horizon</DiscordHeading>
-        <DiscordText>The full walkthrough is here: <span className="text-[#006ce7] dark:text-[#00a8fc]">https://quickstart.horizon-bot.me/</span></DiscordText>
-        <DiscordText>Every creator channel has its own settings, which you can change in the <span className="text-[#006ce7] dark:text-[#00a8fc]">Dashboard</span>. Not sure how something works? Check the <span className="text-[#006ce7] dark:text-[#00a8fc]">Documentation</span>.</DiscordText>
-    </DiscordContainer>
-    <DiscordActionRow>
-        <DiscordComponentButton style="primary" highlight icon={<CloudDownload className="size-4" />}>Setup Horizon</DiscordComponentButton>
-        <DiscordComponentButton disabled icon={<CirclePlus className="size-4 text-[#3fae5f]" />}>Add Creator</DiscordComponentButton>
-        <DiscordComponentButton disabled icon={<PenLine className="size-4 text-[#6cc4fe]" />}>Add Interface</DiscordComponentButton>
-    </DiscordActionRow>
-</DiscordMessage>
-
-**Add Creator** and **Add Interface** stay greyed out until your server has its first creator channel. After that, use them to add another creator channel or to post the panel in the current channel.
-
-<MockStep n={2}>Click **Setup Horizon** and Horizon answers with a confirmation</MockStep>
-
-<DiscordMessage time="21:11" ephemeral>
-    <DiscordContainer accent="green">
-        <DiscordHeading large>All set!</DiscordHeading>
-        <DiscordText>Your server is ready. Anyone who joins <DiscordMention>➕ Create your channel</DiscordMention> gets their own temporary voice channel.<br />Members can manage their channel from the interface in <DiscordMention>#interface</DiscordMention>.</DiscordText>
-    </DiscordContainer>
-    <DiscordActionRow>
-        <DiscordComponentButton icon={<Settings className="size-4" />}>Configure Horizon <ExternalLink className="size-4" /></DiscordComponentButton>
-    </DiscordActionRow>
-</DiscordMessage>
-
-The `/setup` menu stays open. To use **Add Creator** or **Add Interface** after your first setup, run `/setup` again.
+**Add Creator** and **Add Interface** in the `/setup` menu stay greyed out until your server has its first creator channel. After that, run `/setup` again to add another creator channel or to post the panel in the current channel.
 
 Join <strong className="text-fd-primary">➕ Create your channel</strong> and Horizon creates your own channel and moves you into it.
+
+![Join the creator channel, own your channel, and it is gone once everyone has left](/img/welcome/usage.png)
 
 Everything else is set up in the <a href="https://dashboard.horizon-bot.me" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1">Dashboard <ExternalLink size={14} /></a>.
 

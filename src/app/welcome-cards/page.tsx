@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 import { notFound } from "next/navigation";
-import { Check, ChevronDown, Hash, MousePointer2 } from "lucide-react";
+import { ChevronDown, Hash, MousePointer2 } from "lucide-react";
 import { PlusEmoji } from "@/components/discord-mock/DiscordEmojis";
 import { SpeakerIcon } from "@/components/discord-mock/DiscordIcons";
 import { withBase } from "@/lib/base";
@@ -79,26 +79,21 @@ function SetupMenuScene() {
 
 function SetupDoneScene() {
   return (
-    <>
-      <Scene className="bottom-[54px] left-4 right-[72px] top-3 bg-dc-bg px-2 pt-2 text-[13px]">
-        <p className="flex items-center gap-1 px-1 pb-1 text-[11px] font-semibold uppercase text-dc-muted">
-          Custom Channels
-          <ChevronDown className="size-3" />
-        </p>
-        <div className="flex items-center gap-1.5 rounded-md px-1.5 py-1 text-dc-muted">
-          <Hash className="size-4" />
-          <span className="font-medium">interface</span>
-        </div>
-        <div className="flex items-center gap-1.5 rounded-md bg-dc-selected px-1.5 py-1">
-          <SpeakerIcon className="size-4 text-dc-muted" />
-          <PlusEmoji className="size-3.5" />
-          <span className="font-semibold text-dc-text-strong">Create your channel</span>
-        </div>
-      </Scene>
-      <span className="absolute right-5 top-[52px] grid size-11 place-items-center rounded-full bg-[#23a55a] shadow-[0_6px_18px_rgba(0,0,0,0.35)]">
-        <Check className="size-6 text-white" strokeWidth={3} />
-      </span>
-    </>
+    <Scene className="bottom-[54px] left-4 right-4 top-3 bg-dc-bg px-2 pt-2 text-[13px]">
+      <p className="flex items-center gap-1 px-1 pb-1 text-[11px] font-semibold uppercase text-dc-muted">
+        Custom Channels
+        <ChevronDown className="size-3" />
+      </p>
+      <div className="flex items-center gap-1.5 rounded-md px-1.5 py-1 text-dc-muted">
+        <Hash className="size-4" />
+        <span className="font-medium">interface</span>
+      </div>
+      <div className="flex items-center gap-1.5 rounded-md bg-dc-selected px-1.5 py-1">
+        <SpeakerIcon className="size-4 text-dc-muted" />
+        <PlusEmoji className="size-3.5" />
+        <span className="font-semibold text-dc-text-strong">Create your channel</span>
+      </div>
+    </Scene>
   );
 }
 
