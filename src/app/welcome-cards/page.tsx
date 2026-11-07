@@ -83,7 +83,7 @@ function SetupDoneScene() {
   return (
     <Scene className="bottom-[54px] left-4 right-4 top-3 bg-dc-bg px-2 pt-2 text-[13px]">
       <p className="flex items-center gap-1 px-1 pb-1 text-[11px] font-semibold uppercase text-dc-muted">
-        Custom Channels
+        Horizon Channels
         <ChevronDown className="size-3" />
       </p>
       <div className="flex items-center gap-1.5 rounded-md px-1.5 py-1 text-dc-muted">
@@ -136,7 +136,7 @@ function ChannelScene({ stage }: { stage: number }) {
   return (
     <Scene className="bottom-[54px] left-4 right-4 top-3 bg-dc-bg px-2 pt-2 text-[13px]">
       <p className="flex items-center gap-1 px-1 pb-1 text-[11px] font-semibold uppercase text-dc-muted">
-        Custom Channels
+        Horizon Channels
         <ChevronDown className="size-3" />
       </p>
       <VoiceRow name="Create your channel" generator active={stage === 0} />
