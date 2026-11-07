@@ -4,7 +4,7 @@ import { FitWidth } from "@/components/discord-mock/FitWidth";
 const STEPS = [
   {
     label: "Join",
-    text: "You join the Join to Create channel on your server.",
+    text: "You join the creator channel on your server.",
   },
   {
     label: "Talk",

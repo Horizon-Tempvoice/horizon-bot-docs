@@ -31,7 +31,7 @@ export type ChannelListMockText = {
 const DEFAULT_MOCK: ChannelListMockText = {
   category: "Custom Channels",
   lounge: "General",
-  joinToCreate: "Join to Create",
+  joinToCreate: "Create your channel",
   channel: "Fabi's channel",
   setStatus: "Set a channel status",
   member: "Fabi",

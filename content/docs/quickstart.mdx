@@ -1,6 +1,6 @@
 ---
 title: Quickstart
-description: Invite Horizon and run /setup to get your first Join to Create channel.
+description: Invite Horizon and run /setup to get your first creator channel.
 icon: Feather
 ---
 
@@ -18,7 +18,7 @@ Open <a href={INVITE_URL} target="_blank" rel="noopener noreferrer" className="i
 
 ## 2. Set up Horizon in your server
 
-Run `/setup` and click **Setup Horizon**. Horizon creates a <strong className="text-fd-primary">Custom Channels</strong> category with a <strong className="text-fd-primary">➕ Join to Create</strong> channel and an <strong className="text-fd-primary">#interface</strong> channel with the [Horizon-Panel](/panel).
+Run `/setup` and click **Setup Horizon**. Horizon creates a <strong className="text-fd-primary">Custom Channels</strong> category with a <strong className="text-fd-primary">➕ Create your channel</strong> voice channel and an <strong className="text-fd-primary">#interface</strong> channel with the [Horizon-Panel](/panel).
 
 Right after the invite, Horizon also posts a welcome message in your server. Its **Setup Horizon** button does the same as the one in `/setup`.
 
@@ -38,14 +38,14 @@ Right after the invite, Horizon also posts a welcome message in your server. Its
     </DiscordActionRow>
 </DiscordMessage>
 
-**Add Creator** and **Add Interface** stay greyed out until your server has its first Join to Create channel. After that, use them to add another Join to Create channel or to post the panel in the current channel.
+**Add Creator** and **Add Interface** stay greyed out until your server has its first creator channel. After that, use them to add another creator channel or to post the panel in the current channel.
 
 <MockStep n={2}>Click **Setup Horizon** and Horizon answers with a confirmation</MockStep>
 
 <DiscordMessage time="21:11" ephemeral>
     <DiscordContainer accent="green">
         <DiscordHeading large>All set!</DiscordHeading>
-        <DiscordText>Your server is ready. Anyone who joins <DiscordMention>➕ Join to Create</DiscordMention> gets their own temporary voice channel.<br />Members can manage their channel from the interface in <DiscordMention>#interface</DiscordMention>.</DiscordText>
+        <DiscordText>Your server is ready. Anyone who joins <DiscordMention>➕ Create your channel</DiscordMention> gets their own temporary voice channel.<br />Members can manage their channel from the interface in <DiscordMention>#interface</DiscordMention>.</DiscordText>
     </DiscordContainer>
     <DiscordActionRow>
         <DiscordComponentButton icon={<Settings className="size-4" />}>Configure Horizon <ExternalLink className="size-4" /></DiscordComponentButton>
@@ -54,7 +54,7 @@ Right after the invite, Horizon also posts a welcome message in your server. Its
 
 The `/setup` menu stays open. To use **Add Creator** or **Add Interface** after your first setup, run `/setup` again.
 
-Join the <strong className="text-fd-primary">Join to Create</strong> channel and Horizon creates your own channel and moves you into it.
+Join <strong className="text-fd-primary">➕ Create your channel</strong> and Horizon creates your own channel and moves you into it.
 
 Everything else is set up in the <a href="https://dashboard.horizon-bot.me" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1">Dashboard <ExternalLink size={14} /></a>.
 
@@ -70,7 +70,7 @@ If these docs don't answer your question, ask in our <a href={SUPPORT_URL} targe
 ## Key concepts
 
 ### Generator Channel
-The Join to Create channel is a Generator Channel. Horizon creates a temporary channel for every member who joins it. A server can have several Generator Channels, and each one has its own settings for the channels it creates.
+**➕ Create your channel** is a Generator Channel. Horizon creates a temporary channel for every member who joins it. A server can have several Generator Channels, and each one has its own settings for the channels it creates.
 
 <Callout title="Notice" type="warn">
     A server can have up to 3 Generator Channels. There's no limit on the temporary channels they create. Deleting a generator also deletes its settings.

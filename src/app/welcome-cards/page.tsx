@@ -92,7 +92,7 @@ function SetupDoneScene() {
         <div className="flex items-center gap-1.5 rounded-md bg-dc-selected px-1.5 py-1">
           <SpeakerIcon className="size-4 text-dc-muted" />
           <PlusEmoji className="size-3.5" />
-          <span className="font-semibold text-dc-text-strong">Join to Create</span>
+          <span className="font-semibold text-dc-text-strong">Create your channel</span>
         </div>
       </Scene>
       <span className="absolute right-5 top-[52px] grid size-11 place-items-center rounded-full bg-[#23a55a] shadow-[0_6px_18px_rgba(0,0,0,0.35)]">
@@ -142,7 +142,7 @@ function ChannelScene({ stage }: { stage: number }) {
         Custom Channels
         <ChevronDown className="size-3" />
       </p>
-      <VoiceRow name="Join to Create" generator active={stage === 0} />
+      <VoiceRow name="Create your channel" generator active={stage === 0} />
       {stage === 0 && <Member />}
       {stage === 1 && (
         <>
