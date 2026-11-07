@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 import { notFound } from "next/navigation";
-import { ChevronDown, Hash, MousePointer2 } from "lucide-react";
+import { ChevronDown, CirclePlus, CloudDownload, Hash, MousePointer2 } from "lucide-react";
 import { PlusEmoji } from "@/components/discord-mock/DiscordEmojis";
 import { SpeakerIcon } from "@/components/discord-mock/DiscordIcons";
 import { withBase } from "@/lib/base";
@@ -64,12 +64,14 @@ function SetupMenuScene() {
       </div>
       <div className="mt-2.5 flex gap-1.5">
         <span className="relative -m-[4px] rounded-[9px] border-2 border-white/80 p-[2px]">
-          <span className="inline-flex h-7 items-center rounded-md bg-[#5865f2] px-2.5 text-[11px] font-medium text-white">
+          <span className="inline-flex h-7 items-center gap-1 rounded-md bg-[#5865f2] px-2.5 text-[11px] font-medium text-white">
+            <CloudDownload className="size-3.5" />
             Setup Horizon
           </span>
           <Cursor className="-bottom-3 right-0" />
         </span>
-        <span className="inline-flex h-7 items-center rounded-md border border-dc-embed-border bg-dc-embed-button px-2.5 text-[11px] font-medium text-dc-text-strong opacity-50">
+        <span className="inline-flex h-7 items-center gap-1 rounded-md border border-dc-embed-border bg-dc-embed-button px-2.5 text-[11px] font-medium text-dc-text-strong opacity-50">
+          <CirclePlus className="size-3.5 text-[#3fae5f]" />
           Add Creator
         </span>
       </div>
