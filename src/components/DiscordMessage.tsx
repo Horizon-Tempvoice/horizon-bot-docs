@@ -164,7 +164,7 @@ export function DiscordSubtext({ children }: { children: ReactNode }) {
   return <p className="m-0 text-xs text-dc-muted">{children}</p>;
 }
 
-export function DiscordFooter({ children = "Horizon • Tempvoice System" }: { children?: ReactNode }) {
+export function DiscordFooter({ children = "Horizon | Temporary Channels" }: { children?: ReactNode }) {
   return <p className="m-0 mt-1 text-sm font-medium text-dc-text">{children}</p>;
 }
 
