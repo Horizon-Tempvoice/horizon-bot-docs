@@ -37,6 +37,10 @@ await page.addScriptTag({ content: bundle.outputFiles[0].text });
 
 for (const id of rows) {
   await page.locator(`#${id}`).screenshot({ path: join(pngDir, `${id}.png`), omitBackground: true });
+  const cards = page.locator(`#${id} > div`);
+  for (let i = 0; i < (await cards.count()); i++) {
+    await cards.nth(i).screenshot({ path: join(pngDir, `${id}-${i + 1}.png`), omitBackground: true });
+  }
 
   const svg = await page.evaluate(async (id) => {
     const doc = window.__d2s.elementToSVG(document.getElementById(id));
@@ -78,7 +82,7 @@ for (const id of rows) {
   }, id);
 
   writeFileSync(join(svgDir, `${id}.svg`), svg);
-  console.log(`${id}: png + svg written`);
+  console.log(`${id}: png, card pngs + svg written`);
 }
 
 await browser.close();

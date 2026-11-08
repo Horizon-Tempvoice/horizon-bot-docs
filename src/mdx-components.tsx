@@ -21,7 +21,6 @@ import {
 import { DiscordCommandInput } from '@/components/DiscordCommandInput';
 import { MockStep } from '@/components/MockStep';
 import PanelMock from '@/components/discord-mock/PanelMock';
-import { TempChannelSteps } from '@/components/TempChannelSteps';
 import { withBase } from '@/lib/base';
 
 const DefaultImage = defaultMdxComponents.img!;
@@ -51,7 +50,6 @@ export function getMDXComponents(components?: MDXComponents): MDXComponents {
     DiscordFields,
     DiscordFooter,
     DiscordComponentButton,
-    TempChannelSteps,
     PanelMock,
     MockStep,
     ...components,
