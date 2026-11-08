@@ -5,7 +5,7 @@ Generates the step images for the bot's welcome message from `src/app/welcome-ca
 Output:
 - `public/img/welcome/setup.png`, `usage.png`: used by the bot (`WelcomeAssets` in `WelcomeService.kt`)
 - `public/img/welcome/panel.png`: renaming a channel through the panel, step by step
-- `public/img/welcome/setup-1.png` to `panel-3.png`: each card on its own, for layouts that stack them on small screens. The homepage copies the usage cards as `public/how-it-works-{1,2,3}.png` and the panel cards as `public/panel-rename-{1,2,3}.png`
+- `public/img/welcome/setup-1.png` to `panel-3.png`: each card on its own, for layouts that stack them on small screens. The homepage copies the setup cards as `public/guide-setup-{1,2,3}.png`, the usage cards as `public/how-it-works-{1,2,3}.png` and the panel cards as `public/panel-rename-{1,2,3}.png`
 - `tools/welcome-cards/svg/*.svg`: editable copies for Inkscape or Illustrator
 
 ## Run
