@@ -56,6 +56,8 @@ function buildFlatAliases() {
 
 const legacyAliases = [
   ['/unhide', '/control-channel/hide#show'],
+  ['/control-channel/unhide', '/control-channel/hide#show'],
+  ['/configure-channel', '/configure-channel/overview'],
   ['/inviteuser', '/control-channel/invite'],
   ['/setup', '/quickstart'],
   ['/commands', '/control-channel'],
