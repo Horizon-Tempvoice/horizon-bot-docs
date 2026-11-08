@@ -1,6 +1,18 @@
 import type { ReactNode } from "react";
 import { notFound } from "next/navigation";
-import { ChevronDown, CirclePlus, CloudDownload, Hash, MousePointer2, Plus } from "lucide-react";
+import {
+  ChevronDown,
+  CirclePlus,
+  CloudDownload,
+  Hash,
+  LockKeyhole,
+  LockKeyholeOpen,
+  MailPlus,
+  MousePointer2,
+  PencilLine,
+  Plus,
+  Users,
+} from "lucide-react";
 import { PlusEmoji } from "@/components/discord-mock/DiscordEmojis";
 import { SpeakerIcon } from "@/components/discord-mock/DiscordIcons";
 import { withBase } from "@/lib/base";
@@ -138,7 +150,7 @@ function VoiceRow({
       <SpeakerIcon className={`size-4 ${active ? "text-[#23a55a]" : "text-dc-muted"}`} />
       {generator && <PlusEmoji className="size-3.5" />}
       <span className={`flex-1 truncate ${active ? "font-semibold text-dc-text-strong" : "font-medium"}`}>{name}</span>
-      {timer && <span className="font-mono text-[10px] text-[#23a55a]">0:30</span>}
+      {timer && <span className="translate-y-[2px] font-mono text-[10px] text-[#23a55a]">0:30</span>}
       {clicked && <Cursor className="-bottom-3 left-[150px]" />}
     </div>
   );
@@ -165,6 +177,71 @@ function ChannelScene({ stage }: { stage: number }) {
           <span className="text-[10px]">Deleted</span>
         </div>
       )}
+    </Scene>
+  );
+}
+
+const PANEL_BUTTONS = [PencilLine, Users, LockKeyhole, LockKeyholeOpen, MailPlus];
+
+function PanelClickScene() {
+  return (
+    <Scene className="-bottom-4 left-9 right-0 top-[46px] p-2.5">
+      <div className="rounded-r-md border-l-[3px] border-brand bg-dc-embed px-2.5 py-2">
+        <p className="text-[14px] font-bold text-dc-text-strong">Horizon Panel</p>
+        <p className="mt-0.5 text-[10px] leading-snug text-dc-text">
+          You can use this interface to manage your temporary channels.
+        </p>
+      </div>
+      <div className="mt-2.5 flex gap-1.5">
+        {PANEL_BUTTONS.map((Icon, i) =>
+          i === 0 ? (
+            <span key="rename" className="relative -m-[4px] rounded-[11px] border-2 border-white/80 p-[2px]">
+              <span className="grid h-8 w-10 place-items-center rounded-lg bg-dc-embed text-brand">
+                <Icon className="size-[18px]" strokeWidth={1.75} />
+              </span>
+              <Cursor className="-bottom-3 -right-2" />
+            </span>
+          ) : (
+            <span key={i} className="grid h-8 w-10 place-items-center rounded-lg bg-dc-embed text-brand">
+              <Icon className="size-[18px]" strokeWidth={1.75} />
+            </span>
+          ),
+        )}
+      </div>
+    </Scene>
+  );
+}
+
+function RenameModalScene() {
+  return (
+    <Scene className="-bottom-4 left-9 right-0 top-[46px] bg-dc-bg p-3">
+      <p className="text-[14px] font-bold text-dc-text-strong">Rename Channel</p>
+      <p className="mt-2 text-[11px] font-semibold text-dc-text-strong">New channel name</p>
+      <div className="mt-1 flex h-7 items-center rounded-md border border-[#5865f2] bg-dc-chat px-2 text-[12px] text-dc-text-strong">
+        Late night ranked
+        <span className="ml-px h-3.5 w-px bg-dc-text-strong" />
+      </div>
+      <div className="mt-3 flex items-center justify-end gap-3 text-[11px] font-medium">
+        <span className="text-dc-text">Cancel</span>
+        <span className="relative">
+          <span className="inline-flex h-7 items-center rounded-md bg-[#5865f2] px-3 text-white">Submit</span>
+          <Cursor className="-bottom-3 right-1" />
+        </span>
+      </div>
+    </Scene>
+  );
+}
+
+function RenamedScene() {
+  return (
+    <Scene className="-bottom-4 left-9 right-0 top-[46px] bg-dc-bg px-2 pt-2 text-[13px]">
+      <p className="flex items-center gap-1 px-1 pb-1 text-[11px] font-semibold uppercase text-dc-muted">
+        Horizon Channels
+        <ChevronDown className="size-3" />
+      </p>
+      <VoiceRow name="Create your channel" generator />
+      <VoiceRow name="Late night ranked" active timer />
+      <Member />
     </Scene>
   );
 }
@@ -205,6 +282,17 @@ export default function WelcomeCards() {
         </Card>
         <Card label="Gone when empty">
           <ChannelScene stage={2} />
+        </Card>
+      </Row>
+      <Row id="panel">
+        <Card label="Click Rename">
+          <PanelClickScene />
+        </Card>
+        <Card label="Type a name">
+          <RenameModalScene />
+        </Card>
+        <Card label="Channel renamed">
+          <RenamedScene />
         </Card>
       </Row>
     </div>

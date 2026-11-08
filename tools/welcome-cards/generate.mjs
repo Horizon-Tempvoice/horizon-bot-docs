@@ -8,7 +8,7 @@ const here = dirname(fileURLToPath(import.meta.url));
 const baseUrl = process.env.DOCS_URL ?? "http://localhost:3000";
 const pngDir = join(here, "../../public/img/welcome");
 const svgDir = join(here, "svg");
-const rows = ["setup", "usage"];
+const rows = ["setup", "usage", "panel"];
 
 mkdirSync(pngDir, { recursive: true });
 mkdirSync(svgDir, { recursive: true });
