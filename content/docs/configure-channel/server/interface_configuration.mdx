@@ -1,0 +1,33 @@
+---
+title: Interface Configuration
+description: Choose which buttons the Horizon Interface shows, and post it into a channel.
+---
+
+<Callout title="Where to find this?" type="info">
+    Open the [Dashboard](https://dashboard.horizon-bot.me), pick your server and open **Interface**.
+</Callout>
+
+## Interface Buttons
+
+Choose which buttons the [Horizon Interface](/interface) shows and in which order, up to 15 at a time. You edit the buttons right in a preview of the interface message, shown in your server's bot language.
+
+- **Reorder:** drag a button to a new spot. On a phone, hold it for a moment, then drag.
+- **Hide or show:** click a button to hide it. Hidden buttons sit below the line under the interface; click one to add it back, or drag buttons across the line.
+- **Full interface:** with all 15 slots in use, drag a hidden button onto a shown one to swap them.
+- **Keyboard:** focus a button and use the arrow keys to move it; Enter or Space hides or shows it.
+
+**Reset to default** brings back the standard set. Changes are saved with the bar at the bottom of the page.
+
+<Callout title="Note" type="info">
+    Buttons for features you turned off in [Owner Tools](/configure-channel/generator/owner_tools) don't work, so it's worth hiding them here too.
+</Callout>
+
+## Send Interface
+
+Posts the interface into a text channel of your choice. Save your button changes first, so the interface you send matches the preview. Channels where Horizon is missing a permission are greyed out in the picker, with the missing permission listed.
+
+You can also post it from Discord with `/interface send [channel]`.
+
+<Callout title="Posted interfaces don't update" type="info">
+    An interface Horizon already posted keeps the buttons it had back then. To show your changes, send it again and delete the old message.
+</Callout>

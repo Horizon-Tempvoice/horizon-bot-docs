@@ -109,6 +109,9 @@ const legacyAliases = [
   ['/rename', '/session#rename'],
   ['/delete', '/session#delete'],
   ['/autosave', '/session#autosave'],
+  ['/panel', '/interface'],
+  ['/configure-channel/server/panel_configuration', '/configure-channel/server/interface_configuration'],
+  ['/panel_configuration', '/configure-channel/server/interface_configuration'],
 ];
 
 /** @type {import('next').NextConfig} */

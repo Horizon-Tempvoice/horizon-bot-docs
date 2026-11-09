@@ -12,7 +12,7 @@ Many servers hide their voice channels until members get a role, for example `@V
 
 ### 1. Category permissions
 
-In Discord, open the settings of the category your Creator Channel is in and set these permissions:
+In Discord, open the settings of the category new channels are created in and set these permissions. You can see and change it under [Temporary Channel Category](/configure-channel/generator/placement_and_privacy#temporary-channel-category):
 
 | Role | View Channel | Connect |
 |---|---|---|
@@ -34,7 +34,7 @@ Open the [Dashboard](https://dashboard.horizon-bot.me), pick your server, open *
 ### Result
 
 - Only members with one of the Access Roles can see and join temporary channels.
-- [`/lock`](/control-channel/lock), [`/hide`](/control-channel/hide) and the panel buttons apply to the Access Roles, so owners can still lock verified members out.
+- [`/lock`](/control-channel/lock), [`/hide`](/control-channel/hide) and the interface buttons apply to the Access Roles, so owners can still lock verified members out.
 - Members an owner lets in with [`/trust`](/control-channel/trust) or [`/inviteuser`](/control-channel/invite) can join even if they aren't verified. Turn off **Trust / Untrust** and **Invite** in [Owner Tools](/configure-channel/generator/owner_tools) if you don't want that.
 - Immune Roles can always see and join while **Apply permission override to immune roles** is on.
 
@@ -93,7 +93,7 @@ The channel owner always gets View Channel, Connect and Speak, plus the **Additi
         - The channel owner trusted or invited them.
     </Accordion>
     <Accordion title="Channels aren't created and members get a DM about missing permissions">
-        Horizon's role has no allow on the category. See [Category permissions](#1-category-permissions).
+        Horizon's role has no allow on the category new channels are created in. See [Category permissions](#1-category-permissions). If no category is left and channels are created outside one, Horizon's server role is missing the permissions instead; see [If the category is deleted](/configure-channel/generator/placement_and_privacy#if-the-category-is-deleted).
     </Accordion>
     <Accordion title="Owners can't lock or hide their channel from verified members">
         Add the verified roles as Access Roles instead of relying only on **Inherit @everyone restrictions**.

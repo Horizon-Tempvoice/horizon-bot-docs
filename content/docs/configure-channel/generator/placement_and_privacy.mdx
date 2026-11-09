@@ -9,12 +9,39 @@ description: Where new channels appear, who can see and join them, and which per
 
 | Setting | Description |
 |---|---|
+| **Temporary Channel Category** | Which category new channels are created in. See [Temporary Channel Category](#temporary-channel-category). |
 | **Channel Position** | Where the channel appears: top of the category, bottom of the category, or right below the generator. |
 | **Default Visibility** | **Public**: everyone can see and join. **Locked**: everyone sees the channel but can't join. **Hidden**: nobody but the owner and members who were let in can see it. Applies to `@everyone`, not to [access roles](/configure-channel/generator/who_can_join#access-roles). |
-| **Permission Sync** | **From category**: new channels copy the permissions of the category. **From generator**: they copy the permissions of the generator channel. **Don't sync**: they start with Horizon's own permissions only. |
+| **Permission Sync** | **From category**: new channels copy the permissions of the category they are created in. **From generator**: they copy the permissions of the generator channel. **Don't sync**: they start with Horizon's own permissions only. |
 | **Inherit @everyone restrictions** | Keeps the `@everyone` denies of the sync source instead of granting view and connect. Only shown while Permission Sync is on. |
 
 Owners can still change the visibility of their own channel with [`/lock`](/control-channel/lock), [`/unlock`](/control-channel/lock#unlock), [`/hide`](/control-channel/hide) and [`/show`](/control-channel/hide#show), and a saved [profile](/configure-channel/generator/saved_profiles) can bring back the state of an earlier channel.
+
+## Temporary Channel Category
+
+New channels are created in the category you pick here. When you set up a generator, this is the category it was created in. Pick another one if you want the generator in one place and the channels somewhere else, for example a **Join to create** channel at the top of the server and all temporary channels in a **Voice** category further down.
+
+The category stays the same when you move the generator channel. Changing it only affects channels created afterwards; channels that are already open stay where they are.
+
+### Position in another category
+
+**Below generator channel** only works while the channels are created in the generator's own category. In any other category you can pick **Top of category** or **Bottom of category**, and a generator set to **Below generator channel** uses **Bottom of category** there.
+
+### Permissions
+
+Horizon needs these permissions in the category: **View Channel**, **Manage Channels**, **Connect**, **Speak** and **Move Members**, plus every permission you give channel owners under [Owner Tools](/configure-channel/generator/owner_tools). Check the category's own permissions too: if it denies something for `@everyone`, it also denies it for Horizon unless Horizon has its own allow there.
+
+With **Permission Sync: From category**, new channels copy the permissions of the category they are created in, not the one the generator is in.
+
+If something is missing, the server overview in the Dashboard lists it, and members get a DM telling them which permissions Horizon lacks.
+
+### If the category is deleted
+
+When you delete the chosen category, the generator switches to the category its generator channel is in now, and new channels appear there.
+
+If the generator channel isn't in a category either, new channels are still created, just outside every category at the top of the server. They then only get what Horizon's server role grants, so give the role the permissions above in your Discord server settings under **Roles**. The server overview points this out until you choose a category again.
+
+A category holds at most 50 channels and a server at most 500, categories included. When the chosen category is full, no new channels can be created there until one is deleted.
 
 <Callout title="Hiding channels until members verify" type="info">
     If your server only shows channels to a verified role, see [Using a verification system?](/faq/verification). It explains both setups and what each of these settings does to the permissions.

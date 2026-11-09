@@ -65,7 +65,7 @@ export default function PanelMock() {
               </p>
               <div className="mt-1.5 rounded-r-lg border-l-4 border-brand bg-dc-embed px-5 py-4">
                 <p className="text-lg font-bold text-dc-text-strong">
-                  Horizon Panel
+                  Horizon Interface
                 </p>
                 <p className="mt-2 text-[15px] text-dc-text">
                   You can use this interface to manage your temporary channels.

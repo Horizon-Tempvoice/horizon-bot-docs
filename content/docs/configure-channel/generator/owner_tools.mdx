@@ -17,15 +17,15 @@ At the top of the section you choose whether channels from this generator have a
 
 | Mode | What happens |
 |---|---|
-| **Managed** | The default. The member who creates the channel owns it and can change it with commands and the [panel](/panel), using the features you allow below. |
-| **Unmanaged** | The channel has no owner. Horizon posts no panel, and nobody can lock, rename, kick, claim or otherwise change the channel through Horizon. It's deleted once it's empty, like any other temporary channel. |
+| **Managed** | The default. The member who creates the channel owns it and can change it with commands and the [interface](/interface), using the features you allow below. |
+| **Unmanaged** | The channel has no owner. Horizon posts no interface, and nobody can lock, rename, kick, claim or otherwise change the channel through Horizon. It's deleted once it's empty, like any other temporary channel. |
 
 Use **Unmanaged** for public lobbies where nobody should be able to lock others out or kick them.
 
 While a generator is unmanaged:
 
 - The feature switches, **Additional Owner Permissions** and **Block Hides Channel** are greyed out. Your choices stay saved and apply again when you switch back to **Managed**.
-- The Channel Panel switch and the saved profiles, knocking, channel moderator and owner reassignment settings are hidden.
+- The Channel Interface switch and the saved profiles, knocking, channel moderator and owner reassignment settings are hidden.
 - The channel name template and the greeting work as usual. Placeholders like `{OWNER_NICK}` use the member who created the channel.
 - Horizon commands in the channel reply that it is unmanaged. Your server staff can still moderate it with their normal Discord permissions.
 
@@ -50,7 +50,7 @@ Each feature has its own switch with a short description next to it. Turning one
 | **Age Restriction** | Marks every temporary channel as NSFW. |
 | **Block Hides Channel** | Only shown while **Block / Unblock** is enabled. On by default: blocked members can't see the channel at all. Turn it off to only keep them from joining. |
 
-The **Channel Panel** switch is in the [Greeting](/configure-channel/generator/greeting) section.
+The **Channel Interface** switch is in the [Greeting](/configure-channel/generator/greeting) section.
 
 ## Additional Owner Permissions
 
