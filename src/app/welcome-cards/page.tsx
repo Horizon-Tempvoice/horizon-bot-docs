@@ -187,7 +187,7 @@ function PanelClickScene() {
   return (
     <Scene className="-bottom-4 left-9 right-0 top-[46px] p-2.5">
       <div className="rounded-r-md border-l-[3px] border-brand bg-dc-embed px-2.5 py-2">
-        <p className="text-[14px] font-bold text-dc-text-strong">Horizon Panel</p>
+        <p className="text-[14px] font-bold text-dc-text-strong">Horizon Interface</p>
         <p className="mt-0.5 text-[10px] leading-snug text-dc-text">
           You can use this interface to manage your temporary channels.
         </p>
