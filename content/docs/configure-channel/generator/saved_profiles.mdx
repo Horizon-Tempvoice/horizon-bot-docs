@@ -18,7 +18,7 @@ Every part of a profile has two switches:
 
 | Switch | Applies to | What it does |
 |---|---|---|
-| **Saved** | The whole server (Settings page) | When off, Horizon stops storing this part. Values saved earlier are ignored and get cleared the next time a member saves. The generator page shows it as Yes or No, with a link to change it. |
+| **Saved** | The whole server (Settings page) | When off, Horizon stops storing this part. Values saved earlier are ignored. Autosave leaves them alone. They are only cleared when a member saves their channel into a different slot. The generator page shows it as Yes or No, with a link to change it. |
 | **Restored** | This generator | When off, channels from this generator use their own defaults for this part. The saved value stays in the profile and other generators still apply it. |
 
 Profiles belong to a member on your server, not to a single generator. A profile saved in one generator is loaded in all the others. That's why saving is a server-wide choice and restoring is set per generator.

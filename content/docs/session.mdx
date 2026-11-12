@@ -33,7 +33,13 @@ Use `/session save [slot] [label]` to save your current channel state. This incl
 
 If your server doesn't store some of these, the reply lists them.
 
-The optional `label` helps you identify the slot (max. 32 characters). Saving to an existing slot overwrites it.
+The optional `label` helps you identify the slot (max. 32 characters).
+
+If you save to the slot your channel was loaded from, only what you changed in this channel is written. Trusted users or blocks that weren't loaded (for example because the generator has a limit) and parts this generator doesn't load stay in the profile.
+
+If you save to any other slot, the channel is copied as it is now and overwrites that slot. Autosave then updates this slot instead.
+
+If your channel is still loading your profile, wait a few seconds before saving.
 
 ## Activate
 
@@ -73,7 +79,11 @@ Use `/session delete [slot]` to permanently remove a saved session slot.
 
 ## Autosave
 
-Use `/session autosave [enabled]` to turn autosave on or off. When enabled, your active session slot is automatically updated with your current channel state every time you leave.
+Use `/session autosave [enabled]` to turn autosave on or off. When enabled, changes you make to your channel are saved to the slot it was loaded from, right when you make them.
+
+- Only what you change is saved. Parts you didn't touch stay as they are in your profile, including trusted users or blocks the channel didn't load.
+- Changes made directly in Discord count too, for example renaming the channel or changing its user limit in the channel settings.
+- Trusted users who leave the server stay in your profile and are trusted again in your next channel once they're back.
 
 <Callout title="Note" type="info">
     If you don't have any saved slots yet, autosave creates slot 1 for you. If you already have slots, pick one with `/session activate` first.
@@ -83,11 +93,13 @@ Server admins can turn autosave on by default. If you set it yourself with `/ses
 
 <Callout title="When autosave is skipped" type="warn">
     Your channel state will **not** be saved automatically if:
+    - The channel was created with [`/session skip`](#skip), so your profile wasn't loaded
+    - The generator only loads profiles for certain roles and you don't have one of them
     - You have saved slots, but none of them is active
     - The server admin has disabled the session feature
-    - The channel was transferred to you (you are not the original creator)
-    - You claimed the channel from an owner who left
-    - Your active slot is above the server's slot limit
+    - The channel was transferred or claimed, by you or from you
+    - The slot is above the server's slot limit
+    - Changes were made while you weren't in the channel
 
-    You can still save manually with `/session save`, but be careful: this will overwrite your profile with the current channel state.
+    In all of these cases your profile stays untouched. You can still save manually with [`/session save`](#save).
 </Callout>
